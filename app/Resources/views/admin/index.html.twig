@@ -2,7 +2,9 @@
 {% block title %}Admin page{% endblock %}
 
 {% block body %}
-admin page
+{{ form_start(authForm) }}
+{{ form_widget(authForm) }}
+{{ form_end(authForm) }}
 {% endblock %}
 
 {% block stylesheets %}

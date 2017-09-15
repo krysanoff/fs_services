@@ -5,6 +5,9 @@ namespace AppBundle\Controller\Admin;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\PasswordType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 class AdminController extends Controller
 {
@@ -13,6 +16,13 @@ class AdminController extends Controller
      */
     public function indexAction(Request $request)
     {
-        return $this->render('admin/index.html.twig', []);
+        $authForm = $this->createFormBuilder()
+            ->add('login', TextType::class)
+            ->add('password', PasswordType::class)
+            ->add('submit', SubmitType::class, array('label' => 'OK'))
+            ->getForm();
+        return $this->render('admin/index.html.twig', array(
+            'authForm' => $authForm->createView(),
+            ));
     }
 }
