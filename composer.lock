@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "620010b4a6c5f00f26dd7a5230eff84d",
+    "content-hash": "45b3a41e383fd583bcfbcccadf19e571",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -886,6 +886,48 @@
                 "rest"
             ],
             "time": "2016-10-17T18:31:11+00:00"
+        },
+        {
+            "name": "hetzerok/sam",
+            "version": "0.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hetzerok/sam.git",
+                "reference": "22346aa7e88dce69a5498c385f378018132fb932"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hetzerok/sam/zipball/22346aa7e88dce69a5498c385f378018132fb932",
+                "reference": "22346aa7e88dce69a5498c385f378018132fb932",
+                "shasum": ""
+            },
+            "require": {
+                "monolog/monolog": "^1.23",
+                "php": ">=5.5.9",
+                "symfony/console": "^3.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Roman Gorbunov",
+                    "homepage": "https://github.com/hetzerok"
+                },
+                {
+                    "name": "Artyom Zernov",
+                    "homepage": "https://github.com/azernov"
+                }
+            ],
+            "description": "Standalone migrations for MySQL. No ORM requires. No manual schema creation.",
+            "time": "2017-06-27T16:53:34+00:00"
         },
         {
             "name": "incenteev/composer-parameter-handler",

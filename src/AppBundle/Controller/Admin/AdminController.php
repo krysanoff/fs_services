@@ -16,13 +16,20 @@ class AdminController extends Controller
      */
     public function indexAction(Request $request)
     {
+        $authForm = $this->authFormAction();
+        return $this->render('admin/index.html.twig', array(
+            'authForm' => $authForm->createView(),
+            ));
+    }
+
+    public function authFormAction()
+    {
         $authForm = $this->createFormBuilder()
             ->add('login', TextType::class)
             ->add('password', PasswordType::class)
             ->add('submit', SubmitType::class, array('label' => 'OK'))
             ->getForm();
-        return $this->render('admin/index.html.twig', array(
-            'authForm' => $authForm->createView(),
-            ));
+
+        return $authForm;
     }
 }
