@@ -14,7 +14,7 @@ use Monolog\Handler\StreamHandler;
 use Opencolour\Additions\Config;
 
 // Подключение конфига
-$config = Config::getInstance('config/');
+$config = Config::getInstance('vendor/hetzerok/sam/config/');
 
 // Создаем канал лога
 $log = new Logger('name');
