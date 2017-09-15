@@ -1,18 +1,18 @@
 <?php
 
-namespace AppBundle\Controller\Admin;
+namespace AppBundle\Controller\Docs;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
-class AdminController extends Controller
+class DocsController extends Controller
 {
     /**
-     * @Route("/admin", name="Admin page")
+     * @Route("/docs", name="Documents page")
      */
     public function indexAction(Request $request)
     {
-        return $this->render('admin/index.html.twig', []);
+        return $this->render('docs/index.html.twig', []);
     }
 }
