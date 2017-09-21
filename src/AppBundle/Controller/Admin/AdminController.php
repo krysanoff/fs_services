@@ -16,10 +16,15 @@ class AdminController extends Controller
      */
     public function indexAction(Request $request)
     {
-        $authForm = $this->authFormAction();
-        return $this->render('admin/index.html.twig', array(
-            'authForm' => $authForm->createView(),
-            ));
+        if (!$this->get('security.authorization_checker')->isGranted('ROLE_ADMIN')) {
+            $authForm = $this->authFormAction();
+
+            return $this->render('admin/login.html.twig', array(
+                'authForm' => $authForm->createView(),
+                ));
+        }
+
+        return $this->render('admin/index.html.twig', array());
     }
 
     public function authFormAction()
@@ -27,7 +32,7 @@ class AdminController extends Controller
         $authForm = $this->createFormBuilder()
             ->add('login', TextType::class)
             ->add('password', PasswordType::class)
-            ->add('submit', SubmitType::class, array('label' => 'OK'))
+            ->add('submit', SubmitType::class)
             ->getForm();
 
         return $authForm;

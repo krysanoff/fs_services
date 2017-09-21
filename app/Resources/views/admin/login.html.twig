@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+{% block title %}Admin page{% endblock %}
+
+{% block body %}
+    {{ form_start(authForm, {'method': 'POST', 'action': 'auth'}) }}
+        {{ form_errors(authForm) }}
+
+        {{ form_row(authForm.login) }}
+        {{ form_row(authForm.password) }}
+
+        {{ form_row(authForm.submit) }}
+    {{ form_end(authForm) }}
+{% endblock %}
+
+{% block stylesheets %}
+
+{% endblock %}

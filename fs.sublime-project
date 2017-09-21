@@ -5,7 +5,7 @@
 			"path": "."
 		},
 		{
-			"path": "/var/log/nginx"
+			"path": "/var/log/nginx/"
 		}
 	]
 }
