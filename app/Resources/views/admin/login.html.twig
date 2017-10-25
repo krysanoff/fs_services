@@ -1,17 +1,24 @@
 {% extends 'base.html.twig' %}
 {% block title %}Admin page{% endblock %}
 
-{% block body %}
-    {{ form_start(authForm, {'method': 'POST', 'action': 'auth'}) }}
-        {{ form_errors(authForm) }}
-
-        {{ form_row(authForm.login) }}
-        {{ form_row(authForm.password) }}
-
-        {{ form_row(authForm.submit) }}
-    {{ form_end(authForm) }}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/signin.css') }}">
 {% endblock %}
 
-{% block stylesheets %}
+{% block body %}
+    <main class="container">
+        {{ form_start(authForm, {
+            "attr": {"class": "form-signin"}
+        }) }}
 
+            <h2 class="form-signin-heading">Please sign in</h2>
+
+            {{ form_errors(authForm) }}
+
+            {{ form_row(authForm.login) }}
+            {{ form_row(authForm.password) }}
+            {{ form_row(authForm.submit) }}
+
+        {{ form_end(authForm) }}
+    </main>
 {% endblock %}
