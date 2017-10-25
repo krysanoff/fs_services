@@ -1,9 +1,23 @@
-{% extends 'base.html.twig' %}
-{% block title %}Admin page{% endblock %}
+{% extends '::base_admin.html.twig' %}
+{% block title %}Content manager page{% endblock %}
 
 {% block body %}
-    Admin page
-    {% include('flash-messages.html.twig') %}
+    <header class="header">
+        <h1 class="header__title">Страница администрирования</h1>
+    </header>
+    <nav class="nav">
+        <ul class="menu">
+            <li class="menu__item">
+                <a href="" class="menu__link">Администраторы сайта</a>
+            </li>
+            <li class="menu__item">
+                <a href="" class="menu__link">Сотрудники</a>
+            </li>
+            <li class="menu__item">
+                <a href="" class="menu__link">Водоисточники</a>
+            </li>
+        </ul>
+    </nav>
 {% endblock %}
 
 {% block stylesheets %}

@@ -520,73 +520,10 @@
 	"buffers":
 	[
 		{
-			"file": "app/Resources/views/admin/index.html.twig",
+			"file": "/etc/postfix/main.cf",
 			"settings":
 			{
-				"buffer_size": 162,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/Resources/views/admin/login.html.twig",
-			"settings":
-			{
-				"buffer_size": 386,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/config/security.yml",
-			"settings":
-			{
-				"buffer_size": 1163,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "composer.json",
-			"settings":
-			{
-				"buffer_size": 2406,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "vendor/hetzerok/sam/config/config.inc.php",
-			"settings":
-			{
-				"buffer_size": 1458,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/AppBundle/Controller/Admin/AdminController.php",
-			"settings":
-			{
-				"buffer_size": 1300,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/config/config.yml",
-			"settings":
-			{
-				"buffer_size": 2161,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/var/log/nginx/fs.error.log",
-			"settings":
-			{
-				"buffer_size": 0,
+				"buffer_size": 1665,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -667,32 +604,70 @@
 	"expanded_folders":
 	[
 		"/home/eugene/host/fs",
-		"/home/eugene/host/fs/app",
-		"/home/eugene/host/fs/app/Resources",
-		"/home/eugene/host/fs/app/Resources/views",
-		"/home/eugene/host/fs/app/Resources/views/admin",
-		"/home/eugene/host/fs/app/config",
-		"/home/eugene/host/fs/src",
-		"/home/eugene/host/fs/src/AppBundle",
-		"/home/eugene/host/fs/src/AppBundle/Entity",
-		"/home/eugene/host/fs/vendor/doctrine",
-		"/home/eugene/host/fs/vendor/doctrine/orm",
-		"/home/eugene/host/fs/vendor/doctrine/orm/lib",
-		"/home/eugene/host/fs/vendor/doctrine/orm/lib/Doctrine",
-		"/home/eugene/host/fs/vendor/doctrine/orm/lib/Doctrine/ORM",
-		"/home/eugene/host/fs/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping"
+		"/home/eugene/host/fs/var",
+		"/home/eugene/host/fs/var/logs",
+		"/home/eugene/host/fs/vendor",
+		"/home/eugene/host/fs/web",
+		"/home/eugene/host/fs/web/bundles"
 	],
 	"file_history":
 	[
+		"/etc/postfix/main.cf",
+		"/var/log/mail.log",
+		"/home/eugene/host/fs/app/Resources/views/admin/index.html.twig",
+		"/home/eugene/host/fs/app/Resources/views/admin/login.html.twig",
+		"/home/eugene/.cache/.fr-u9HVEE/PhpStorm-172.4155.41/Install-Linux-tar.txt",
+		"/home/eugene/host/fs/src/AppBundle/Controller/Admin/AdminController.php",
+		"/etc/php/5.6/fpm/php.ini",
+		"/etc/php/5.6/cli/php.ini",
+		"/home/eugene/host/myasnikov/README.md",
+		"/etc/nginx/conf.d/fs.conf",
+		"/etc/php/7.2/fpm/pool.d/fs.conf",
+		"/home/eugene/host/aergroup/www/core/config/config.inc.php",
+		"/var/log/nginx/aergroup.error.log",
+		"/home/eugene/host/aergroup/zipignored.sh",
+		"/home/eugene/host/duty.local/front/app/scripts/app.js",
+		"/home/eugene/host/duty.local/front/dist/assets/scripts/main.js",
+		"/home/eugene/host/aergroup/www/assets/i/brochure_default.png",
+		"/home/eugene/host/myasnikov/www/core/components/gitmodx/README.md",
+		"/home/eugene/host/aergroup/www/core/components/ms2gallery/cli/ms_generate.php",
+		"/home/eugene/host/dalz/.gitignore",
+		"/home/eugene/host/aergroup/sam/README.md",
+		"/etc/nginx/conf.d/dalz.conf",
+		"/var/log/php5.6-fpm.log",
+		"/var/log/xdebug/xdebug.log",
+		"/etc/nginx/fastcgi_params",
+		"/etc/hosts",
+		"/etc/php/7.2/fpm/pool.d/www.conf",
+		"/home/eugene/host/fs/app/config/config.yml",
+		"/home/eugene/host/fs/app/config/security.yml",
+		"/var/log/nginx/fs.error.log",
+		"/home/eugene/host/fs/var/logs/dev.log",
+		"/var/log/nginx/myasnikov.error.log",
+		"/home/eugene/host/knifecraft/www/core/components/gitmodx/elements/plugins/kcgallery/kcGallery.php",
+		"/home/eugene/host/aergroup/sam/config/config.inc.php",
+		"/home/eugene/host/aergroup/www/core/components/gitmodx/config/config.inc.php",
+		"/home/eugene/host/knifecraft/www/_development/knifecraft/tools/xpdogenerator.class.php",
+		"/home/eugene/Soft/PhpStorm_2017.1/bin/phpstorm64.vmoptions",
+		"/home/eugene/Soft/PhpStorm/bin/phpstorm64.vmoptions",
+		"/etc/php/5.6/fpm/pool.d/dalz.conf",
+		"/etc/php/7.2/fpm/pool.d/instaservice.conf",
+		"/etc/php/7.2/fpm/php-fpm.conf",
+		"/etc/php/5.6/fpm/pool.d/rpk.conf",
+		"/home/eugene/.cache/.fr-4LqJsm/PhpStorm-172.4155.41/Install-Linux-tar.txt",
+		"/home/eugene/host/fs/src/AppBundle/Repository/UserRepository.php",
+		"/home/eugene/host/fs/src/AppBundle/Entity/User.php",
+		"/home/eugene/host/fs/fs.sublime-project",
+		"/home/eugene/host/fs/vendor/hetzerok/sam/config/config.inc.php",
+		"/home/eugene/host/fs/app/AppKernel.php",
+		"/home/eugene/host/fs/composer.json",
 		"/home/eugene/host/fs/app/Resources/views/base.html.twig",
 		"/home/eugene/host/fs/app/config/routing.yml",
 		"/home/eugene/host/fs/app/config/parameters.yml",
 		"/home/eugene/host/fs/vendor/symfony/symfony/src/Symfony/Component/Form/Extension/Core/Type/TextType.php",
-		"/home/eugene/host/fs/src/AppBundle/Entity/User.php",
 		"/home/eugene/.cache/.fr-l9aneN/sam-master/README.md",
 		"/home/eugene/host/fs/.gitignore",
 		"/home/eugene/host/fs/run.php",
-		"/home/eugene/host/fs/app/AppKernel.php",
 		"/home/eugene/host/fs/app/Resources/views/docs/index.html.twig",
 		"/home/eugene/host/fs/app/Resources/views/waterponds/quiz.html.twig",
 		"/home/eugene/host/fs/app/Resources/views/waterponds/index.html.twig",
@@ -701,12 +676,10 @@
 		"/home/eugene/host/fs/src/AppBundle/Controller/Waterponds/WaterpondsController.php",
 		"/home/eugene/host/fs/src/AppBundle/Controller/Graph/GraphController.php",
 		"/var/log/nginx/40plus.access.log.10.gz",
-		"/home/eugene/host/fs/app/Resources/views/admin/index.html.twig",
 		"/home/eugene/host/fs/src/AppBundle/Controller/Admin/AdminBundle.php",
 		"/home/eugene/host/test/app/Resources/views/default/index.html.twig",
 		"/home/eugene/host/test/app/Resources/views/base.html.twig",
 		"/home/eugene/host/test/app/config/config.yml",
-		"/var/log/nginx/fs.error.log",
 		"/home/eugene/host/test/src/AppBundle/Controller/AuthController.php",
 		"/home/eugene/host/fs_service/README.md",
 		"/home/eugene/host/test/vendor/composer/autoload_real.php",
@@ -717,7 +690,6 @@
 		"/etc/nginx/conf.d/instaservice.conf",
 		"/home/eugene/host/instaservice/symfony/composer.json",
 		"/home/eugene/host/instaservice/symfony/app/autoload.php",
-		"/etc/nginx/fastcgi_params",
 		"/var/log/nginx/instaservice.error.log",
 		"/home/eugene/host/test/app/Resources/views/lucky/number.html.twig",
 		"/home/eugene/host/instaservice/symfony/src/AppBundle/AppBundle.php",
@@ -730,7 +702,6 @@
 		"/home/eugene/host/instaservice/symfony/src/AppBundle/Controller/DefaultController.php",
 		"/home/eugene/host/test/app/Resources/views/blog/blog.html.twig",
 		"/etc/nginx/conf.d/test.conf",
-		"/etc/hosts",
 		"/home/eugene/host/test/src/AppBundle/Controller/BlogController.php",
 		"/home/eugene/host/test/src/AppBundle/Controller/LuckyController.php",
 		"/home/eugene/.config/sublime-text-3/Packages/Emmet/Emmet.sublime-settings",
@@ -738,7 +709,6 @@
 		"/home/eugene/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
 		"/home/eugene/.config/sublime-text-3/Packages/User/Emmet.sublime-settings",
 		"/var/log/nginx/test.error.log",
-		"/etc/php/5.6/fpm/php.ini",
 		"/home/eugene/Desktop/js_practice.js",
 		"/home/eugene/Desktop/js_practice.html",
 		"/home/eugene/host/waterponds/webpack.config.babel.js",
@@ -752,7 +722,6 @@
 		"/home/eugene/host/rpk/source/assets/jade/index.jade",
 		"/home/eugene/host/rpk/source/assets/sass/main_global.scss",
 		"/home/eugene/host/rpk/source/dist/main.html",
-		"/home/eugene/host/dalz/.gitignore",
 		"/home/eugene/host/rpk/.gitmodules",
 		"/home/eugene/Desktop/csssr-project-template/readme.md",
 		"/home/eugene/host/dalz/www/assets/files/documents/test.txt",
@@ -763,55 +732,14 @@
 		"/home/eugene/host/rpk/package.json",
 		"/home/eugene/host/rpk/.gitignore",
 		"/home/eugene/host/knifecraft/.gitignore",
-		"/home/eugene/Soft/PhpStorm/bin/phpstorm64.vmoptions",
 		"/boot/grub/grub.cfg",
 		"/etc/default/grub",
-		"/var/log/php5.6-fpm.log",
 		"/etc/nginx/nginx.conf",
 		"/home/eugene/host/rpk/webpack.config.js",
 		"/home/eugene/host/rpk/source/assets/i/icons/logo2.svg",
 		"/home/eugene/host/rpk/source/assets/i/icons/logo.svg",
 		"/home/eugene/Desktop/csssr-project-template/contributing.md",
-		"/home/eugene/host/dalz/www/assets/files/documents/manual.txt",
-		"/home/eugene/.cache/.fr-RT3ssC/pins_for_WPS.txt",
-		"/home/eugene/host/test.local/symfony/README.md",
-		"/home/eugene/host/rpk/www/ht.access",
-		"/home/eugene/host/dalz/source/package.json",
-		"/home/eugene/host/dalz/source/README-RUS.md",
-		"/home/eugene/host/dalz/source/README.md",
-		"/home/eugene/host/dalz/Untitled Folder/dalz/source/assets/js/catalog.js",
-		"/home/eugene/host/dalz/www/assets/components/minishop2/js/mgr/product/product.common.js",
-		"/home/eugene/Downloads/serializeform.js",
-		"/home/eugene/dalz.sql",
-		"/home/eugene/Downloads/error.1487673874.log",
-		"/home/eugene/.ssh/known_hosts",
-		"/home/eugene/Desktop/buyer_info.tpl",
-		"/home/eugene/host/dalz/www/core/components/gitmodx/model/gitmodx/gitmodparser.class.php",
-		"/home/eugene/host/dalz/www/core/cache/includes/elements/modplugin/10.include.cache.php",
-		"/home/eugene/host/dalz/www/core/config/config.inc.php",
-		"/www/core/config/config.inc.php",
-		"/etc/mysql/mysql.conf.d/mysqld.cnf",
-		"/etc/samba/smb.conf",
-		"/var/log/nginx/error.log",
-		"/etc/php/5.6/fpm/pool.d/phpmyadmin.conf",
-		"/home/eugene/host/dalz/www/core/cache/logs",
-		"/home/eugene/host/dalz/www/core/cache/logs/errors.log",
-		"/home/eugene/host/dalz/www/core/cache/lexicon_topics/lexicon/ru/core/source.cache.php",
-		"/home/eugene/host/dalz/etc/nginx/conf.d",
-		"/etc/php/5.6/fpm/pool.d/dalz.conf",
-		"/home/eugene/host/dalz/www/core/xpdo/xpdo.class.php",
-		"/home/eugene/host/dalz/www/core/components/gitmodx/elements/snippets/getTags.php",
-		"/etc/php/5.6/apache2/php.ini",
-		"/etc/php/5.6/fpm/conf.d/20-pdo_mysql.ini",
-		"/etc/php/5.6/fpm/conf.d/20-mysqli.ini",
-		"/etc/php/5.6/fpm/conf.d/10-mysqlnd.ini",
-		"/var/log/apache2/error.log",
-		"/etc/php/5.6/fpm/pool.d/www.conf",
-		"/home/eugene/host/dalz/www/ms2g_U7zUyl",
-		"/home/eugene/host/dalz/www/core/cache/log/error.log",
-		"/home/eugene/host/dalz/www/core/error/fatal.include.php",
-		"/etc/php/5.6/cli/php.ini",
-		"/home/eugene/.cache/.fr-2UBfHt/xdebug-2.5.0/README.rst"
+		"/home/eugene/host/dalz/www/assets/files/documents/manual.txt"
 	],
 	"find":
 	{
@@ -879,6 +807,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"aergroup",
+			"Frie",
+			"user",
 			"fos",
 			"|",
 			"address",
@@ -1003,10 +934,7 @@
 			"var_",
 			"category-switch-off",
 			"manufacturer_info",
-			"manufacturer_info.tpl",
-			"Временно нет в наличии",
-			"Эта категория пуста",
-			"button-ca"
+			"manufacturer_info.tpl"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1024,233 +952,24 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/Resources/views/admin/index.html.twig",
+					"file": "/etc/postfix/main.cf",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 162,
+						"buffer_size": 1665,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								105,
-								105
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Twig/Syntaxes/HTML (Twig).tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/Resources/views/admin/login.html.twig",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 386,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								345,
-								345
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Twig/Syntaxes/HTML (Twig).tmLanguage",
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/config/security.yml",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1163,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								240,
-								240
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/YAML/YAML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "composer.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2406,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								623,
-								623
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JSON (JavaScriptNext).tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "vendor/hetzerok/sam/config/config.inc.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1458,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1438,
-								1438
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "src/AppBundle/Controller/Admin/AdminController.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1300,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								265,
-								265
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 42.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "app/config/config.yml",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2161,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2161,
-								2161
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/YAML/YAML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 588.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "/var/log/nginx/fs.error.log",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
+								1665,
+								1665
 							]
 						],
 						"settings":
@@ -1258,10 +977,10 @@
 							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 391.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]

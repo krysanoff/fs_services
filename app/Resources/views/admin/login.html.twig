@@ -1,5 +1,5 @@
-{% extends 'base.html.twig' %}
-{% block title %}Admin page{% endblock %}
+{% extends '::base_admin.html.twig' %}
+{% block title %}Authetication{% endblock %}
 
 {% block stylesheets %}
     <link rel="stylesheet" href="{{ asset('css/signin.css') }}">
@@ -7,18 +7,23 @@
 
 {% block body %}
     <main class="container">
-        {{ form_start(authForm, {
-            "attr": {"class": "form-signin"}
-        }) }}
+        <form name="login" method="post" action="{{ path('login') }}" class="form-signin">
 
             <h2 class="form-signin-heading">Please sign in</h2>
 
-            {{ form_errors(authForm) }}
 
-            {{ form_row(authForm.login) }}
-            {{ form_row(authForm.password) }}
-            {{ form_row(authForm.submit) }}
 
-        {{ form_end(authForm) }}
+            <div class="form-group">
+                <label class="control-label required" for="_username">Your username</label>
+                <input type="text" id="_username" name="_username" required="required" placeholder="Type your username here" class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label required" for="_password">Password</label>
+                <input type="password" id="_password" name="_password" required="required" placeholder="Type your password here" class="form-control">
+            </div>
+            <div class="form-group"><button type="submit" id="submit" name="submit" class="btn btn-lg btn-success btn-block btn">Submit</button></div>
+
+            <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}"/>
+        </form>
     </main>
 {% endblock %}

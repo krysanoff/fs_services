@@ -6,12 +6,13 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * User
  *
- * @ORM\Table(name="User")
+ * @ORM\Table(name="user")
  * @ORM\Entity(repositoryClass="AppBundle\Repository\UserRepository")
  */
 class User implements UserInterface, \Serializable
@@ -28,9 +29,9 @@ class User implements UserInterface, \Serializable
     /**
      * @var string
      *
-     * @ORM\Column(name="login", type="string", length=20, unique=true)
+     * @ORM\Column(name="username", type="string", length=20, unique=true)
      */
-    private $login;
+    private $username;
 
     /**
      * @var string
@@ -40,11 +41,19 @@ class User implements UserInterface, \Serializable
     private $password;
 
     /**
-     * @ORM\ManyToMany(targetEntity="Role", inversedBy="users")
+     * @var ArrayCollection
+     *
+     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Role", inversedBy="users", fetch="EAGER")
+     * @ORM\JoinTable(name="user_role", joinColumns={@ORM\JoinColumn(name="user_id", referencedColumnName="id")},
+     *      inverseJoinColumns={@ORM\JoinColumn(name="role_id", referencedColumnName="id")})
      *
      */
     private $roles;
 
+    public function __construct()
+    {
+        $this->roles = new ArrayCollection();
+    }
 
     /**
      * Get id
@@ -57,27 +66,27 @@ class User implements UserInterface, \Serializable
     }
 
     /**
-     * Set login
+     * Set username
      *
-     * @param string $login
+     * @param string $username
      *
      * @return User
      */
-    public function setLogin($login)
+    public function setUsername($username)
     {
-        $this->login = $login;
+        $this->username = $username;
 
         return $this;
     }
 
     /**
-     * Get login
+     * Get username
      *
      * @return string
      */
-    public function getLogin()
+    public function getUsername()
     {
-        return $this->login;
+        return $this->username;
     }
 
     /**
@@ -122,7 +131,21 @@ class User implements UserInterface, \Serializable
      */
     public function getRoles()
     {
-        return [('ROLE_ADMIN')];
+        $rolesArray = $this->roles->toArray();
+
+        if (count($rolesArray)) {
+            foreach ($rolesArray as $role)
+            {
+                dump($role);
+                $roles[] = $role->getRole();
+            }
+        }
+
+        if (empty($roles)) {
+            $roles[] = 'ROLE_USER';
+        }
+
+        return array_unique($roles);
     }
 
     /**
@@ -133,16 +156,6 @@ class User implements UserInterface, \Serializable
      * @return string|null The salt
      */
     public function getSalt()
-    {
-        return;
-    }
-
-    /**
-     * Returns the username used to authenticate the user.
-     *
-     * @return string The username
-     */
-    public function getUsername()
     {
         return;
     }
@@ -168,7 +181,11 @@ class User implements UserInterface, \Serializable
      */
     public function serialize()
     {
-        return '';
+        return serialize([
+            $this->id,
+            $this->username,
+            $this->password,
+        ]);
     }
 
     /**
@@ -183,6 +200,10 @@ class User implements UserInterface, \Serializable
      */
     public function unserialize($serialized)
     {
-        return;
+        list(
+            $this->id,
+            $this->username,
+            $this->password
+            ) = unserialize($serialized);
     }
 }
