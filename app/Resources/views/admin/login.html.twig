@@ -1,10 +1,6 @@
 {% extends '::base_admin.html.twig' %}
 {% block title %}Authetication{% endblock %}
 
-{% block stylesheets %}
-    <link rel="stylesheet" href="{{ asset('css/signin.css') }}">
-{% endblock %}
-
 {% block body %}
     <main class="container">
         <form name="login" method="post" action="{{ path('login') }}" class="form-signin">
