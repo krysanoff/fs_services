@@ -2,22 +2,27 @@
 {% block title %}Content manager page{% endblock %}
 
 {% block body %}
-    <header class="header">
-        <h1 class="header__title">Страница администрирования</h1>
-    </header>
-    <nav class="nav">
-        <ul class="menu">
-            <li class="menu__item">
-                <a href="" class="menu__link">Администраторы сайта</a>
-            </li>
-            <li class="menu__item">
-                <a href="" class="menu__link">Сотрудники</a>
-            </li>
-            <li class="menu__item">
-                <a href="" class="menu__link">Водоисточники</a>
-            </li>
-        </ul>
-    </nav>
+    <section class="row">
+        <header class="header col-lg-12">
+            <h1 class="header__title">Страница администрирования</h1>
+        </header>
+    </section>
+    <section class="row">
+        <nav class="nav col-lg-2">
+            <ul class="menu">
+                <li class="menu__item">
+                    <a href="" class="menu__link">Администраторы сайта</a>
+                </li>
+                <li class="menu__item">
+                    <a href="" class="menu__link">Сотрудники</a>
+                </li>
+                <li class="menu__item">
+                    <a href="" class="menu__link">Водоисточники</a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+
 {% endblock %}
 
 {% block stylesheets %}
