@@ -4,12 +4,15 @@
  */
 namespace AppBundle\Controller\Admin;
 
+use AppBundle\AppBundle;
+use AppBundle\Entity\User;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Doctrine\ORM\EntityManager;
-use AppBundle\Form\LoginFormType;
+use AppBundle\Form\UserFormType;
 use Twig\Tests\EnvironmentTest\Extension;
 
 /**
@@ -45,8 +48,15 @@ class UserController extends Controller
             ->getRepository('AppBundle:User');
         $editingUser = $em->find($user);
 
+        $form = $this->createForm(UserFormType::class, null, [
+            'action' => $this->generateUrl('update_user', [
+                'user' => $user,
+            ]),
+        ]);
+
         return $this->render('admin/user.html.twig', [
             'user' => $editingUser,
+            'form' => $form->createView(),
         ]);
     }
 
@@ -60,9 +70,7 @@ class UserController extends Controller
     public function createAction()
     {
 
-        return $this->render('admin/user.html.twig', [
-            'user' => $user,
-        ]);
+        return $this->render('admin/user.html.twig');
     }
 
     /**
@@ -86,8 +94,47 @@ class UserController extends Controller
         $em->getEntityManager()->remove($deletingUser);
         $em->getManager()->flush();
 
-        return $this->redirectToRoute('admin_users_page', [
-            'flash' => 'Пользователь удален',
+        $this->addFlash('success', 'User deleted');
+
+        return $this->redirectToRoute('admin_users_page');
+    }
+
+    /**
+     * @param Request $request
+     *
+     * @Route("/update/user", name="update_user")
+     *
+     * @Method("POST")
+     *
+     * @return string
+     */
+    public function updateAction(Request $request)
+    {
+        $form = $this->createForm(UserFormType::class, null, [
+            'action' => $this->generateUrl('update_user'),
         ]);
+
+        $form->handleRequest($request);
+
+        if (!$form->isSubmitted() ||  !$form->isValid()) {
+            $this->addFlash('error', 'There are some errors');
+            return $this->redirectToRoute('admin_users_page');
+        }
+
+        $formData = $form->getData();
+        dump($formData);
+
+        $em = $this->getDoctrine()->getManager();
+
+        $user = $em->find(User::class, $formData['user_id']);
+        $user->setUsername($formData['username']);
+        $user->setPassword($formData['password']);
+
+        $em->persist($user);
+        $em->flush();
+
+        $this->addFlash('success', 'User\'s data has successfully updated');
+
+        return $this->redirectToRoute('admin_users_page');
     }
 }

@@ -10,7 +10,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\RedirectResponse;
-use AppBundle\Form\LoginFormType;
+use AppBundle\Form\UserFormType;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
 /**
@@ -44,46 +44,5 @@ class SecurityController extends Controller
     public function logoutAction(): void
     {
         throw new \Exception('This should never be reached!');
-    }
-
-    /**
-     * @param Request $request
-     *
-     * @Route("/form-submission", name="handle_form_submission")
-     *
-     * @Method("POST")
-     *
-     * @return RedirectResponse
-     */
-    public function handleFormSubmissionAction(Request $request)
-    {
-        $authForm = $this->createForm(LoginFormType::class, null, [
-            'action' => $this->generateUrl('handle_form_submission'),
-        ]);
-
-        $authForm->handleRequest($request);
-
-        if (!$authForm->isSubmitted() ||  !$authForm->isValid()) {
-            return $this->redirectToRoute('Admin page');
-        }
-
-        $formData = $authForm->getData();
-        dump($formData);
-
-        $user = $this->getDoctrine()
-            ->getRepository(User::class)
-            ->findOneBy([
-                'login' => $formData['login'],
-            ]);
-
-        dump($user);
-
-        if ($user || $user->getPassword() === $formData['password']) {
-            dump('okey');
-        }
-
-        $this->addFlash('success', implode("\n", $formData));
-
-        return $this->redirectToRoute('Admin page');
     }
 }

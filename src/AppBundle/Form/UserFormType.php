@@ -6,6 +6,7 @@
 namespace AppBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -15,7 +16,7 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 /**
  * Form class
  */
-class LoginFormType extends AbstractType
+class UserFormType extends AbstractType
 {
 
     /**
@@ -25,18 +26,23 @@ class LoginFormType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('_username', TextType::class, [
+            ->add('username', TextType::class, [
                 'label' => 'Your username',
                 'attr' => [
-                    'placeholder' => 'Type your username here',
+                    'placeholder' => 'Type your new username here',
                 ],
             ])
-            ->add('_password', PasswordType::class, [
+            ->add('password', PasswordType::class, [
                 'attr' => [
-                    'name' => '_password',
-                    'placeholder' => 'Type your password here',
+                    'placeholder' => 'Type your new password here',
                 ],
             ])
+            ->add('confirm_password', PasswordType::class, [
+                'attr' => [
+                    'placeholder' => 'Type your new password again',
+                ],
+            ])
+            ->add('user_id', HiddenType::class)
             ->add('submit', SubmitType::class, [
                 'attr' => [
                     'class' => 'btn btn-lg btn-success btn-block',
