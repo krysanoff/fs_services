@@ -1,0 +1,22 @@
+.user {
+    margin: auto;
+    max-width: 25rem;
+}
+
+.user__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+    border-bottom: 1px solid $dark1;
+}
+
+.user__name {
+    width: 15rem;
+}
+
+.user_add, .user__del {
+    margin: 3rem auto 0;
+    text-align: center;
+}

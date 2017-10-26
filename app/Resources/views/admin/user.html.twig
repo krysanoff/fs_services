@@ -4,7 +4,8 @@
 {% block content %}
 
     {% if user %}
-        <div class="user col-lg-6">
+        <h2 class="content_title">Change account data</h2>
+        <div class="user">
             {{ include('flash-messages.html.twig') }}
 
             {{ form_start(form, {'name': 'user_editor', 'method': 'post', 'attr': { 'autocomplete': 'off' } }) }}
@@ -17,11 +18,13 @@
             {{ form_row(form.user_id, { 'value': user.id }) }}
 
             {{ form_end(form) }}
+
+            <div class="user_del">
+                <a href="{{ path('admin_user_delete', {'user': user.id}) }}" class="user__action btn btn-block btn-lg btn-danger"><span class="glyphicon glyphicon-remove"></span> DELETE</a>
+            </div>
         </div>
 
-        <div class="user__actions">
-            <a href="{{ path('admin_user_delete', {'user': user.id}) }}" class="user__action btn btn-default"><span class="glyphicon glyphicon-remove"></span> DELETE</a>
-        </div>
+
     {% else %}
         <div class="caveat alert-warning">
             <p>Пользователь с данным id не найден.</p>

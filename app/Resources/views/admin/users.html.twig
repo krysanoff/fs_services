@@ -2,24 +2,23 @@
 {% block title %}Content manager page || Users{% endblock %}
 
 {% block content %}
-
+    <h2 class="content_title">Список учетных записей администраторов</h2>
     {{ include('flash-messages.html.twig') }}
-    <div class="users col-lg-8">
-        <ul class="user">
+    <div class="users">
+        <ul class="user list-unstyled">
             {% for user in users %}
                 <li class="user__item">
-                    <div class="user__name">{{ user.username }}</div>
+                    <div class="user__name"><span class="glyphicon glyphicon-user"></span> {{ user.username }}</div>
                     <div class="user__actions">
                         <a href="{{ path('admin_user', {'user': user.id}) }}" class="user__action"><span class="glyphicon glyphicon-pencil"></span></a>
                         <a href="{{ path('admin_user_delete', {'user': user.id}) }}" class="user__action"><span class="glyphicon glyphicon-remove"></span></a>
                     </div>
                 </li>
             {% endfor %}
+            <div class="user_add">
+                <a href="{{ path('admin_user_add') }}" class="user__actions btn btn-block btn-lg btn-success"><span class="glyphicon glyphicon-plus"></span> Add user</a>
+            </div>
         </ul>
     </div>
-    <div class="user_add">
-        <a href="{{ path('admin_user_add') }}" class="user__actions btn btn-default"><span class="glyphicon glyphicon-plus"></span> Add user</a>
-    </div>
-
 
 {% endblock %}

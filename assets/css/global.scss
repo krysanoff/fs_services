@@ -1,8 +1,9 @@
 @import "helpers/variables";
 
-@import "imports/basics";
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+@import "imports/basics";
 @import "imports/header";
 @import "imports/footer";
 @import "imports/signin";
 @import "imports/navy";
+@import "imports/user";

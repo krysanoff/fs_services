@@ -2,8 +2,8 @@
 {% block title %}Content manager page || Users{% endblock %}
 
 {% block content %}
-
-    <div class="user col-lg-6">
+    <h2 class="content_title">New administrator account</h2>
+    <div class="user">
         {{ include('flash-messages.html.twig') }}
 
         {{ form_start(form, {'name': 'new_user', 'method': 'post', 'attr': { 'autocomplete': 'off' } }) }}

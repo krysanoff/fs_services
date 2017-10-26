@@ -8,11 +8,21 @@ body.inner_mod{
 }
 
 .wrapper {
-    padding: 2rem;
+    position: relative;
+    height: auto !important;
+    overflow: hidden;
+    padding-bottom: $footer-height;
 }
 
 .container {
+    min-height: 70vh;
+    padding: 0 2rem;
     background: $light_bg;
     overflow: hidden;
+}
+
+.content_title {
+    text-align: center;
+    margin-bottom: 2rem;
 }
 

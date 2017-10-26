@@ -11,14 +11,17 @@
 
                 {{ include('admin/blocks/nav.html.twig') }}
 
-                <div class="container">
+                <div class="container col-lg-9 clearfix">
                     {% block content %}{% endblock %}
                 </div>
 
             </div>
+
+            {{ include('admin/blocks/footer.html.twig') }}
+
         </div>
 
-        {{ include('admin/blocks/footer.html.twig') }}
+
 
         {% block javascripts %}{% endblock %}
 
