@@ -6,6 +6,7 @@ namespace AppBundle\Controller\Admin;
 
 use AppBundle\AppBundle;
 use AppBundle\Entity\User;
+use AppBundle\Form\UserCreateFormType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
@@ -61,16 +62,19 @@ class UserController extends Controller
     }
 
     /**
-     * @Route("/admin/user/", name="admin_user_create")
-     *
-     * @Method("POST")
+     * @Route("/admin/user/new", name="admin_user_add")
      *
      * @return string
      */
-    public function createAction()
+    public function addAction()
     {
+        $form = $this->createForm(UserCreateFormType::class, null, [
+            'action' => $this->generateUrl('admin_user_create'),
+        ]);
 
-        return $this->render('admin/user.html.twig');
+        return $this->render('admin/new_user.html.twig', [
+            'form' => $form->createView(),
+        ]);
     }
 
     /**
@@ -118,7 +122,7 @@ class UserController extends Controller
 
         if (!$form->isSubmitted() ||  !$form->isValid()) {
             $this->addFlash('error', 'There are some errors');
-            return $this->redirectToRoute('admin_users_page');
+            return $this->redirect($request->headers->get('referer'));
         }
 
         $formData = $form->getData();
@@ -134,6 +138,45 @@ class UserController extends Controller
         $em->flush();
 
         $this->addFlash('success', 'User\'s data has successfully updated');
+
+        return $this->redirectToRoute('admin_users_page');
+    }
+
+    /**
+     * @param Request $request
+     *
+     * @Route("/update/user/create", name="admin_user_create")
+     *
+     * @Method("POST")
+     *
+     * @return string
+     */
+    public function createAction(Request $request)
+    {
+        $form = $this->createForm(UserCreateFormType::class, null, [
+            'action' => $this->generateUrl('admin_user_create'),
+        ]);
+
+        $form->handleRequest($request);
+
+        if (!$form->isSubmitted() ||  !$form->isValid()) {
+            $this->addFlash('error', 'There are some errors');
+            return $this->redirect($request->headers->get('referer'));
+        }
+
+        $formData = $form->getData();
+        dump($formData);
+
+        $em = $this->getDoctrine()->getManager();
+
+        $user = new User();
+        $user->setUsername($formData['username']);
+        $user->setPassword($formData['password']);
+
+        $em->persist($user);
+        $em->flush();
+
+        $this->addFlash('success', 'User\'s data has successfully created');
 
         return $this->redirectToRoute('admin_users_page');
     }

@@ -5,21 +5,25 @@
 
     {% if user %}
         <div class="user col-lg-6">
+            {{ include('flash-messages.html.twig') }}
+
             {{ form_start(form, {'name': 'user_editor', 'method': 'post', 'attr': { 'autocomplete': 'off' } }) }}
+
+            {{ form_errors(form.username) }}
+            {{ form_errors(form.password) }}
 
             {{ form_row(form.username, { 'value': user.username }) }}
             {{ form_row(form.password) }}
-            {{ form_row(form.confirm_password) }}
             {{ form_row(form.user_id, { 'value': user.id }) }}
 
             {{ form_end(form) }}
         </div>
 
         <div class="user__actions">
-            <a href="{{ path('admin_user_delete', {'user': user.id}) }}" class="user__action"><span class="glyphicon glyphicon-remove"></span> DELETE</a>
+            <a href="{{ path('admin_user_delete', {'user': user.id}) }}" class="user__action btn btn-default"><span class="glyphicon glyphicon-remove"></span> DELETE</a>
         </div>
     {% else %}
-        <div class="caveat">
+        <div class="caveat alert-warning">
             <p>Пользователь с данным id не найден.</p>
             <p>Посмотреть список всех пользователей можно на этой
                 <a href="{{ path('admin_users_page') }}">странице</a></p>

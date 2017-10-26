@@ -1,0 +1,21 @@
+{% extends '::base_admin.html.twig' %}
+{% block title %}Content manager page || Users{% endblock %}
+
+{% block content %}
+
+    <div class="user col-lg-6">
+        {{ include('flash-messages.html.twig') }}
+
+        {{ form_start(form, {'name': 'new_user', 'method': 'post', 'attr': { 'autocomplete': 'off' } }) }}
+
+        {{ form_row(form.username) }}
+        {{ form_row(form.password) }}
+
+        {{ form_end(form) }}
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+
+{% endblock %}

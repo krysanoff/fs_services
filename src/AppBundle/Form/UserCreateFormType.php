@@ -17,7 +17,7 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 /**
  * Form class
  */
-class UserFormType extends AbstractType
+class UserCreateFormType extends AbstractType
 {
 
     /**
@@ -30,7 +30,7 @@ class UserFormType extends AbstractType
             ->add('username', TextType::class, [
                 'label' => 'Your username',
                 'attr' => [
-                    'placeholder' => 'Type your new username here',
+                    'placeholder' => 'Type your username here',
                 ],
             ])
             ->add('password', RepeatedType::class, [
@@ -38,16 +38,16 @@ class UserFormType extends AbstractType
                 'invalid_message' => 'The passwords must match',
                 'first_name' => 'password',
                 'first_options' => [
-                    'label' => 'New password',
+                    'label' => 'Your password',
                     'attr' => [
-                        'placeholder' => 'Type your new password here',
+                        'placeholder' => 'Type your password here',
                     ],
                 ],
                 'second_name' => 'confirm_password',
                 'second_options' => [
                     'label' => 'Confirm password',
                     'attr' => [
-                        'placeholder' => 'Type your new password again',
+                        'placeholder' => 'Type your password again',
                     ],
                 ],
             ])

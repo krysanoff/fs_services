@@ -4,15 +4,22 @@
 {% block content %}
 
     {{ include('flash-messages.html.twig') }}
+    <div class="users col-lg-8">
+        <ul class="user">
+            {% for user in users %}
+                <li class="user__item">
+                    <div class="user__name">{{ user.username }}</div>
+                    <div class="user__actions">
+                        <a href="{{ path('admin_user', {'user': user.id}) }}" class="user__action"><span class="glyphicon glyphicon-pencil"></span></a>
+                        <a href="{{ path('admin_user_delete', {'user': user.id}) }}" class="user__action"><span class="glyphicon glyphicon-remove"></span></a>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="user_add">
+        <a href="{{ path('admin_user_add') }}" class="user__actions btn btn-default"><span class="glyphicon glyphicon-plus"></span> Add user</a>
+    </div>
 
-    {% for user in users %}
-        <li class="user__item">
-            <div class="user__name">{{ user.username }}</div>
-            <div class="user__actions">
-                <a href="{{ path('admin_user', {'user': user.id}) }}" class="user__action"><span class="glyphicon glyphicon-pencil"></span></a>
-                <a href="{{ path('admin_user_delete', {'user': user.id}) }}" class="user__action"><span class="glyphicon glyphicon-remove"></span></a>
-            </div>
-        </li>
-    {% endfor %}
 
 {% endblock %}

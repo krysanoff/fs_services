@@ -132,11 +132,11 @@ class User implements UserInterface, \Serializable
     public function getRoles()
     {
         $rolesArray = $this->roles->toArray();
+        dump($this->roles);
 
         if (count($rolesArray)) {
             foreach ($rolesArray as $role)
             {
-                dump($role);
                 $roles[] = $role->getRole();
             }
         }
@@ -146,6 +146,18 @@ class User implements UserInterface, \Serializable
         }
 
         return array_unique($roles);
+    }
+
+    /**
+     * Sets the roles granted to the user.
+     *
+     * @return $this
+     */
+    public function setRoles(array $roles)
+    {
+        $this->roles = $roles;
+
+        return $this;
     }
 
     /**
