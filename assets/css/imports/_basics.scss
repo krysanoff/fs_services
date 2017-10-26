@@ -1,0 +1,18 @@
+html {
+    height: 100%;
+    font: 400 10px/1.33 Verdana;
+}
+
+body.inner_mod{
+    background: $dark2;
+}
+
+.wrapper {
+    padding: 2rem;
+}
+
+.container {
+    background: $light_bg;
+    overflow: hidden;
+}
+

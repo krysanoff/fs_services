@@ -1,0 +1,12 @@
+.navy{
+    padding: 1rem 2rem;
+    background-color: $dark2;
+}
+
+.navy__link {
+    color: white;
+
+    &:hover {
+        color: $dark2;
+    }
+}

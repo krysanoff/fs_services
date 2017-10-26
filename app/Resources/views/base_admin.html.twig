@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-        <link rel="stylesheet" href="{{ asset('build/global.css') }}">
-        <script src="{{ asset('build/app.js') }}"></script>
-    </head>
-    <body>
+    {{ include('admin/blocks/head.html.twig') }}
 
-        {% block body %}{% endblock %}
+    <body class="inner_mod">
+
+        {{ include('admin/blocks/header.html.twig') }}
+
+        <div class="wrapper">
+            <div class="base">
+
+                {{ include('admin/blocks/nav.html.twig') }}
+
+                <div class="container">
+                    {% block content %}{% endblock %}
+                </div>
+
+            </div>
+        </div>
+
+        {{ include('admin/blocks/footer.html.twig') }}
+
         {% block javascripts %}{% endblock %}
+
     </body>
 </html>

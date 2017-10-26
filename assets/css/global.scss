@@ -1,6 +1,8 @@
-@import "signin";
-@import '~bootstrap-sass/assets/stylesheets/bootstrap';
+@import "helpers/variables";
 
-body {
-	background-color: azure;
-}
+@import "imports/basics";
+@import '~bootstrap-sass/assets/stylesheets/bootstrap';
+@import "imports/header";
+@import "imports/footer";
+@import "imports/signin";
+@import "imports/navy";
