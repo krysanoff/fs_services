@@ -39,7 +39,7 @@ class Role implements RoleHierarchyInterface
     private $role;
 
     /**
-     * @ORM\ManyToMany(targetEntity="User", mappedBy="roles")
+     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\User", mappedBy="role")
      */
     private $users;
 
@@ -108,5 +108,14 @@ class Role implements RoleHierarchyInterface
     public function getReachableRoles(array $roles)
     {
         // TODO: Implement getReachableRoles() method.
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function __toString()
+    {
+        return (string) $this->getName();
+
     }
 }

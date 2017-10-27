@@ -164,7 +164,7 @@ class UserController extends Controller
             return $this->redirect($request->headers->get('referer'));
         }
 
-        $formData = $form->getData();
+        $formData = $form->getNormData();
         dump($formData);
 
         $em = $this->getDoctrine()->getManager();
@@ -172,6 +172,7 @@ class UserController extends Controller
         $user = new User();
         $user->setUsername($formData['username']);
         $user->setPassword($formData['password']);
+        $user->setRole($formData['role_id']);
 
         $em->persist($user);
         $em->flush();

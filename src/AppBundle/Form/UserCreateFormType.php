@@ -5,6 +5,8 @@
 
 namespace AppBundle\Form;
 
+use AppBundle\Entity\Role;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
@@ -52,6 +54,12 @@ class UserCreateFormType extends AbstractType
                 ],
             ])
             ->add('user_id', HiddenType::class)
+            ->add('role_id', EntityType::class, [
+                'class' => Role::class,
+                'attr' => [
+                    'value' => 1
+                ],
+            ])
             ->add('submit', SubmitType::class, [
                 'attr' => [
                     'class' => 'btn btn-lg btn-success btn-block',

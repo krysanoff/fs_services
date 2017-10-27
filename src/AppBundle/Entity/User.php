@@ -43,10 +43,9 @@ class User implements UserInterface, \Serializable
     /**
      * @var ArrayCollection
      *
-     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Role", inversedBy="users", fetch="EAGER")
+     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Role", inversedBy="users", fetch="LAZY")
      * @ORM\JoinTable(name="user_role", joinColumns={@ORM\JoinColumn(name="user_id", referencedColumnName="id")},
      *      inverseJoinColumns={@ORM\JoinColumn(name="role_id", referencedColumnName="id")})
-     *
      */
     private $roles;
 
@@ -153,9 +152,22 @@ class User implements UserInterface, \Serializable
      *
      * @return $this
      */
-    public function setRoles(array $roles)
+    public function setRole(Role $role)
     {
-        $this->roles = $roles;
+        //$this->roles[] = new ArrayCollection($roles);
+
+        //$rolesArray = $this->roles->toArray();
+
+//        if (count($roles)) {
+//            foreach ($roles as $role)
+//            {
+//                dump($role);
+//                $roles[] = $role->current();
+//
+//            }
+//        }
+//        dump($roles);
+        $this->roles[] = $role;
 
         return $this;
     }
