@@ -39,7 +39,7 @@ class Role implements RoleHierarchyInterface
     private $role;
 
     /**
-     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\User", mappedBy="role")
+     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\User", mappedBy="roles")
      */
     private $users;
 

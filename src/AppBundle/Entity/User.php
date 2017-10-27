@@ -43,7 +43,7 @@ class User implements UserInterface, \Serializable
     /**
      * @var ArrayCollection
      *
-     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Role", inversedBy="users", fetch="LAZY")
+     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Role", inversedBy="users", fetch="EAGER")
      * @ORM\JoinTable(name="user_role", joinColumns={@ORM\JoinColumn(name="user_id", referencedColumnName="id")},
      *      inverseJoinColumns={@ORM\JoinColumn(name="role_id", referencedColumnName="id")})
      */

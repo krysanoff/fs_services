@@ -4,7 +4,6 @@
  */
 namespace AppBundle\Controller\Admin;
 
-use AppBundle\AppBundle;
 use AppBundle\Entity\User;
 use AppBundle\Form\UserCreateFormType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
@@ -12,9 +11,8 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
-use Doctrine\ORM\EntityManager;
 use AppBundle\Form\UserFormType;
-use Twig\Tests\EnvironmentTest\Extension;
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 /**
  * Admin page controller
@@ -112,7 +110,7 @@ class UserController extends Controller
      *
      * @return string
      */
-    public function updateAction(Request $request)
+    public function updateAction(Request $request, UserPasswordEncoderInterface $encoder)
     {
         $form = $this->createForm(UserFormType::class, null, [
             'action' => $this->generateUrl('update_user'),
@@ -126,13 +124,12 @@ class UserController extends Controller
         }
 
         $formData = $form->getData();
-        dump($formData);
 
         $em = $this->getDoctrine()->getManager();
 
         $user = $em->find(User::class, $formData['user_id']);
         $user->setUsername($formData['username']);
-        $user->setPassword($formData['password']);
+        $user->setPassword($encoder->encodePassword($user, $formData['password']));
 
         $em->persist($user);
         $em->flush();
@@ -151,7 +148,7 @@ class UserController extends Controller
      *
      * @return string
      */
-    public function createAction(Request $request)
+    public function createAction(Request $request, UserPasswordEncoderInterface $encoder)
     {
         $form = $this->createForm(UserCreateFormType::class, null, [
             'action' => $this->generateUrl('admin_user_create'),
@@ -171,7 +168,7 @@ class UserController extends Controller
 
         $user = new User();
         $user->setUsername($formData['username']);
-        $user->setPassword($formData['password']);
+        $user->setPassword($encoder->encodePassword($user, $formData['password']));
         $user->setRole($formData['role_id']);
 
         $em->persist($user);
