@@ -9,7 +9,7 @@ use AppBundle\Entity\Employee;
 use AppBundle\Entity\Position;
 use AppBundle\Entity\Rank;
 use AppBundle\Entity\Shift;
-use Doctrine\ORM\Mapping\Id;
+use Doctrine\ORM\EntityRepository;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\HiddenType;
@@ -51,10 +51,18 @@ class EmployeeFormType extends AbstractType
             ])
             ->add('position', EntityType::class, [
                 'class' => Position::class,
+                'query_builder' => function (EntityRepository $er) {
+                    return $er->createQueryBuilder('p')
+                        ->orderBy('p.id', 'ASC');
+                },
                 'label' => 'Должность',
             ])
             ->add('rank', EntityType::class, [
                 'class' => Rank::class,
+                'query_builder' => function (EntityRepository $er) {
+                    return $er->createQueryBuilder('r')
+                        ->orderBy('r.id', 'ASC');
+                },
                 'label' => 'Звание',
             ])
             ->add('shift', EntityType::class, [

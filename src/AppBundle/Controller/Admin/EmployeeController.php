@@ -5,7 +5,6 @@
 namespace AppBundle\Controller\Admin;
 
 use AppBundle\Entity\Employee;
-use AppBundle\Form\EmployeeCreateFormType;
 //use AppBundle\Service\FileUploader;
 use AppBundle\Form\EmployeeFormType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
@@ -68,7 +67,7 @@ class EmployeeController extends Controller
      */
     public function addAction()
     {
-        $form = $this->createForm(EmployeeCreateFormType::class, null, [
+        $form = $this->createForm(EmployeeFormType::class, null, [
             'action' => $this->generateUrl('admin_employee_create'),
         ]);
 
@@ -157,7 +156,7 @@ class EmployeeController extends Controller
      */
     public function createAction(Request $request)
     {
-        $form = $this->createForm(EmployeeCreateFormType::class, null, [
+        $form = $this->createForm(EmployeeFormType::class, null, [
             'action' => $this->generateUrl('admin_employee_create'),
         ]);
 
