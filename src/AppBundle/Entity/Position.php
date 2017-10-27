@@ -1,4 +1,7 @@
 <?php
+/**
+ * @license MIT
+ */
 
 namespace AppBundle\Entity;
 
@@ -32,10 +35,11 @@ class Position
     /**
      * @ORM\OneToMany(targetEntity="AppBundle\Entity\Employee", mappedBy="position")
      */
-    private $users;
+    private $employees;
 
-    public function __construct() {
-        $this->users = new ArrayCollection();
+    public function __construct()
+    {
+        $this->employees = new ArrayCollection();
     }
 
     /**
@@ -70,6 +74,15 @@ class Position
     public function getTitle()
     {
         return $this->title;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function __toString()
+    {
+        return (string) $this->getTitle();
+
     }
 }
 

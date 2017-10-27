@@ -5,16 +5,16 @@
 
 namespace AppBundle\Entity;
 
-use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Rank
+ * Shift
  *
- * @ORM\Table(name="rank")
- * @ORM\Entity(repositoryClass="AppBundle\Repository\RankRepository")
+ * @ORM\Table(name="shift")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\ShiftRepository")
  */
-class Rank
+class Shift
 {
     /**
      * @var int
@@ -28,12 +28,12 @@ class Rank
     /**
      * @var string
      *
-     * @ORM\Column(name="title", type="string", length=20, unique=true)
+     * @ORM\Column(name="title", type="string", length=15, unique=true)
      */
     private $title;
 
     /**
-     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Employee", mappedBy="rank")
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Employee", mappedBy="shift")
      */
     private $employees;
 
@@ -41,6 +41,7 @@ class Rank
     {
         $this->employees = new ArrayCollection();
     }
+
 
     /**
      * Get id
@@ -57,7 +58,7 @@ class Rank
      *
      * @param string $title
      *
-     * @return Rank
+     * @return Shift
      */
     public function setTitle($title)
     {
@@ -82,7 +83,6 @@ class Rank
     public function __toString()
     {
         return (string) $this->getTitle();
-
     }
 }
 

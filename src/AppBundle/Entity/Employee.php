@@ -52,13 +52,6 @@ class Employee
     /**
      * @var int
      *
-     * @ORM\Column(name="shift", type="smallint")
-     */
-    private $shift;
-
-    /**
-     * @var ArrayCollection
-     *
      * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Position", inversedBy="employees")
      * @ORM\JoinColumn(name="position_id", referencedColumnName="id")
      *
@@ -66,13 +59,22 @@ class Employee
     private $position;
 
     /**
-     * @var ArrayCollection
+     * @var int
      *
      * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Rank", inversedBy="employees")
      * @ORM\JoinColumn(name="rank_id", referencedColumnName="id")
      *
      */
     private $rank;
+
+    /**
+     * @var int
+     *
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Shift", inversedBy="employees")
+     * @ORM\JoinColumn(name="shift_id", referencedColumnName="id")
+     *
+     */
+    private $shift;
 
     /**
      * Get id
