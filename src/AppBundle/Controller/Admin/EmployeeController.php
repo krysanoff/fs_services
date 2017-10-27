@@ -4,7 +4,9 @@
  */
 namespace AppBundle\Controller\Admin;
 
+use AppBundle\Entity\Employee;
 use AppBundle\Form\EmployeeCreateFormType;
+use AppBundle\Service\FileUploader;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
@@ -59,14 +61,14 @@ class EmployeeController extends Controller
     }
 
     /**
-     * @Route("/admin/employee/new", name="admin_employee_add")
+     * @Route("/admin/employee/new", name="admin_employee_new")
      *
      * @return string
      */
     public function addAction()
     {
         $form = $this->createForm(EmployeeCreateFormType::class, null, [
-            'action' => $this->generateUrl('admin_employee_add'),
+            'action' => $this->generateUrl('admin_employee_create'),
         ]);
 
         return $this->render('admin/new_employee.html.twig', [
@@ -141,16 +143,16 @@ class EmployeeController extends Controller
     /**
      * @param Request $request
      *
-     * @Route("/update/user/create", name="admin_user_create")
+     * @Route("/update/employee/create", name="admin_employee_create")
      *
      * @Method("POST")
      *
      * @return string
      */
-    public function createAction(Request $request, UserPasswordEncoderInterface $encoder)
+    public function createAction(Request $request, FileUploader $fileUploader)
     {
-        $form = $this->createForm(UserCreateFormType::class, null, [
-            'action' => $this->generateUrl('admin_user_create'),
+        $form = $this->createForm(EmployeeCreateFormType::class, null, [
+            'action' => $this->generateUrl('admin_employee_create'),
         ]);
 
         $form->handleRequest($request);
@@ -160,21 +162,26 @@ class EmployeeController extends Controller
             return $this->redirect($request->headers->get('referer'));
         }
 
-        $formData = $form->getNormData();
-        dump($formData);
+        $formData = $form->getData();
 
         $em = $this->getDoctrine()->getManager();
+        dump($formData);
+        $employee = new Employee();
+        $employee->setLastname($formData->getLastname());
+        $employee->setFirstname($formData->getFirstname());
+        $employee->setMiddlename($formData->getMiddlename());
+        $employee->setPosition($formData->getPosition());
+        $employee->setRank($formData->getRank());
+        $employee->setShift($formData->getShift());
 
-        $user = new User();
-        $user->setUsername($formData['username']);
-        $user->setPassword($encoder->encodePassword($user, $formData['password']));
-        $user->setRole($formData['role_id']);
+        $imageName = $fileUploader->upload($formData->getImage());
+        $employee->setImage($imageName);
 
-        $em->persist($user);
+        $em->persist($employee);
         $em->flush();
 
-        $this->addFlash('success', 'User\'s data has successfully created');
+        $this->addFlash('success', 'New employee has successfully created');
 
-        return $this->redirectToRoute('admin_users_page');
+        return $this->redirectToRoute('admin_employees_page');
     }
 }

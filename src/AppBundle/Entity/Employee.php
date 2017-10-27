@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * @license MIT
+ */
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
@@ -45,7 +47,7 @@ class Employee
     /**
      * @var string
      *
-     * @ORM\Column(name="image", type="string", length=255, unique=true)
+     * @ORM\Column(name="image", type="string", length=255, unique=true, nullable=true)
      */
     private $image;
 
@@ -205,5 +207,52 @@ class Employee
     {
         return $this->shift;
     }
-}
 
+    /**
+     * Set position
+     *
+     * @param string $position
+     *
+     * @return Employee
+     */
+    public function setPosition($position)
+    {
+        $this->position = $position;
+
+        return $this;
+    }
+
+    /**
+     * Get $this->position
+     *
+     * @return string
+     */
+    public function getPosition()
+    {
+        return $this->position;
+    }
+
+    /**
+     * Set $this->rank
+     *
+     * @param string $rank
+     *
+     * @return Employee
+     */
+    public function setRank($rank)
+    {
+        $this->rank = $rank;
+
+        return $this;
+    }
+
+    /**
+     * Get $this->rank
+     *
+     * @return string
+     */
+    public function getRank()
+    {
+        return $this->rank;
+    }
+}

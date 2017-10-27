@@ -5,6 +5,7 @@
 
 namespace AppBundle\Form;
 
+use AppBundle\Entity\Employee;
 use AppBundle\Entity\Position;
 use AppBundle\Entity\Rank;
 use AppBundle\Entity\Shift;
@@ -59,7 +60,10 @@ class EmployeeCreateFormType extends AbstractType
                 'class' => Shift::class,
                 'label' => 'Караул',
             ])
-            ->add('image', FileType::class)
+            ->add('image', FileType::class, [
+                'required' => false,
+                'label' => 'Фотография',
+            ])
             ->add('submit', SubmitType::class, [
                 'attr' => [
                     'class' => 'btn btn-lg btn-success btn-block',
@@ -72,7 +76,9 @@ class EmployeeCreateFormType extends AbstractType
      */
     public function configureOptions(OptionsResolver $resolver)
     {
-        return;
+        $resolver->setDefaults(array(
+            'data_class' => Employee::class,
+        ));
     }
 
     /**
