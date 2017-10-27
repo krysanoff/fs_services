@@ -1,0 +1,41 @@
+{% extends '::base_admin.html.twig' %}
+{% block title %}Content manager page || Employee{% endblock %}
+
+{% block content %}
+
+    {% if employee %}
+        <h2 class="content_title">Change employee data</h2>
+        <div class="user">
+            {{ include('flash-messages.html.twig') }}
+
+            {{ form_start(form, {'name': 'employee_editor', 'method': 'post', 'attr': { 'autocomplete': 'off' } }) }}
+
+            {{ form_row(form.lastname, { 'value': employee.lastname }) }}
+            {{ form_row(form.firstname, { 'value': employee.firstname }) }}
+            {{ form_row(form.middlename, { 'value': employee.middlename }) }}
+            {{ form_row(form.position, { 'value': employee.position }) }}
+            {{ form_row(form.rank, { 'value': employee.rank }) }}
+            {{ form_row(form.shift, { 'value': employee.shift }) }}
+            {{ form_row(form.id, { 'value': employee.id }) }}
+
+            {{ form_end(form) }}
+
+            <div class="user_del">
+                <a href="{{ path('admin_user_delete', {'user': employee.id}) }}" class="user__action btn btn-block btn-lg btn-danger"><span class="glyphicon glyphicon-remove"></span> DELETE</a>
+            </div>
+        </div>
+
+
+    {% else %}
+        <div class="caveat alert-warning">
+            <p>Пользователь с данным id не найден.</p>
+            <p>Посмотреть список всех пользователей можно на этой
+                <a href="{{ path('admin_users_page') }}">странице</a></p>
+        </div>
+    {% endif %}
+
+{% endblock %}
+
+{% block javascripts %}
+
+{% endblock %}

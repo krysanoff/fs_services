@@ -7,6 +7,7 @@ namespace AppBundle\Controller\Admin;
 use AppBundle\Entity\Employee;
 use AppBundle\Form\EmployeeCreateFormType;
 //use AppBundle\Service\FileUploader;
+use AppBundle\Form\EmployeeFormType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
@@ -38,24 +39,24 @@ class EmployeeController extends Controller
     }
 
     /**
-     * @Route("/admin/user/{user}", name="admin_user", requirements={"user": "\d+"})
+     * @Route("/admin/employee/{employee}", name="admin_employee", requirements={"employee": "\d+"})
      *
      * @return string
      */
-    public function editAction($user)
+    public function editAction($employee)
     {
         $em = $this->getDoctrine()
-            ->getRepository('AppBundle:User');
-        $editingUser = $em->find($user);
+            ->getRepository('AppBundle:Employee');
+        $editingEmployee = $em->find($employee);
 
-        $form = $this->createForm(UserFormType::class, null, [
-            'action' => $this->generateUrl('update_user', [
-                'user' => $user,
+        $form = $this->createForm(EmployeeFormType::class, null, [
+            'action' => $this->generateUrl('update_employee', [
+                'employee' => $editingEmployee,
             ]),
         ]);
 
-        return $this->render('admin/user.html.twig', [
-            'user' => $editingUser,
+        return $this->render('admin/employee.html.twig', [
+            'employee' => $editingEmployee,
             'form' => $form->createView(),
         ]);
     }
@@ -77,44 +78,44 @@ class EmployeeController extends Controller
     }
 
     /**
-     * @Route("/admin/delete/user/{user}", name="admin_user_delete", requirements={"user": "\d+"})
+     * @Route("/admin/delete/employee/{employee}", name="admin_employee_delete", requirements={"employee": "\d+"})
      *
      * @return string
      */
-    public function deleteAction($user)
+    public function deleteAction($employee)
     {
-        if (!$user) {
+        if (!$employee) {
             throw new NotFoundHttpException("Page not found");
         }
 
         $em = $this->getDoctrine();
-        $deletingUser = $em->getRepository('AppBundle:User')->find($user);
+        $deletingEmployee = $em->getRepository('AppBundle:Employee')->find($employee);
 
-        if (!$deletingUser) {
+        if (!$deletingEmployee) {
             throw new NotFoundHttpException("Page not found");
         }
 
-        $em->getEntityManager()->remove($deletingUser);
+        $em->getEntityManager()->remove($deletingEmployee);
         $em->getManager()->flush();
 
-        $this->addFlash('success', 'User deleted');
+        $this->addFlash('success', 'Employee deleted');
 
-        return $this->redirectToRoute('admin_users_page');
+        return $this->redirectToRoute('admin_employees_page');
     }
 
     /**
      * @param Request $request
      *
-     * @Route("/update/user", name="update_user")
+     * @Route("/update/employee", name="update_employee")
      *
      * @Method("POST")
      *
      * @return string
      */
-    public function updateAction(Request $request, UserPasswordEncoderInterface $encoder)
+    public function updateAction(Request $request)
     {
-        $form = $this->createForm(UserFormType::class, null, [
-            'action' => $this->generateUrl('update_user'),
+        $form = $this->createForm(EmployeeFormType::class, null, [
+            'action' => $this->generateUrl('update_employee'),
         ]);
 
         $form->handleRequest($request);
@@ -125,19 +126,24 @@ class EmployeeController extends Controller
         }
 
         $formData = $form->getData();
+        dump($formData);
 
         $em = $this->getDoctrine()->getManager();
 
-        $user = $em->find(User::class, $formData['user_id']);
-        $user->setUsername($formData['username']);
-        $user->setPassword($encoder->encodePassword($user, $formData['password']));
+        $employee = $em->find(Employee::class, $formData->getId());
+        $employee->setLastname($formData->getLastname());
+        $employee->setFirstname($formData->getFirstname());
+        $employee->setMiddlename($formData->getMiddlename());
+        $employee->setPosition($formData->getPosition());
+        $employee->setRank($formData->getRank());
+        $employee->setShift($formData->getShift());
 
-        $em->persist($user);
+        $em->persist($employee);
         $em->flush();
 
-        $this->addFlash('success', 'User\'s data has successfully updated');
+        $this->addFlash('success', 'Employee\'s data has successfully updated');
 
-        return $this->redirectToRoute('admin_users_page');
+        return $this->redirectToRoute('admin_employees_page');
     }
 
     /**

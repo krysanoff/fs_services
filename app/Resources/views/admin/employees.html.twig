@@ -1,5 +1,5 @@
 {% extends '::base_admin.html.twig' %}
-{% block title %}Content manager page || Employees{% endblock %}
+{% block title %}Content employeeager page || Employees{% endblock %}
 
 {% block content %}
     <div class="content">
@@ -7,18 +7,22 @@
             <h2 class="content_title">Список сотрудников</h2>
             {{ include('flash-messages.html.twig') }}
             <ul class="employee content__list">
-                {% for man in employees %}
+                {% for employee in employees %}
                     <li class="employee__item">
                         <div class="employee__icon">
                             <span class="glyphicon glyphicon-user"></span>
                         </div>
                         <div class="employee__data">
                             <div class="employee__name">
-                                <p>{{ man.lastname }} {{ man.firstname }} {{ man.middlename }}</p>
+                                <p>{{ employee.lastname }} {{ employee.firstname }} {{ employee.middlename }}</p>
                             </div>
                             <div class="employee__attr">
-                                <p>{{ man.position }} || {{ man.rank }} || {{ man.shift }}</p>
+                                <p>{{ employee.position }} || {{ employee.rank }} || {{ employee.shift }}</p>
                             </div>
+                        </div>
+                        <div class="user__actions">
+                            <a href="{{ path('admin_employee', {'employee': employee.id}) }}" class="user__action"><span class="glyphicon glyphicon-pencil"></span></a>
+                            <a href="{{ path('admin_employee_delete', {'employee': employee.id}) }}" class="user__action"><span class="glyphicon glyphicon-remove"></span></a>
                         </div>
                     </li>
                 {% endfor %}
