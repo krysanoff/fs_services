@@ -6,7 +6,7 @@ namespace AppBundle\Controller\Admin;
 
 use AppBundle\Entity\Employee;
 use AppBundle\Form\EmployeeCreateFormType;
-use AppBundle\Service\FileUploader;
+//use AppBundle\Service\FileUploader;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
@@ -33,7 +33,7 @@ class EmployeeController extends Controller
         $employees = $em->findAll();
 
         return $this->render('admin/employees.html.twig', [
-            'users' => $employees,
+            'employees' => $employees,
         ]);
     }
 
@@ -149,7 +149,7 @@ class EmployeeController extends Controller
      *
      * @return string
      */
-    public function createAction(Request $request, FileUploader $fileUploader)
+    public function createAction(Request $request)
     {
         $form = $this->createForm(EmployeeCreateFormType::class, null, [
             'action' => $this->generateUrl('admin_employee_create'),
@@ -174,8 +174,8 @@ class EmployeeController extends Controller
         $employee->setRank($formData->getRank());
         $employee->setShift($formData->getShift());
 
-        $imageName = $fileUploader->upload($formData->getImage());
-        $employee->setImage($imageName);
+        //$imageName = $fileUploader->upload($formData->getImage());
+        //$employee->setImage($imageName);
 
         $em->persist($employee);
         $em->flush();

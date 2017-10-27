@@ -2,13 +2,35 @@
 {% block title %}Content manager page || Employees{% endblock %}
 
 {% block content %}
-    <h2 class="content_title">Список сотрудников</h2>
-    {{ include('flash-messages.html.twig') }}
-    <div class="user_add">
-        <a href="{{ path('admin_employee_new') }}" class="user__actions btn btn-block btn-lg btn-success">
-            <span class="glyphicon glyphicon-plus"></span>
-            New employee
-        </a>
+    <div class="content">
+        {% if employees %}
+            <h2 class="content_title">Список сотрудников</h2>
+            {{ include('flash-messages.html.twig') }}
+            <ul class="employee content__list">
+                {% for man in employees %}
+                    <li class="employee__item">
+                        <div class="employee__icon">
+                            <span class="glyphicon glyphicon-user"></span>
+                        </div>
+                        <div class="employee__data">
+                            <div class="employee__name">
+                                <p>{{ man.lastname }} {{ man.firstname }} {{ man.middlename }}</p>
+                            </div>
+                            <div class="employee__attr">
+                                <p>{{ man.position }} || {{ man.rank }} || {{ man.shift }}</p>
+                            </div>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+            <div class="user_add">
+                <a href="{{ path('admin_employee_new') }}" class="user__actions btn btn-block btn-lg btn-success">
+                    <span class="glyphicon glyphicon-plus"></span>
+                    New employee
+                </a>
+            </div>
+        {% endif %}
     </div>
+
 
 {% endblock %}

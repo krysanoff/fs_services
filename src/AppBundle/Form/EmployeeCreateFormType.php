@@ -60,10 +60,10 @@ class EmployeeCreateFormType extends AbstractType
                 'class' => Shift::class,
                 'label' => 'Караул',
             ])
-            ->add('image', FileType::class, [
+            /*->add('image', FileType::class, [
                 'required' => false,
                 'label' => 'Фотография',
-            ])
+            ])*/
             ->add('submit', SubmitType::class, [
                 'attr' => [
                     'class' => 'btn btn-lg btn-success btn-block',
