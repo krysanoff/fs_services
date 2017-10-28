@@ -14,7 +14,7 @@ Encore
     .addEntry('app', './assets/js/main.js')
 
     // will output as web/build/global.css
-    .addStyleEntry('global', './assets/css/global.scss')
+    .addStyleEntry('global', './assets/css/global.sass')
 
     // allow sass/scss files to be processed
     .enableSassLoader()
