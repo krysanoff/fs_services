@@ -8,6 +8,7 @@ namespace AppBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
+use Symfony\Component\Form\Extension\Core\Type\ResetType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -54,8 +55,13 @@ class UserFormType extends AbstractType
             ->add('user_id', HiddenType::class)
             ->add('submit', SubmitType::class, [
                 'attr' => [
-                    'class' => 'btn btn-lg btn-success btn-block',
+                    'class' => 'btn btn-primary btn-success',
                 ],
+            ])
+            ->add('cancel', ResetType::class, [
+                'attr' => [
+                    'class' => 'btn btn-default btn-reset'
+                ]
             ]);
     }
 

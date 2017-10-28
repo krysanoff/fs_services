@@ -1,37 +1,45 @@
 {% extends '::base_admin.html.twig' %}
-{% block title %}Content manager page || Users{% endblock %}
+{% block title %}Content manager page || Administrators{% endblock %}
+
+{% block pagetitle %}Administrators{% endblock %}
 
 {% block content %}
+    <div class="col-md-6">
+        <div class="card">
+            {% if user %}
+                <h3 class="card-title">Administrator /// {{ user.username|default('No such user')}}</h3>
+                <div class="card-body">
+                    {{ include('flash-messages.html.twig') }}
 
-    {% if user %}
-        <h2 class="content_title">Change account data</h2>
-        <div class="user">
-            {{ include('flash-messages.html.twig') }}
+                    {{ form_start(form, {'name': 'user_editor', 'method': 'post','attr': { 'autocomplete': 'off' } }) }}
 
-            {{ form_start(form, {'name': 'user_editor', 'method': 'post', 'attr': { 'autocomplete': 'off' } }) }}
+                    {{ form_errors(form.username) }}
+                    {{ form_errors(form.password) }}
 
-            {{ form_errors(form.username) }}
-            {{ form_errors(form.password) }}
+                    {{ form_row(form.username, { 'value': user.username }) }}
+                    {{ form_row(form.password) }}
+                    {{ form_row(form.user_id, { 'value': user.id }) }}
 
-            {{ form_row(form.username, { 'value': user.username }) }}
-            {{ form_row(form.password) }}
-            {{ form_row(form.user_id, { 'value': user.id }) }}
+                    {{ form_end(form) }}
 
-            {{ form_end(form) }}
+                    <div class="card-footer">
+                        <a href="{{ path('admin_user_delete', {'user': user.id}) }}" class="user__action btn btn-block btn-lg btn-danger">
+                            DELETE
+                        </a>
+                    </div>
+                </div>
 
-            <div class="user_del">
-                <a href="{{ path('admin_user_delete', {'user': user.id}) }}" class="user__action btn btn-block btn-lg btn-danger"><span class="glyphicon glyphicon-remove"></span> DELETE</a>
-            </div>
+
+            {% else %}
+                <div class="card-body">
+                    <p>Пользователь с данным id не найден.</p>
+                    <p>Посмотреть список всех пользователей можно на этой
+                        <a href="{{ path('admin_users_page') }}">странице</a></p>
+                </div>
+            {% endif %}
         </div>
+    </div>
 
-
-    {% else %}
-        <div class="caveat alert-warning">
-            <p>Пользователь с данным id не найден.</p>
-            <p>Посмотреть список всех пользователей можно на этой
-                <a href="{{ path('admin_users_page') }}">странице</a></p>
-        </div>
-    {% endif %}
 
 {% endblock %}
 

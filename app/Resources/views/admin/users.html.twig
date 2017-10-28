@@ -1,24 +1,47 @@
 {% extends '::base_admin.html.twig' %}
-{% block title %}Content manager page || Users{% endblock %}
+{% block title %}Content manager page || Administrators{% endblock %}
+
+{% block pagetitle %}Administrators{% endblock %}
 
 {% block content %}
-    <h2 class="content_title">Список учетных записей администраторов</h2>
-    {{ include('flash-messages.html.twig') }}
-    <div class="users">
-        <ul class="user list-unstyled">
-            {% for user in users %}
-                <li class="user__item">
-                    <div class="user__name"><span class="glyphicon glyphicon-user"></span> {{ user.username }}</div>
-                    <div class="user__actions">
-                        <a href="{{ path('admin_user', {'user': user.id}) }}" class="user__action"><span class="glyphicon glyphicon-pencil"></span></a>
-                        <a href="{{ path('admin_user_delete', {'user': user.id}) }}" class="user__action"><span class="glyphicon glyphicon-remove"></span></a>
-                    </div>
-                </li>
-            {% endfor %}
+    <div class="col-md-6">
+        <div class="card">
+            {{ include('flash-messages.html.twig') }}
+            <h3 class="card-title">Administators Table</h3>
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Username</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for user in users %}
+                    <tr>
+                        <td>{{ loop.index }}</td>
+                        <td>{{ user.username }}</td>
+                        <td>
+                            <a href="{{ path('admin_user', {'user': user.id}) }}" class="">
+                                <span class="fa fa-lg fa-edit"></span>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="{{ path('admin_user_delete', {'user': user.id}) }}" class="">
+                                <span class="fa fa-lg fa-remove"></span>
+                            </a>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+
             <div class="user_add">
                 <a href="{{ path('admin_user_add') }}" class="user__actions btn btn-block btn-lg btn-success"><span class="glyphicon glyphicon-plus"></span> Add user</a>
             </div>
-        </ul>
+        </div>
     </div>
+
 
 {% endblock %}

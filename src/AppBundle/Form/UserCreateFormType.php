@@ -62,7 +62,7 @@ class UserCreateFormType extends AbstractType
             ])
             ->add('submit', SubmitType::class, [
                 'attr' => [
-                    'class' => 'btn btn-lg btn-success btn-block',
+                    'class' => 'btn btn-lg btn-success',
                 ],
             ]);
     }
