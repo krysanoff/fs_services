@@ -12,8 +12,6 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
-use AppBundle\Form\UserFormType;
-use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 /**
  * Admin page controller
@@ -48,7 +46,7 @@ class EmployeeController extends Controller
             ->getRepository('AppBundle:Employee');
         $editingEmployee = $em->find($employee);
 
-        $form = $this->createForm(EmployeeFormType::class, null, [
+        $form = $this->createForm(EmployeeFormType::class, $editingEmployee, [
             'action' => $this->generateUrl('update_employee', [
                 'employee' => $editingEmployee,
             ]),
