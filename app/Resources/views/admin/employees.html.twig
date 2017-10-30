@@ -1,40 +1,59 @@
 {% extends '::base_admin.html.twig' %}
-{% block title %}Content employeeager page || Employees{% endblock %}
+{% block title %}Content manager page || Employees{% endblock %}
+
+{% block pagetitle %}Employees{% endblock %}
 
 {% block content %}
-    <div class="content">
         {% if employees %}
-            <h2 class="content_title">Список сотрудников</h2>
-            {{ include('flash-messages.html.twig') }}
-            <ul class="employee content__list">
-                {% for employee in employees %}
-                    <li class="employee__item">
-                        <div class="employee__icon">
-                            <span class="glyphicon glyphicon-user"></span>
-                        </div>
-                        <div class="employee__data">
-                            <div class="employee__name">
-                                <p>{{ employee.lastname }} {{ employee.firstname }} {{ employee.middlename }}</p>
-                            </div>
-                            <div class="employee__attr">
-                                <p>{{ employee.position }} || {{ employee.rank }} || {{ employee.shift }}</p>
-                            </div>
-                        </div>
-                        <div class="user__actions">
-                            <a href="{{ path('admin_employee', {'employee': employee.id}) }}" class="user__action"><span class="glyphicon glyphicon-pencil"></span></a>
-                            <a href="{{ path('admin_employee_delete', {'employee': employee.id}) }}" class="user__action"><span class="glyphicon glyphicon-remove"></span></a>
-                        </div>
-                    </li>
-                {% endfor %}
-            </ul>
-            <div class="user_add">
-                <a href="{{ path('admin_employee_new') }}" class="user__actions btn btn-block btn-lg btn-success">
-                    <span class="glyphicon glyphicon-plus"></span>
-                    New employee
-                </a>
+            <div class="col-md-9">
+                <div class="card">
+                    <h3 class="card-pagetitle">Employees Table</h3>
+                    {{ include('flash-messages.html.twig') }}
+                    <div class="card-body">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Position</th>
+                                    <th>Rank</th>
+                                    <th>Shift</th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            {% for employee in employees %}
+                                <tr>
+                                    <td>{{ employee.lastname }} {{ employee.firstname }} {{ employee.middlename }}</td>
+                                    <td>{{ employee.position }}</td>
+                                    <td>{{ employee.rank }}</td>
+                                    <td>{{ employee.shift }}</td>
+                                    <td>
+                                        <a href="{{ path('admin_employee', {'employee': employee.id}) }}">
+                                            <span class="fa fa-lg fa-edit"></span>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="{{ path('admin_employee_delete', {'employee': employee.id}) }}">
+                                            <span class="fa fa-lg fa-remove"></span>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            {% endfor %}
+                        </table>
+                    </div>
+                    <div class="card-footer">
+                        <a href="{{ path('admin_employee_new') }}" class="user__actions btn btn-block btn-lg btn-success">
+                            <span class="fa fa-lg fa-newuser"></span>
+                            New employee
+                        </a>
+                    </div>
+                </div>
             </div>
         {% endif %}
-    </div>
+{% endblock %}
 
+{% block javascripts %}
 
 {% endblock %}

@@ -1,22 +1,28 @@
 {% extends '::base_admin.html.twig' %}
-{% block title %}Content manager page || Users{% endblock %}
+{% block title %}Content manager page || Employee{% endblock %}
+
+{% block pagetitle %}New employee{% endblock %}
 
 {% block content %}
-    <h2 class="content_title">New administrator account</h2>
-    <div class="user">
-        {{ include('flash-messages.html.twig') }}
+    <div class="col-md-6">
+        <div class="card">
+            <h3 class="card-pagetitle">New employee form</h3>
+            <div class="card-body">
+                {{ include('flash-messages.html.twig') }}
 
-        {{ form_start(form, {'name': 'new_employee', 'method': 'post', 'attr': { 'autocomplete': 'off' } }) }}
+                {{ form_start(form, {'name': 'new_employee', 'method': 'post', 'attr': { 'autocomplete': 'off' } }) }}
 
-        {{ form_row(form.lastname) }}
-        {{ form_row(form.firstname) }}
-        {{ form_row(form.middlename) }}
-        {{ form_row(form.position) }}
-        {{ form_row(form.rank) }}
-        {{ form_row(form.shift) }}
-        {#{{ form_row(form.image) }}#}
+                {{ form_row(form.lastname) }}
+                {{ form_row(form.firstname) }}
+                {{ form_row(form.middlename) }}
+                {{ form_row(form.position) }}
+                {{ form_row(form.rank) }}
+                {{ form_row(form.shift) }}
+                {#{{ form_row(form.image) }}#}
 
-        {{ form_end(form) }}
+                {{ form_end(form) }}
+            </div>
+        </div>
     </div>
 
 {% endblock %}

@@ -1,38 +1,46 @@
 {% extends '::base_admin.html.twig' %}
 {% block title %}Content manager page || Employee{% endblock %}
 
+{% block pagetitle %}Employee{% endblock %}
+
 {% block content %}
+    <div class="col-md-6">
+        <div class="card">
 
-    {% if employee %}
-        <h2 class="content_title">Change employee data</h2>
-        <div class="user">
-            {{ include('flash-messages.html.twig') }}
+        {% if employee %}
+            <h3 class="card-pagetitle">Employee Form</h3>
 
-            {{ form_start(form, {'name': 'employee_editor', 'method': 'post', 'attr': { 'autocomplete': 'off' } }) }}
+            <div class="card-body">
+                {{ include('flash-messages.html.twig') }}
 
-            {{ form_row(form.lastname) }}
-            {{ form_row(form.firstname) }}
-            {{ form_row(form.middlename) }}
-            {{ form_row(form.position) }}
-            {{ form_row(form.rank) }}
-            {{ form_row(form.shift) }}
-            {{ form_row(form.id) }}
+                {{ form_start(form, {'name': 'employee_editor', 'method': 'post', 'attr': { 'autocomplete': 'off' } }) }}
 
-            {{ form_end(form) }}
+                {{ form_row(form.lastname) }}
+                {{ form_row(form.firstname) }}
+                {{ form_row(form.middlename) }}
+                {{ form_row(form.position) }}
+                {{ form_row(form.rank) }}
+                {{ form_row(form.shift) }}
+                {{ form_row(form.id) }}
 
-            <div class="user_del">
-                <a href="{{ path('admin_user_delete', {'user': employee.id}) }}" class="user__action btn btn-block btn-lg btn-danger"><span class="glyphicon glyphicon-remove"></span> DELETE</a>
+                {{ form_end(form) }}
+
+                <div class="card-footer">
+                    <a href="{{ path('admin_user_delete', {'user': employee.id}) }}" class="btn btn-block btn-lg btn-danger">DELETE</a>
+                </div>
             </div>
-        </div>
 
 
-    {% else %}
-        <div class="caveat alert-warning">
-            <p>Пользователь с данным id не найден.</p>
-            <p>Посмотреть список всех пользователей можно на этой
-                <a href="{{ path('admin_users_page') }}">странице</a></p>
+        {% else %}
+            <div class="caveat alert-warning">
+                <p>Пользователь с данным id не найден.</p>
+                <p>Посмотреть список всех пользователей можно на этой
+                    <a href="{{ path('admin_users_page') }}">странице</a></p>
+            </div>
+        {% endif %}
+
         </div>
-    {% endif %}
+    </div>
 
 {% endblock %}
 
