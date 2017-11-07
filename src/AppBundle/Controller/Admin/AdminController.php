@@ -15,7 +15,8 @@ use AppBundle\Form\LoginFormType;
 class AdminController extends Controller
 {
     /**
-     * @Route("/admin", name="admin_page")
+     * @Route(
+     *     "/{_locale}/admin/", name="admin_page")
      *
      * @return string
      */

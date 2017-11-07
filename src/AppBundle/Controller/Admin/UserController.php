@@ -21,7 +21,7 @@ use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 class UserController extends Controller
 {
     /**
-     * @Route("/admin/users", name="admin_users_page")
+     * @Route("/{_locale}/admin/users", name="admin_users_page")
      *
      * @return string
      */
@@ -37,7 +37,7 @@ class UserController extends Controller
     }
 
     /**
-     * @Route("/admin/user/{user}", name="admin_user", requirements={"user": "\d+"})
+     * @Route("/{_locale}/admin/user/{user}", name="admin_user", requirements={"user": "\d+"})
      *
      * @return string
      */
@@ -60,7 +60,7 @@ class UserController extends Controller
     }
 
     /**
-     * @Route("/admin/user/new", name="admin_user_add")
+     * @Route("/{_locale}/admin/user/new", name="admin_user_add")
      *
      * @return string
      */

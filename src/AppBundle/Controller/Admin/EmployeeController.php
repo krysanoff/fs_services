@@ -20,7 +20,7 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 class EmployeeController extends Controller
 {
     /**
-     * @Route("/admin/employees", name="admin_employees_page")
+     * @Route("/{_locale}/admin/employees/", name="admin_employees_page")
      *
      * @return string
      */
@@ -36,7 +36,7 @@ class EmployeeController extends Controller
     }
 
     /**
-     * @Route("/admin/employee/{employee}", name="admin_employee", requirements={"employee": "\d+"})
+     * @Route("/{_locale}/admin/employee/{employee}", name="admin_employee", requirements={"employee": "\d+"})
      *
      * @return string
      */
@@ -59,7 +59,7 @@ class EmployeeController extends Controller
     }
 
     /**
-     * @Route("/admin/employee/new", name="admin_employee_new")
+     * @Route("/{_locale}/admin/employee/new", name="admin_employee_new")
      *
      * @return string
      */

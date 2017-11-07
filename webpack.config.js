@@ -13,8 +13,8 @@ Encore
     // will output as web/build/app.js
     .addEntry('app', './assets/js/main.js')
 
-    // will output as web/build/global.css
-    .addStyleEntry('global', './assets/css/global.sass')
+    // will output as web/build/admin.css
+    .addStyleEntry('admin', './assets/css/admin.sass')
 
     // allow sass/scss files to be processed
     .enableSassLoader()

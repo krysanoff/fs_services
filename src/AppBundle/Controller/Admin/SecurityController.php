@@ -19,7 +19,7 @@ use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 class SecurityController extends Controller
 {
     /**
-     * @Route("/login", name="login")
+     * @Route("/{_locale}/login", name="login")
      *
      * @return \Symfony\Component\HttpFoundation\Response
      */
