@@ -1,1 +1,13 @@
-hello: Привет
+nav:
+  dashboard: Главная
+  users: Администраторы сайта
+  user:
+    settings: Профиль
+  employees: Сотрудники
+  waterponds: Водоисточники
+  graphs: Графики дежурств
+  graph:
+    schemas: Схемы
+    view: Сохраненные графики
+  logout: Выход
+  login: Вход

@@ -1,12 +1,47 @@
 <ul class="sidebar-menu">
-    <li class="active"><a href="{{ path('admin_page') }}"><i class="fa fa-dashboard"></i><span>Dashboard</span></a></li>
-    <li><a href="{{ path('admin_users_page') }}"><i class="fa fa-users"></i><span>Site Admins</span></a></li>
-    <li><a href="{{ path('admin_employees_page') }}"><i class="fa fa-users"></i><span>Employees</span></a></li>
-    <li><a href="/"><i class="fa fa-database"></i><span>Waterponds</span></a></li>
-    <li class="treeview"><a href="#"><i class="fa fa-table"></i><span>Graphs</span><i class="fa fa-angle-right"></i></a>
+    <li class="active">
+        <a href="{{ path('admin_page') }}">
+            <i class="fa fa-dashboard"></i>
+            <span>{{ "nav.dashboard" | trans([], 'admin')}}</span>
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('admin_users_page') }}">
+            <i class="fa fa-users"></i>
+            <span>{{ "nav.users" | trans([], 'admin') }}</span>
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('admin_employees_page') }}">
+            <i class="fa fa-users"></i>
+            <span>{{ "nav.employees" | trans([], 'admin') }}</span>
+        </a>
+    </li>
+    <li>
+        <a href="/">
+            <i class="fa fa-database"></i>
+            <span>{{ "nav.waterponds"  | trans([], 'admin') }}</span>
+        </a>
+    </li>
+    <li class="treeview">
+        <a href="#">
+            <i class="fa fa-table"></i>
+            <span>{{ "nav.graphs"  | trans([], 'admin')}}</span>
+            <i class="fa fa-angle-right"></i>
+        </a>
         <ul class="treeview-menu">
-            <li><a href="form-components.html"><i class="fa fa-circle-o"></i> Graph Schemas</a></li>
-            <li><a href="form-custom.html"><i class="fa fa-circle-o"></i> View graphs</a></li>
+            <li>
+                <a href="form-components.html">
+                    <i class="fa fa-circle-o"></i>
+                    {{ "nav.graph.schemas"  | trans([], 'admin')}}
+                </a>
+            </li>
+            <li>
+                <a href="form-custom.html">
+                    <i class="fa fa-circle-o"></i>
+                    {{ "nav.graph.view"  | trans([], 'admin')}}
+                </a>
+            </li>
         </ul>
     </li>
 </ul>

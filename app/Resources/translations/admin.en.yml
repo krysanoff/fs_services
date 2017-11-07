@@ -1,1 +1,13 @@
-hello: Hello
+nav:
+  dashboard: Dashboard
+  users: Site Admins
+  user:
+    settings: Profile
+  employees: Employees
+  waterponds: Waterponds
+  graphs: Graphs
+  graph:
+    schemas: Graph Schemas
+    view: View graphs
+  logout: Logout
+  login: Login
