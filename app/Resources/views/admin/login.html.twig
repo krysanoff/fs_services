@@ -6,11 +6,11 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- CSS-->
-        <link rel="stylesheet" type="text/css" href="{{ asset('build/global.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('build/admin.css') }}">
         <!-- Font-icon css-->
         <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="{{ asset('build/app.js') }}"></script>
-        <title>FS Admin || 11 Fire Station</title>
+        <title>{{ "login.pagetitle" | trans([], 'admin')}}</title>
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries-->
         <!--if lt IE 9
         script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
@@ -23,24 +23,24 @@
     </section>
     <section class="login-content">
         <div class="logo">
-            <h1>Fire Services Admin Page</h1>
+            <h1>{{ "site.name" | trans([], 'main') }}</h1>
         </div>
         <div class="login-box">
             <form name="login" method="post" class="login-form" action="{{ path('login') }}">
-                <h3 class="login-head"><i class="fa fa-lg fa-fw fa-user"></i>SIGN IN</h3>
+                <h3 class="login-head"><i class="fa fa-lg fa-fw fa-user"></i>{{ "login.formtitle" | trans([], 'admin')}}</h3>
                 <div class="form-group">
-                    <label class="control-label">USERNAME</label>
-                    <input name="_username" class="form-control" type="text" placeholder="Username" autofocus>
+                    <label class="control-label">{{ "login.field.username" | trans([], 'admin') }}</label>
+                    <input name="_username" class="form-control" type="text" placeholder="{{ "login.field.username" | trans([], 'admin') }}" autofocus>
                 </div>
                 <div class="form-group">
-                    <label class="control-label">PASSWORD</label>
-                    <input name="_password" class="form-control" type="password" placeholder="Password">
+                    <label class="control-label">{{ "login.field.password" | trans([], 'admin') }}</label>
+                    <input name="_password" class="form-control" type="password" placeholder="{{ "login.field.password" | trans([], 'admin') }}">
                 </div>
                 <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}"/>
                 <div class="form-group btn-container">
                     <button type="submit" name="submit" class="btn btn-primary btn-block">
                         <i class="fa fa-sign-in fa-lg fa-fw"></i>
-                        SIGN IN
+                        {{ "login.button.signin" | trans([], 'admin') }}
                     </button>
                 </div>
             </form>

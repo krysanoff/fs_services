@@ -11,3 +11,12 @@ nav:
     view: Сохраненные графики
   logout: Выход
   login: Вход
+
+login:
+  pagetitle: FS Services Admin Page
+  formtitle: Вход
+  field:
+    username: Имя пользователя
+    password: Пароль
+  button:
+    signin: Войти

@@ -11,3 +11,12 @@ nav:
     view: View graphs
   logout: Logout
   login: Login
+
+login:
+  pagetitle: FS Services Admin Page
+  formtitle: Sign in
+  field:
+    username: username
+    password: password
+  button:
+    signin: sign in
