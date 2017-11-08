@@ -29,29 +29,12 @@ class UserCreateFormType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('username', TextType::class, [
-                'label' => 'Your username',
-                'attr' => [
-                    'placeholder' => 'Type your username here',
-                ],
-            ])
+            ->add('username', TextType::class)
             ->add('password', RepeatedType::class, [
                 'type' => PasswordType::class,
                 'invalid_message' => 'The passwords must match',
                 'first_name' => 'password',
-                'first_options' => [
-                    'label' => 'Your password',
-                    'attr' => [
-                        'placeholder' => 'Type your password here',
-                    ],
-                ],
                 'second_name' => 'confirm_password',
-                'second_options' => [
-                    'label' => 'Confirm password',
-                    'attr' => [
-                        'placeholder' => 'Type your password again',
-                    ],
-                ],
             ])
             ->add('user_id', HiddenType::class)
             ->add('role_id', EntityType::class, [

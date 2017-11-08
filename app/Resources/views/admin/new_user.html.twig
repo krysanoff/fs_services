@@ -1,17 +1,46 @@
 {% extends '::base_admin.html.twig' %}
-{% block title %}Content manager page || Users{% endblock %}
+{% block title %}{{ "site.name" | trans([], 'main')}} || {{ "new_user.title" | trans({}, 'admin')}}{% endblock %}
+
+{% block pagetitle %}{{ "users.pagetitle" | trans([], 'admin')}}{% endblock %}
 
 {% block content %}
     <div class="col-md-6">
         <div class="card">
-            <h3 class="card-pagetitle">New administrator account</h3>
+            <h3 class="card-pagetitle">{{ "new_user.form.title" | trans({}, 'admin')}}</h3>
             <div class="card-body">
                 {{ include('flash-messages.html.twig') }}
 
                 {{ form_start(form, {'name': 'new_user', 'method': 'post', 'attr': { 'autocomplete': 'off' } }) }}
 
-                {{ form_row(form.username) }}
-                {{ form_row(form.password) }}
+                {{ form_row(form.username, {
+                    'label': 'user.form.username.label' | trans({}, 'admin'),
+                    'attr': {
+                        'placeholder': 'user.form.username.placeholder' | trans({}, 'admin'),
+                    }}
+                ) }}
+
+                {{ form_row(form.password.password, {
+                    'label': 'user.form.password.label' | trans({}, 'admin'),
+                    'attr': {
+                        'placeholder': 'user.form.password.placeholder' | trans({}, 'admin'),
+                    }
+                }) }}
+
+                {{ form_row(form.password.confirm_password, {
+                    'label': 'user.form.conf_password.label' | trans({}, 'admin'),
+                    'attr': {
+                        'placeholder': 'user.form.conf_password.placeholder' | trans({}, 'admin'),
+                    }
+                }) }}
+
+                {{ form_row(form.role_id, {
+                    'label': 'user.form.role.label' | trans({}, 'admin'),
+                    'value': 1,
+                }) }}
+
+                {{ form_row(form.submit, {
+                    'label': 'user.button.submit' | trans({}, 'admin'),
+                }) }}
 
                 {{ form_end(form) }}
             </div>

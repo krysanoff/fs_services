@@ -44,8 +44,15 @@ user:
     conf_password:
       label: confirm password
       placeholder: type your new password again
+    role:
+          label: user's role
   button:
     add: Add user
     submit: submit
     cancel: cancel
     delete: delete
+
+new_user:
+  title: New user
+  form:
+    title: Add new user
