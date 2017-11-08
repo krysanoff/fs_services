@@ -1,13 +1,18 @@
 {% extends '::base_admin.html.twig' %}
-{% block title %}Content manager page || Administrators{% endblock %}
+{% block title %}
+    {{ "site.name" | trans([], 'main')}}
+    {% if user %}
+        || {{ "user.title" | trans({'%username%': user.username}, 'admin')}}
+    {% endif %}
+{% endblock %}
 
-{% block pagetitle %}Administrators{% endblock %}
+{% block pagetitle %}{{ "users.pagetitle" | trans({}, 'admin')}}{% endblock %}
 
 {% block content %}
     <div class="col-md-6">
         <div class="card">
             {% if user %}
-                <h3 class="card-title">Administrator /// {{ user.username|default('No such user')}}</h3>
+                <h3 class="card-title">{{ "user.form.title" | trans({'%username%': user.username}, 'admin')}}</h3>
                 <div class="card-body">
                     {{ include('flash-messages.html.twig') }}
 
@@ -16,15 +21,43 @@
                     {{ form_errors(form.username) }}
                     {{ form_errors(form.password) }}
 
-                    {{ form_row(form.username, { 'value': user.username }) }}
-                    {{ form_row(form.password) }}
+                    {{ form_row(form.username, {
+                        'label': 'user.form.username.label' | trans({}, 'admin'),
+                        'value': user.username,
+                        'attr': {
+                            'placeholder': 'user.form.username.placeholder' | trans({}, 'admin'),
+                        }}
+                    ) }}
+
+                    {{ form_row(form.password.password, {
+                        'label': 'user.form.password.label' | trans({}, 'admin'),
+                        'attr': {
+                            'placeholder': 'user.form.password.placeholder' | trans({}, 'admin'),
+                        }
+                    }) }}
+
+                    {{ form_row(form.password.confirm_password, {
+                        'label': 'user.form.conf_password.label' | trans({}, 'admin'),
+                        'attr': {
+                            'placeholder': 'user.form.conf_password.placeholder' | trans({}, 'admin'),
+                        }
+                    }) }}
+
                     {{ form_row(form.user_id, { 'value': user.id }) }}
+
+                    {{ form_row(form.submit, {
+                        'label': 'user.button.submit' | trans({}, 'admin'),
+                    }) }}
+
+                    {{ form_row(form.cancel, {
+                        'label': 'user.button.cancel' | trans({}, 'admin'),
+                    }) }}
 
                     {{ form_end(form) }}
 
                     <div class="card-footer">
                         <a href="{{ path('admin_user_delete', {'user': user.id}) }}" class="user__action btn btn-block btn-lg btn-danger">
-                            DELETE
+                            {{ "user.button.delete" | trans({}, 'admin')}}
                         </a>
                     </div>
                 </div>
@@ -32,9 +65,10 @@
 
             {% else %}
                 <div class="card-body">
-                    <p>Пользователь с данным id не найден.</p>
-                    <p>Посмотреть список всех пользователей можно на этой
-                        <a href="{{ path('admin_users_page') }}">странице</a></p>
+                    <p>
+                        {{ 'user.not_found.text' | trans({}, 'admin') }}
+                        <a href="{{ path('admin_users_page') }}">{{ 'user.not_found.link' | trans({}, 'admin') }}</a>
+                    </p>
                 </div>
             {% endif %}
         </div>

@@ -7,7 +7,7 @@
     <!-- Font-icon css-->
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="{{ asset('build/app.js') }}"></script>
-    <title>{% block title %}{% endblock %}</title>
+    <title>{{ title ?: 'Welcome' }}</title>
     {% block stylesheets %}{% endblock %}
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries-->

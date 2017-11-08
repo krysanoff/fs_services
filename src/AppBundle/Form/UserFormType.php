@@ -28,29 +28,12 @@ class UserFormType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('username', TextType::class, [
-                'label' => 'Your username',
-                'attr' => [
-                    'placeholder' => 'Type your new username here',
-                ],
-            ])
+            ->add('username', TextType::class)
             ->add('password', RepeatedType::class, [
                 'type' => PasswordType::class,
                 'invalid_message' => 'The passwords must match',
                 'first_name' => 'password',
-                'first_options' => [
-                    'label' => 'New password',
-                    'attr' => [
-                        'placeholder' => 'Type your new password here',
-                    ],
-                ],
                 'second_name' => 'confirm_password',
-                'second_options' => [
-                    'label' => 'Confirm password',
-                    'attr' => [
-                        'placeholder' => 'Type your new password again',
-                    ],
-                ],
             ])
             ->add('user_id', HiddenType::class)
             ->add('submit', SubmitType::class, [
@@ -60,8 +43,8 @@ class UserFormType extends AbstractType
             ])
             ->add('cancel', ResetType::class, [
                 'attr' => [
-                    'class' => 'btn btn-default btn-reset'
-                ]
+                    'class' => 'btn btn-default btn-reset',
+                ],
             ]);
     }
 
@@ -70,7 +53,9 @@ class UserFormType extends AbstractType
      */
     public function configureOptions(OptionsResolver $resolver)
     {
-        return;
+        $resolver->setDefaults([
+            'translation_domain' => 'admin',
+        ]);
     }
 
     /**

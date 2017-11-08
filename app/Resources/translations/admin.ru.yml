@@ -20,3 +20,37 @@ login:
     password: Пароль
   button:
     signin: Войти
+
+index:
+  pagetitle: Страница администрирования
+
+users:
+  title: Администраторы сайта
+  pagetitle: Администраторы
+  table:
+    title: Список администраторов
+    username: Имя пользователя
+
+user:
+  title: 'Администратор :: %username%'
+  form:
+    title: '%username% - администратор'
+    username:
+      label: Имя пользователя
+      placeholder: Введите ваше имя пользователя
+    password:
+      label: Новый пароль
+      placeholder: Введите новый пароль
+    conf_password:
+      label: Подтверждение пароля
+      placeholder: Введите новый пароль еще раз
+  button:
+    add: Добавить пользователя
+    submit: Сохранить
+    cancel: Отменить
+    delete: Удалить пользователя
+  not_found:
+    text: >
+            Пользователь с данным id не найден.
+            Посмотреть список всех пользователей можно на этой
+    link: странице

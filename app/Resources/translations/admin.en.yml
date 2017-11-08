@@ -13,10 +13,39 @@ nav:
   login: Login
 
 login:
-  pagetitle: FS Services Admin Page
+  title: FS Services Admin Page
   formtitle: Sign in
   field:
     username: username
     password: password
   button:
     signin: sign in
+
+index:
+  title: Main admin page
+
+users:
+  title: Admin user's accounts
+  pagetitle: Administrators
+  table:
+    title: Admin List
+    username: Username
+
+user:
+  title: 'Admin user - %username%'
+  form:
+    title: '%username% - administrator'
+    username:
+      label: your username
+      placeholder: type your username here
+    password:
+      label: new password
+      placeholder: type your new password here
+    conf_password:
+      label: confirm password
+      placeholder: type your new password again
+  button:
+    add: Add user
+    submit: submit
+    cancel: cancel
+    delete: delete

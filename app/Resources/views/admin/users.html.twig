@@ -1,18 +1,18 @@
 {% extends '::base_admin.html.twig' %}
-{% block title %}Content manager page || Administrators{% endblock %}
+{% block title %}{{ "site.name" | trans([], 'main')}} || {{ "users.title" | trans([], 'admin')}}{% endblock %}
 
-{% block pagetitle %}Administrators{% endblock %}
+{% block pagetitle %}{{ "users.pagetitle" | trans([], 'admin')}}{% endblock %}
 
 {% block content %}
     <div class="col-md-6">
         <div class="card">
             {{ include('flash-messages.html.twig') }}
-            <h3 class="card-title">Administators Table</h3>
+            <h3 class="card-title">{{ "users.table.title" | trans([], 'admin')}}</h3>
             <table class="table table-hover">
                 <thead>
                 <tr>
                     <th>#</th>
-                    <th>Username</th>
+                    <th>{{ "users.table.username" | trans([], 'admin')}}</th>
                     <th></th>
                     <th></th>
                 </tr>
@@ -38,7 +38,7 @@
             </table>
 
             <div class="user_add">
-                <a href="{{ path('admin_user_add') }}" class="user__actions btn btn-block btn-lg btn-success"><span class="glyphicon glyphicon-plus"></span> Add user</a>
+                <a href="{{ path('admin_user_add') }}" class="user__actions btn btn-block btn-lg btn-success"><span class="glyphicon glyphicon-plus"></span> {{ "user.button.add" | trans([], 'admin')}}</a>
             </div>
         </div>
     </div>

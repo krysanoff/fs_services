@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    {{ include('admin/blocks/head.html.twig') }}
+    {% include "admin/blocks/head.html.twig" with {title: block('title')} %}
 
     <body class="sidebar-mini fixed">
     <div class="wrapper">
