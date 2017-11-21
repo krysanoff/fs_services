@@ -78,7 +78,7 @@ class UserController extends Controller
     }
 
     /**
-     * @Route("/admin/delete/user/{user}", name="admin_user_delete", requirements={"user": "\d+"})
+     * @Route("/{_locale}/admin/delete/user/{user}", name="admin_user_delete", requirements={"user": "\d+"})
      *
      * @param int $user
      *
@@ -96,7 +96,11 @@ class UserController extends Controller
         $em->getManager()->remove($deletingUser);
         $em->getManager()->flush();
 
-        $this->addFlash('success', 'User deleted');
+        $this->addFlash('success', $this->get('translator')->trans(
+            'user.flash.delete',
+            array('%username%' => $deletingUser->getUsername()),
+            'admin')
+        );
 
         return $this->redirectToRoute('admin_users_page');
     }
@@ -105,7 +109,7 @@ class UserController extends Controller
      * @param Request                      $request
      * @param UserPasswordEncoderInterface $encoder
      *
-     * @Route("/update/user", name="update_user")
+     * @Route("/{_locale}/update/user", name="update_user")
      *
      * @Method("POST")
      *
@@ -144,7 +148,11 @@ class UserController extends Controller
         $em->persist($user);
         $em->flush();
 
-        $this->addFlash('success', 'User\'s data has successfully updated');
+        $this->addFlash('success', $this->get('translator')->trans(
+            'user.flash.update',
+            array('%username%' => $user->getUsername()),
+            'admin')
+        );
 
         return $this->redirectToRoute('admin_users_page');
     }
@@ -153,7 +161,7 @@ class UserController extends Controller
      * @param Request                      $request
      * @param UserPasswordEncoderInterface $encoder
      *
-     * @Route("/update/user/create", name="admin_user_create")
+     * @Route("/{_locale}/user/create", name="admin_user_create")
      *
      * @Method("POST")
      *
@@ -187,7 +195,11 @@ class UserController extends Controller
         $em->persist($user);
         $em->flush();
 
-        $this->addFlash('success', 'User\'s data has successfully created');
+        $this->addFlash('success', $this->get('translator')->trans(
+            'user.flash.create',
+            array('%username%' => $user->getUsername()),
+            'admin')
+        );
 
         return $this->redirectToRoute('admin_users_page');
     }

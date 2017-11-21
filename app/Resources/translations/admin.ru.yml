@@ -56,6 +56,10 @@ user:
             Пользователь с данным id не найден.
             Посмотреть список всех пользователей можно на этой
     link: странице
+  flash:
+    create: 'Пользователь <strong>%username%</strong> успешно создан'
+    delete: 'Пользователь <strong>%username%</strong> удален'
+    update: 'Новые данные пользователя <strong>%username%</strong> сохранены'
 
 new_user:
   title: Создание нового пользователя

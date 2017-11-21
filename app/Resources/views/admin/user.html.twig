@@ -19,41 +19,41 @@
                     {{ form_start(form, {'name': 'user_editor', 'method': 'post','attr': { 'autocomplete': 'off' } }) }}
 
                     {{ form_row(form.username, {
-                        'label': 'user.form.username.label' | trans({}, 'admin'),
+                        'label': 'user.form.username.label',
                         'value': user.username,
                         'attr': {
-                            'placeholder': 'user.form.username.placeholder' | trans({}, 'admin'),
+                            'placeholder': 'user.form.username.placeholder',
                         }}
                     ) }}
 
                     {{ form_row(form.password.password, {
-                        'label': 'user.form.password.label' | trans({}, 'admin'),
+                        'label': 'user.form.password.label',
                         'attr': {
-                            'placeholder': 'user.form.password.placeholder' | trans({}, 'admin'),
+                            'placeholder': 'user.form.password.placeholder',
                         }
                     }) }}
 
                     {{ form_row(form.password.confirm_password, {
-                        'label': 'user.form.conf_password.label' | trans({}, 'admin'),
+                        'label': 'user.form.conf_password.label',
                         'attr': {
-                            'placeholder': 'user.form.conf_password.placeholder' | trans({}, 'admin'),
+                            'placeholder': 'user.form.conf_password.placeholder',
                         }
                     }) }}
 
                     {{ form_row(form.user_id, { 'value': user.id }) }}
 
                     {{ form_row(form.submit, {
-                        'label': 'user.button.submit' | trans({}, 'admin'),
+                        'label': 'user.button.submit',
                     }) }}
 
                     {{ form_row(form.cancel, {
-                        'label': 'user.button.cancel' | trans({}, 'admin'),
+                        'label': 'user.button.cancel',
                     }) }}
 
                     {{ form_end(form) }}
 
                     <div class="card-footer">
-                        <a href="{{ path('admin_user_delete', {'user': user.id}) }}" class="user__action btn btn-block btn-lg btn-danger">
+                        <a href="{{ path('admin_user_delete', {'user': user.id}) }}" class="user__action btn btn-sm btn-danger">
                             {{ "user.button.delete" | trans({}, 'admin')}}
                         </a>
                     </div>
