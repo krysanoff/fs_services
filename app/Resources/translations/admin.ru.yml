@@ -65,3 +65,37 @@ new_user:
   title: Создание нового пользователя
   form:
     title: Новый пользователь
+
+employee:
+  title: 'Сотрудник :: %employee%'
+  form:
+    title: '%employee% - %position%'
+    lastname:
+      label: Фамилия
+      placeholder: Введите фамилию сотрудника
+    firstname:
+      label: Имя
+      placeholder: Введите имя сотрудника
+    middlename:
+      label: Отчество
+      placeholder: Введите отчество сотрудника
+    position:
+      label: Должность
+    rank:
+      label: Звание
+    shift:
+      label: Караул
+  button:
+    add: Добавить сотрудника
+    submit: Сохранить
+    cancel: Отменить
+    delete: Удалить сотрудника
+  not_found:
+    text: >
+            Сотрудник с данным id не найден.
+            Посмотреть список всех сотрудников можно на этой
+    link: странице
+  flash:
+    create: 'Сотрудник <strong>%employee%</strong> успешно создан'
+    delete: 'Сотрудник <strong>%employee%</strong> удален'
+    update: 'Новые данные сотрудника <strong>%employee%</strong> сохранены'

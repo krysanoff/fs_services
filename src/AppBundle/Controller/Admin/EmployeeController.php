@@ -92,10 +92,13 @@ class EmployeeController extends Controller
             throw new NotFoundHttpException("Page not found");
         }
 
-        $em->getEntityManager()->remove($deletingEmployee);
+        $em->getManager()->remove($deletingEmployee);
         $em->getManager()->flush();
 
-        $this->addFlash('success', 'Employee deleted');
+        $this->addFlash('success', $this->get('translator')->trans(
+            'employee.flash.delete',
+            array('%username%' => $deletingEmployee->getUsername()),
+            'admin'));
 
         return $this->redirectToRoute('admin_employees_page');
     }
