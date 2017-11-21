@@ -32,7 +32,7 @@ class EmployeeFormType extends AbstractType
     {
         $builder
             ->add('lastname', TextType::class, [
-                'label' => 'employee.form.',
+                'label' => 'employee.form.lastname.label',
                 'attr' => [
                     'placeholder' => 'Введите фамилию сотрудника',
                 ],

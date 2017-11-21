@@ -3,19 +3,32 @@
     {{ "site.name" | trans([], 'main')}}
     {% if employee %}
         || {{ "employee.title" | trans({
-            '%employee%': employee.lastname ~ ' ' ~ employee.firstname | upper | slice(0,1) ~ '.' ~ employee.middlename | upper | slice(0,1) ~ '.'
+            '%employee%': employee.lastname ~ ' ' ~ employee.firstname | upper | first ~ '.' ~ employee.middlename | upper | first ~ '.'
         }, 'admin')}}
     {% endif %}
 {% endblock %}
 
-{% block pagetitle %}Employee{% endblock %}
+{% block pagetitle %}
+    {% if employee %}
+        {{ "employee.pagetitle" | trans({
+        '%position%': employee.position,
+        '%employee%': employee.lastname ~ ' ' ~ employee.firstname | upper | first ~ '.' ~ employee.middlename | upper | first ~ '.'
+    }, 'admin')}}
+    {% endif %}
+{% endblock %}
 
 {% block content %}
     <div class="col-md-6">
         <div class="card">
 
         {% if employee %}
-            <h3 class="card-pagetitle">Employee Form</h3>
+            <h3 class="card-pagetitle">
+                {% if employee %}
+                    {{ "employee.form.title" | trans({
+                        '%employee%': employee.lastname ~ ' ' ~ employee.firstname ~ ' ' ~ employee.middlename
+                    }, 'admin')}}
+                {% endif %}
+            </h3>
 
             <div class="card-body">
                 {{ include('flash-messages.html.twig') }}

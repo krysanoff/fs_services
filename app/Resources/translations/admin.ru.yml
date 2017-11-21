@@ -68,8 +68,9 @@ new_user:
 
 employee:
   title: 'Сотрудник :: %employee%'
+  pagetitle: '%position% %employee%'
   form:
-    title: '%employee% - %position%'
+    title: '%employee%'
     lastname:
       label: Фамилия
       placeholder: Введите фамилию сотрудника
