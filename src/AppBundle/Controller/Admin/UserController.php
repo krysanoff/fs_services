@@ -39,6 +39,8 @@ class UserController extends Controller
     /**
      * @Route("/{_locale}/admin/user/{user}", name="admin_user", requirements={"user": "\d+"})
      *
+     * @param int $user
+     *
      * @return string
      */
     public function editAction($user)
@@ -78,22 +80,20 @@ class UserController extends Controller
     /**
      * @Route("/admin/delete/user/{user}", name="admin_user_delete", requirements={"user": "\d+"})
      *
+     * @param int $user
+     *
      * @return string
      */
     public function deleteAction($user)
     {
-        if (!$user) {
-            throw new NotFoundHttpException("Page not found");
-        }
-
         $em = $this->getDoctrine();
         $deletingUser = $em->getRepository('AppBundle:User')->find($user);
 
-        if (!$deletingUser) {
-            throw new NotFoundHttpException("Page not found");
+        if (!$deletingUser || !$user) {
+            throw new NotFoundHttpException("Deleting user doesn't exist");
         }
 
-        $em->getEntityManager()->remove($deletingUser);
+        $em->getManager()->remove($deletingUser);
         $em->getManager()->flush();
 
         $this->addFlash('success', 'User deleted');
@@ -102,7 +102,8 @@ class UserController extends Controller
     }
 
     /**
-     * @param Request $request
+     * @param Request                      $request
+     * @param UserPasswordEncoderInterface $encoder
      *
      * @Route("/update/user", name="update_user")
      *
@@ -119,8 +120,17 @@ class UserController extends Controller
         $form->handleRequest($request);
 
         if (!$form->isSubmitted() ||  !$form->isValid()) {
-            $this->addFlash('error', 'There are some errors');
-            return $this->redirect($request->headers->get('referer'));
+            foreach ($form->getErrors(true) as $error) {
+                $this->addFlash('danger', $error->getMessage());
+            }
+
+            $em = $this->getDoctrine()
+                ->getRepository('AppBundle:User');
+            $editingUser = $em->find($request->query->get('user'));
+
+            return $this->redirectToRoute('admin_user', array(
+                'user' => $editingUser->getId(),
+            ));
         }
 
         $formData = $form->getData();
@@ -140,7 +150,8 @@ class UserController extends Controller
     }
 
     /**
-     * @param Request $request
+     * @param Request                      $request
+     * @param UserPasswordEncoderInterface $encoder
      *
      * @Route("/update/user/create", name="admin_user_create")
      *
@@ -157,12 +168,14 @@ class UserController extends Controller
         $form->handleRequest($request);
 
         if (!$form->isSubmitted() ||  !$form->isValid()) {
-            $this->addFlash('error', 'There are some errors');
+            foreach ($form->getErrors(true) as $error) {
+                $this->addFlash('danger', $error->getMessage());
+            }
+
             return $this->redirect($request->headers->get('referer'));
         }
 
-        $formData = $form->getNormData();
-        dump($formData);
+        $formData = $form->getData();
 
         $em = $this->getDoctrine()->getManager();
 

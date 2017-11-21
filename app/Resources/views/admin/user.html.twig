@@ -18,9 +18,6 @@
 
                     {{ form_start(form, {'name': 'user_editor', 'method': 'post','attr': { 'autocomplete': 'off' } }) }}
 
-                    {{ form_errors(form.username) }}
-                    {{ form_errors(form.password) }}
-
                     {{ form_row(form.username, {
                         'label': 'user.form.username.label' | trans({}, 'admin'),
                         'value': user.username,

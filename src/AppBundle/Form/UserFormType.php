@@ -28,7 +28,8 @@ class UserFormType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('username', TextType::class)
+            ->add('username', TextType::class, [
+            ])
             ->add('password', RepeatedType::class, [
                 'type' => PasswordType::class,
                 'invalid_message' => 'The passwords must match',
@@ -55,6 +56,7 @@ class UserFormType extends AbstractType
     {
         $resolver->setDefaults([
             'translation_domain' => 'admin',
+            'error_bubbling' => false,
         ]);
     }
 
