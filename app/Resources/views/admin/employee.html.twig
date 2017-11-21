@@ -1,5 +1,12 @@
 {% extends '::base_admin.html.twig' %}
-{% block title %}Content manager page || Employee{% endblock %}
+{% block title %}
+    {{ "site.name" | trans([], 'main')}}
+    {% if employee %}
+        || {{ "employee.title" | trans({
+            '%employee%': employee.lastname ~ ' ' ~ employee.firstname | upper | slice(0,1) ~ '.' ~ employee.middlename | upper | slice(0,1) ~ '.'
+        }, 'admin')}}
+    {% endif %}
+{% endblock %}
 
 {% block pagetitle %}Employee{% endblock %}
 
