@@ -134,9 +134,9 @@ class EmployeeController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $employee = $em->find(Employee::class, $formData->getId());
-        $employee->setLastname($formData->getLastname());
-        $employee->setFirstname($formData->getFirstname());
-        $employee->setMiddlename($formData->getMiddlename());
+        $employee->setLastname(ucfirst($formData->getLastname()));
+        $employee->setFirstname(ucfirst($formData->getFirstname()));
+        $employee->setMiddlename(ucfirst($formData->getMiddlename()));
         $employee->setPosition($formData->getPosition());
         $employee->setRank($formData->getRank());
         $employee->setShift($formData->getShift());
@@ -184,9 +184,9 @@ class EmployeeController extends Controller
         $em = $this->getDoctrine()->getManager();
         dump($formData);
         $employee = new Employee();
-        $employee->setLastname($formData->getLastname());
-        $employee->setFirstname($formData->getFirstname());
-        $employee->setMiddlename($formData->getMiddlename());
+        $employee->setLastname(ucfirst($formData->getLastname()));
+        $employee->setFirstname(ucfirst($formData->getFirstname()));
+        $employee->setMiddlename(ucfirst($formData->getMiddlename()));
         $employee->setPosition($formData->getPosition());
         $employee->setRank($formData->getRank());
         $employee->setShift($formData->getShift());
