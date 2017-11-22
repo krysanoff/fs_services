@@ -24,19 +24,30 @@ class EmployeeController extends Controller
      *
      * @return string
      */
-    public function indexAction()
+    public function indexAction(Request $request)
     {
         $em = $this->getDoctrine()
             ->getRepository('AppBundle:Employee');
         $employees = $em->findAll();
 
+        $page = $request->query->get('page') ?? 1;
+
+        $paginator = $this->get('knp_paginator');
+        $pagination = $paginator->paginate(
+            $employees,
+            $page
+        );
+
         return $this->render('admin/employees.html.twig', [
             'employees' => $employees,
+            'pagination' => $pagination,
         ]);
     }
 
     /**
      * @Route("/{_locale}/admin/employee/{employee}", name="admin_employee", requirements={"employee": "\d+"})
+     *
+     * @param int $employee
      *
      * @return string
      */
@@ -136,9 +147,12 @@ class EmployeeController extends Controller
         $imageName = $fileUploader->upload($formData->getImage());
 
         $employee = $em->find(Employee::class, $formData->getId());
-        $employee->setLastname(ucfirst($formData->getLastname()));
-        $employee->setFirstname(ucfirst($formData->getFirstname()));
-        $employee->setMiddlename(ucfirst($formData->getMiddlename()));
+
+        // ucfirst doesn't work with cyrillic in utf-8
+        $employee->setLastname(mb_strtoupper(mb_substr($formData->getLastname(), 0, 1)).mb_substr($formData->getLastname(), 1));
+        $employee->setFirstname(mb_strtoupper(mb_substr($formData->getFirstname(), 0, 1)).mb_substr($formData->getFirstname(), 1));
+        $employee->setMiddlename(mb_strtoupper(mb_substr($formData->getMiddlename(), 0, 1)).mb_substr($formData->getMiddlename(), 1));
+
         $employee->setPosition($formData->getPosition());
         $employee->setRank($formData->getRank());
         $employee->setShift($formData->getShift());
@@ -189,9 +203,9 @@ class EmployeeController extends Controller
         $imageName = $fileUploader->upload($formData->getImage());
 
         $employee = new Employee();
-        $employee->setLastname(ucfirst($formData->getLastname()));
-        $employee->setFirstname(ucfirst($formData->getFirstname()));
-        $employee->setMiddlename(ucfirst($formData->getMiddlename()));
+        $employee->setLastname(mb_strtoupper(mb_substr($formData->getLastname(), 0, 1)).mb_substr($formData->getLastname(), 1));
+        $employee->setFirstname(mb_strtoupper(mb_substr($formData->getFirstname(), 0, 1)).mb_substr($formData->getFirstname(), 1));
+        $employee->setMiddlename(mb_strtoupper(mb_substr($formData->getMiddlename(), 0, 1)).mb_substr($formData->getMiddlename(), 1));
         $employee->setPosition($formData->getPosition());
         $employee->setRank($formData->getRank());
         $employee->setShift($formData->getShift());
