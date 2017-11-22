@@ -5,6 +5,7 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Employee
@@ -26,6 +27,14 @@ class Employee
     /**
      * @var string
      *
+     * @Assert\NotBlank
+     * @Assert\Length(
+     *     min = 2,
+     *     max = 30,
+     *     minMessage="message.employee.lastname.min",
+     *     maxMessage="message.employee.lastname.max"
+     *     )
+     *
      * @ORM\Column(name="lastname", type="string", length=30)
      */
     private $lastname;
@@ -33,12 +42,28 @@ class Employee
     /**
      * @var string
      *
+     * @Assert\NotBlank
+     * @Assert\Length(
+     *     min = 2,
+     *     max = 15,
+     *     minMessage="message.employee.firstname.min",
+     *     maxMessage="message.employee.firstname.max"
+     *     )
+     *
      * @ORM\Column(name="firstname", type="string", length=15)
      */
     private $firstname;
 
     /**
      * @var string
+     *
+     * @Assert\NotBlank
+     * @Assert\Length(
+     *     min = 6,
+     *     max = 20,
+     *     minMessage="message.employee.middlename.min",
+     *     maxMessage="message.employee.middlename.max"
+     *     )
      *
      * @ORM\Column(name="middlename", type="string", length=20)
      */

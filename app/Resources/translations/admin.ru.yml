@@ -102,6 +102,7 @@ employee:
     create: 'Сотрудник <strong>%employee%</strong> успешно создан'
     delete: 'Сотрудник <strong>%employee%</strong> удален'
     update: '<strong>%employee%</strong> - новые данные сотрудника сохранены'
+    short: 'короткое'
 
 employees:
   title: 'Сотрудники части'
