@@ -99,4 +99,4 @@ employee:
   flash:
     create: 'Сотрудник <strong>%employee%</strong> успешно создан'
     delete: 'Сотрудник <strong>%employee%</strong> удален'
-    update: 'Новые данные сотрудника <strong>%employee%</strong> сохранены'
+    update: '<strong>%employee%</strong> - новые данные сотрудника сохранены'

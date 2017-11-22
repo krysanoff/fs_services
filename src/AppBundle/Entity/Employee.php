@@ -269,4 +269,14 @@ class Employee
     {
         return $this->rank;
     }
+
+    /**
+     * Get full name
+     *
+     * @return string
+     */
+    public function getFullname()
+    {
+        return $this->lastname." ".mb_substr($this->firstname, 0, 1).".".mb_substr($this->middlename, 0, 1).".";
+    }
 }

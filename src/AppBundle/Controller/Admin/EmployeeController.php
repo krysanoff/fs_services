@@ -75,7 +75,7 @@ class EmployeeController extends Controller
     }
 
     /**
-     * @Route("/admin/delete/employee/{employee}", name="admin_employee_delete", requirements={"employee": "\d+"})
+     * @Route("/{_locale}/admin/delete/employee/{employee}", name="admin_employee_delete", requirements={"employee": "\d+"})
      *
      * @return string
      */
@@ -97,7 +97,7 @@ class EmployeeController extends Controller
 
         $this->addFlash('success', $this->get('translator')->trans(
             'employee.flash.delete',
-            array('%username%' => $deletingEmployee->getUsername()),
+            ['%employee%' => $deletingEmployee->getFullname()],
             'admin'));
 
         return $this->redirectToRoute('admin_employees_page');
@@ -106,7 +106,7 @@ class EmployeeController extends Controller
     /**
      * @param Request $request
      *
-     * @Route("/update/employee", name="update_employee")
+     * @Route("/{_locale}/update/employee", name="update_employee")
      *
      * @Method("POST")
      *
@@ -121,7 +121,10 @@ class EmployeeController extends Controller
         $form->handleRequest($request);
 
         if (!$form->isSubmitted() ||  !$form->isValid()) {
-            $this->addFlash('error', 'There are some errors');
+            foreach ($form->getErrors(true) as $error) {
+                $this->addFlash('danger', $error->getMessage());
+            }
+
             return $this->redirect($request->headers->get('referer'));
         }
 
@@ -141,7 +144,11 @@ class EmployeeController extends Controller
         $em->persist($employee);
         $em->flush();
 
-        $this->addFlash('success', 'Employee\'s data has successfully updated');
+        $this->addFlash('success', $this->get('translator')->trans(
+            'employee.flash.update',
+            ['%employee%' => $employee->getFullname()],
+            'admin')
+        );
 
         return $this->redirectToRoute('admin_employees_page');
     }
@@ -149,7 +156,7 @@ class EmployeeController extends Controller
     /**
      * @param Request $request
      *
-     * @Route("/update/employee/create", name="admin_employee_create")
+     * @Route("/{_locale}/update/employee/create", name="admin_employee_create")
      *
      * @Method("POST")
      *
@@ -164,7 +171,11 @@ class EmployeeController extends Controller
         $form->handleRequest($request);
 
         if (!$form->isSubmitted() ||  !$form->isValid()) {
-            $this->addFlash('error', 'There are some errors');
+            foreach ($form->getErrors(true) as $error)
+            {
+                $this->addFlash('danger', $error->getMessage());
+            }
+
             return $this->redirect($request->headers->get('referer'));
         }
 
@@ -186,7 +197,11 @@ class EmployeeController extends Controller
         $em->persist($employee);
         $em->flush();
 
-        $this->addFlash('success', 'New employee has successfully created');
+        $this->addFlash('success', $this->get('translator')->trans(
+            'employee.flash.create',
+            ['%employee%' => $employee->getFullname()],
+            'admin'
+        ));
 
         return $this->redirectToRoute('admin_employees_page');
     }
