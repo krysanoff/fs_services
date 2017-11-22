@@ -38,6 +38,7 @@ class FileUploader
     public function upload(UploadedFile $file)
     {
         $filename = $file->getClientOriginalName();
+        dump($file);
 
         $file->move($this->getTargetDir(), $filename);
 

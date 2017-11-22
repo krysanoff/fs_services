@@ -5,7 +5,7 @@
 namespace AppBundle\Controller\Admin;
 
 use AppBundle\Entity\Employee;
-//use AppBundle\Service\FileUploader;
+use AppBundle\Service\FileUploader;
 use AppBundle\Form\EmployeeFormType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -104,7 +104,8 @@ class EmployeeController extends Controller
     }
 
     /**
-     * @param Request $request
+     * @param Request      $request
+     * @param FileUploader $fileUploader
      *
      * @Route("/{_locale}/update/employee", name="update_employee")
      *
@@ -112,7 +113,7 @@ class EmployeeController extends Controller
      *
      * @return string
      */
-    public function updateAction(Request $request)
+    public function updateAction(Request $request, FileUploader $fileUploader)
     {
         $form = $this->createForm(EmployeeFormType::class, null, [
             'action' => $this->generateUrl('update_employee'),
@@ -132,6 +133,7 @@ class EmployeeController extends Controller
         dump($formData);
 
         $em = $this->getDoctrine()->getManager();
+        $imageName = $fileUploader->upload($formData->getImage());
 
         $employee = $em->find(Employee::class, $formData->getId());
         $employee->setLastname(ucfirst($formData->getLastname()));
@@ -140,6 +142,7 @@ class EmployeeController extends Controller
         $employee->setPosition($formData->getPosition());
         $employee->setRank($formData->getRank());
         $employee->setShift($formData->getShift());
+        $employee->setImage($imageName);
 
         $em->persist($employee);
         $em->flush();
@@ -155,6 +158,7 @@ class EmployeeController extends Controller
 
     /**
      * @param Request $request
+     * @param FileUploader $fileUploader
      *
      * @Route("/{_locale}/update/employee/create", name="admin_employee_create")
      *
@@ -162,7 +166,7 @@ class EmployeeController extends Controller
      *
      * @return string
      */
-    public function createAction(Request $request)
+    public function createAction(Request $request, FileUploader $fileUploader)
     {
         $form = $this->createForm(EmployeeFormType::class, null, [
             'action' => $this->generateUrl('admin_employee_create'),
@@ -182,7 +186,8 @@ class EmployeeController extends Controller
         $formData = $form->getData();
 
         $em = $this->getDoctrine()->getManager();
-        dump($formData);
+        $imageName = $fileUploader->upload($formData->getImage());
+
         $employee = new Employee();
         $employee->setLastname(ucfirst($formData->getLastname()));
         $employee->setFirstname(ucfirst($formData->getFirstname()));
@@ -190,9 +195,7 @@ class EmployeeController extends Controller
         $employee->setPosition($formData->getPosition());
         $employee->setRank($formData->getRank());
         $employee->setShift($formData->getShift());
-
-        //$imageName = $fileUploader->upload($formData->getImage());
-        //$employee->setImage($imageName);
+        $employee->setImage($imageName);
 
         $em->persist($employee);
         $em->flush();

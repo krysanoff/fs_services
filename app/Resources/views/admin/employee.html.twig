@@ -74,7 +74,11 @@
                         }) }}
                     </div>
                     <div class="col-md-6">
-                        <img id='upload_image' src="#" alt="">
+                        <img
+                            class="employee__image"
+                            id='upload_image'
+                            src="{{ asset('uploads/images/employees/') ~ employee.image }}"
+                            alt="">
                     </div>
                 </div>
 
