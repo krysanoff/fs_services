@@ -1,22 +1,22 @@
 {% extends '::base_admin.html.twig' %}
-{% block title %}Content manager page || Employees{% endblock %}
+{% block title %}{{ "site.name" | trans([], 'main')}} || {{ "employees.title" | trans([], 'admin')}}{% endblock %}
 
-{% block pagetitle %}Employees{% endblock %}
+{% block pagetitle %}{{ 'employees.pagetitle' | trans({}, 'admin') }}{% endblock %}
 
 {% block content %}
         {% if employees %}
             <div class="col-md-9">
                 <div class="card">
-                    <h3 class="card-pagetitle">Employees Table</h3>
+                    <h3 class="card-pagetitle">{{ 'employees.table.title' | trans({}, 'admin') }}</h3>
                     {{ include('flash-messages.html.twig') }}
                     <div class="card-body">
                         <table class="table table-hover">
                             <thead>
                                 <tr>
-                                    <th>Name</th>
-                                    <th>Position</th>
-                                    <th>Rank</th>
-                                    <th>Shift</th>
+                                    <th>{{ 'employees.table.fullname' | trans({}, 'admin') }}</th>
+                                    <th>{{ 'employees.table.position' | trans({}, 'admin') }}</th>
+                                    <th>{{ 'employees.table.rank' | trans({}, 'admin') }}</th>
+                                    <th>{{ 'employees.table.shift' | trans({}, 'admin') }}</th>
                                     <th></th>
                                     <th></th>
                                 </tr>
@@ -46,7 +46,7 @@
                     <div class="card-footer">
                         <a href="{{ path('admin_employee_new') }}" class="user__actions btn btn-block btn-lg btn-success">
                             <span class="fa fa-lg fa-newuser"></span>
-                            New employee
+                            {{ 'employee.button.add' | trans({}, 'admin') }}
                         </a>
                     </div>
                 </div>

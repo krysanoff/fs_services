@@ -100,3 +100,13 @@ employee:
     create: 'Сотрудник <strong>%employee%</strong> успешно создан'
     delete: 'Сотрудник <strong>%employee%</strong> удален'
     update: '<strong>%employee%</strong> - новые данные сотрудника сохранены'
+
+employees:
+  title: 'Сотрудники части'
+  pagetitle: 'Наша гордость!!!'
+  table:
+    title: 'Список сотрудников'
+    fullname: 'Ф.И.О.'
+    position: Должность
+    rank: Звание
+    shift: Караул
