@@ -65,22 +65,30 @@
 
                 {{ form_row(form.shift, {'label': 'employee.form.shift.label'}) }}
 
+                {{ form_row(form.submit, {'label': 'employee.button.submit'}) }}
+
                 {{ form_row(form.id) }}
 
                 {{ form_end(form) }}
 
                 <div class="card-footer">
-                    <a href="{{ path('admin_user_delete', {'user': employee.id}) }}" class="btn btn-sm btn-danger">DELETE</a>
+                    <a href="{{ path('admin_employee_delete', {'employee': employee.id}) }}" class="btn btn-sm btn-danger">
+                        {{ 'employee.button.delete' | trans({}, 'admin') }}
+                    </a>
                 </div>
             </div>
 
 
         {% else %}
-            <div class="caveat alert-warning">
-                <p>Пользователь с данным id не найден.</p>
-                <p>Посмотреть список всех пользователей можно на этой
-                    <a href="{{ path('admin_users_page') }}">странице</a></p>
+            <div class="bs-component">
+                <div class="alert alert-dismissible alert-warning">
+                    <p>
+                        {{ 'employee.not_found.text' | trans({}, 'admin') }}
+                        <a href="{{ path('admin_employees_page') }}">{{ 'employee.not_found.link' | trans({}, 'admin') }}</a>
+                    </p>
+                </div>
             </div>
+
         {% endif %}
 
         </div>

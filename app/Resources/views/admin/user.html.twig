@@ -61,12 +61,15 @@
 
 
             {% else %}
-                <div class="card-body">
-                    <p>
-                        {{ 'user.not_found.text' | trans({}, 'admin') }}
-                        <a href="{{ path('admin_users_page') }}">{{ 'user.not_found.link' | trans({}, 'admin') }}</a>
-                    </p>
+                <div class="bs-component">
+                    <div class="alert alert-dismissible alert-warning">
+                        <p>
+                            {{ 'user.not_found.text' | trans({}, 'admin') }}
+                            <a href="{{ path('admin_users_page') }}">{{ 'user.not_found.link' | trans({}, 'admin') }}</a>
+                        </p>
+                    </div>
                 </div>
+
             {% endif %}
         </div>
     </div>
