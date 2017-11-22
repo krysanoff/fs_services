@@ -1,23 +1,23 @@
 <ul class="sidebar-menu">
-    <li class="active">
+    <li {% if app.request.get('_route') == 'admin_page' %} class="active" {% endif %}>
         <a href="{{ path('admin_page') }}">
             <i class="fa fa-dashboard"></i>
             <span>{{ "nav.dashboard" | trans([], 'admin')}}</span>
         </a>
     </li>
-    <li>
+    <li {% if app.request.get('_route') == 'admin_users_page' %} class="active" {% endif %}>
         <a href="{{ path('admin_users_page') }}">
             <i class="fa fa-users"></i>
             <span>{{ "nav.users" | trans([], 'admin') }}</span>
         </a>
     </li>
-    <li>
+    <li {% if app.request.get('_route') == 'admin_employees_page' %} class="active" {% endif %}>
         <a href="{{ path('admin_employees_page') }}">
             <i class="fa fa-users"></i>
             <span>{{ "nav.employees" | trans([], 'admin') }}</span>
         </a>
     </li>
-    <li>
+    <li {% if app.request.get('_route') == 'admin_page' %} class="active" {% endif %}>
         <a href="/">
             <i class="fa fa-database"></i>
             <span>{{ "nav.waterponds"  | trans([], 'admin') }}</span>
