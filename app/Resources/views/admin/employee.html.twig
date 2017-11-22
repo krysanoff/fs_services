@@ -65,6 +65,19 @@
 
                 {{ form_row(form.shift, {'label': 'employee.form.shift.label'}) }}
 
+
+
+                <div class="row">
+                    <div class="col-md-6">
+                        {{ form_row(form.image, {
+                            'label': 'employee.form.image.label'
+                        }) }}
+                    </div>
+                    <div class="col-md-6">
+                        <img id='upload_image' src="#" alt="">
+                    </div>
+                </div>
+
                 {{ form_row(form.submit, {
                     'label': 'employee.button.submit',
                     'attr': {'class': 'btn btn-primary btn-success'}

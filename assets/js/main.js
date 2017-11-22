@@ -11,9 +11,6 @@ height:"100%",position:"absolute",top:0,display:a.alwaysVisible&&a.railVisible?"
 h.hover(function(){w()},function(){p()});c.hover(function(){y=!0},function(){y=!1});b.hover(function(){r=!0;w();p()},function(){r=!1;p()});b.bind("touchstart",function(a,b){a.originalEvent.touches.length&&(A=a.originalEvent.touches[0].pageY)});b.bind("touchmove",function(b){k||b.originalEvent.preventDefault();b.originalEvent.touches.length&&(m((A-b.originalEvent.touches[0].pageY)/a.touchScrollStep,!0),A=b.originalEvent.touches[0].pageY)});x();"bottom"===a.start?(c.css({top:b.outerHeight()-c.outerHeight()}),
 m(0,!0)):"top"!==a.start&&(m(e(a.start).position().top,null,!0),a.alwaysVisible||c.hide());window.addEventListener?(this.addEventListener("DOMMouseScroll",v,!1),this.addEventListener("mousewheel",v,!1)):document.attachEvent("onmousewheel",v)}});return this}});e.fn.extend({slimscroll:e.fn.slimScroll})})(jQuery);
 
-// create global $ and jQuery variables
-global.$ = global.jQuery = $;
-
 $(function () {
 	"use strict";
 
@@ -117,7 +114,7 @@ $(function () {
 	$.pushMenu.activate("[data-toggle='offcanvas']");
 
 	//Activate bootstrip tooltips
-	$("[data-toggle='tooltip']").tooltip();
+	//$("[data-toggle='tooltip']").tooltip();
 
 	// Login Page Flipbox control
 	$('.login-content [data-toggle="flip"]').click(function() {
@@ -136,4 +133,21 @@ $(function () {
 		$('.sidebar').css("overflow","visible");
 		$('.main-sidebar').find(".slimScrollDiv").css("overflow","visible");
 	}
+
+    // Show upload image
+    $('#image').on('change', function (e) {
+    	var input = e.originalEvent.srcElement;
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#upload_image')
+                    .attr('src', e.target.result)
+                    .width(150);
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    });
+
 });

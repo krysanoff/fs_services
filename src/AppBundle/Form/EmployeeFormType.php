@@ -16,6 +16,7 @@ use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 /**
@@ -51,10 +52,10 @@ class EmployeeFormType extends AbstractType
             ->add('shift', EntityType::class, [
                 'class' => Shift::class,
             ])
-            /*->add('image', FileType::class, [
+            ->add('image', FileType::class, [
+                'data_class' => null,
                 'required' => false,
-                'label' => 'Фотография',
-            ])*/
+            ])
             ->add('id', HiddenType::class)
             ->add('submit', SubmitType::class);
     }

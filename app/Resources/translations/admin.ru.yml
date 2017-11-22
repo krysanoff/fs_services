@@ -86,6 +86,8 @@ employee:
       label: Звание
     shift:
       label: Караул
+    image:
+      label: Фотография
   button:
     add: Добавить сотрудника
     submit: Сохранить
