@@ -35,16 +35,22 @@ class FileUploader
      *
      * @return null|string
      */
-    public function upload(UploadedFile $file)
+    public function upload(UploadedFile $file = null)
     {
-        $filename = $file->getClientOriginalName();
-        dump($file);
+        if ($file) {
+            $filename = $file->getClientOriginalName();
 
-        $file->move($this->getTargetDir(), $filename);
+            $file->move($this->getTargetDir(), $filename);
 
-        return $filename;
+            return $filename;
+        }
+
+        return null;
     }
 
+    /**
+     * @return string
+     */
     public function getTargetDir()
     {
         return $this->targetDir;
