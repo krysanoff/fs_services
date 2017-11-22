@@ -1,23 +1,46 @@
 {% extends '::base_admin.html.twig' %}
-{% block title %}Content manager page || Employee{% endblock %}
+{% block title %}{{ "site.name" | trans([], 'main')}} || {{ "new_employee.title" | trans([], 'admin')}}{% endblock %}
 
-{% block pagetitle %}New employee{% endblock %}
+{% block pagetitle %}{{ "new_employee.title" | trans([], 'admin')}}{% endblock %}
 
 {% block content %}
     <div class="col-md-6">
         <div class="card">
-            <h3 class="card-pagetitle">New employee form</h3>
+            <h3 class="card-pagetitle">{{ "new_employee.form.title" | trans([], 'admin')}}</h3>
             <div class="card-body">
                 {{ include('flash-messages.html.twig') }}
 
                 {{ form_start(form, {'name': 'new_employee', 'method': 'post', 'attr': { 'autocomplete': 'off' } }) }}
 
-                {{ form_row(form.lastname) }}
-                {{ form_row(form.firstname) }}
-                {{ form_row(form.middlename) }}
-                {{ form_row(form.position) }}
-                {{ form_row(form.rank) }}
-                {{ form_row(form.shift) }}
+                {{ form_row(form.lastname, {
+                    'label': 'employee.form.lastname.label',
+                    'attr': {
+                        'placeholder': 'employee.form.lastname.placeholder',
+                    }})
+                }}
+
+                {{ form_row(form.firstname, {
+                    'label': 'employee.form.firstname.label',
+                    'attr': {
+                        'placeholder': 'employee.form.firstname.placeholder',
+                    }})
+                }}
+
+                {{ form_row(form.middlename, {
+                    'label': 'employee.form.middlename.label',
+                    'attr': {
+                        'placeholder': 'employee.form.middlename.placeholder',
+                    }})
+                }}
+
+                {{ form_row(form.position, {'label': 'employee.form.position.label'}) }}
+
+                {{ form_row(form.rank, {'label': 'employee.form.rank.label'}) }}
+
+                {{ form_row(form.shift, {'label': 'employee.form.shift.label'}) }}
+
+                {{ form_row(form.submit, {'label': 'employee.button.submit'}) }}
+
                 {#{{ form_row(form.image) }}#}
 
                 {{ form_end(form) }}

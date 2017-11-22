@@ -110,3 +110,8 @@ employees:
     position: Должность
     rank: Звание
     shift: Караул
+
+new_employee:
+  title: 'Создание записи нового сотрудника'
+  form:
+    title: Новый сотрудник
