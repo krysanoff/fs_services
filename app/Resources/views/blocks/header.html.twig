@@ -1,13 +1,14 @@
-<section class="header container">
-    <div class="row">
-        <div class="col-md-2">
-            logo
+<section class="header">
+        <div class="header__logo col-md-2">
+            <img class="header__image" src="{{ asset('assets/icons/logo.svg') }}" alt="">
         </div>
-        <div class="col-md-8">
-            header_content
+        <div class="header__content col-md-8">
+            {% block header_content %}
+                <p>11 пожарная часть</p>
+                <p>г. Тарко-Сале, Ямало-Ненецкий автономоный округ</p>
+            {% endblock %}
         </div>
-        <div class="col-md-2">
-            menu
+        <div class="header__menu col-md-2">
+            <span class="header__hamburger glyphicon glyphicon-menu-hamburger"></span>
         </div>
-    </div>
 </section>
