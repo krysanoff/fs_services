@@ -1,3 +1,9 @@
+// require jQuery normally
+var $ = require('jquery');
+
+// create global $ and jQuery variables
+global.$ = global.jQuery = $;
+
 /*
  * SlimScroll Plugin required for sidenav to function properly
  */
