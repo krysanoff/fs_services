@@ -15,13 +15,16 @@ Encore
     // empty the outputPath dir before each build
     .cleanupOutputBeforeBuild()
 
-    // will output as web/build/app.js
-    .addEntry('js/app', './assets/js/main.js')
+    // admin js
+    .addEntry('js/admin', './assets/js/admin.js')
 
-    // will output as web/build/admin.css
+    // public js
+    .addEntry('js/main', './assets/js/main.js')
+
+    // admin.css
     .addStyleEntry('css/admin', './assets/css/admin.sass')
 
-    // will output as web/build/main.css
+    // main.css
     .addStyleEntry('css/main', './assets/css/main.sass')
 
     // allow sass/scss files to be processed
@@ -29,8 +32,18 @@ Encore
 
     .enableSourceMaps(!Encore.isProduction())
 
+    /*.addLoader({
+        test: /\.(png|jpg|gif|svg)$/,
+        loader: 'file-loader',
+        options: {
+            name: '[path][name].[ext]',
+            outputPath: 'images',
+            publicPath: '/images/i'
+        }
+    })*/
+
 // create hashed filenames (e.g. app.abc123.css)
-// .enableVersioning()
+//.enableVersioning()
 ;
 
 // export the final configuration

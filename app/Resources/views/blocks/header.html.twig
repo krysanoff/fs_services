@@ -1,11 +1,17 @@
 <section class="header">
         <div class="header__logo col-md-2">
-            <img class="header__image" src="{{ asset('assets/icons/logo.svg') }}" alt="">
+            <div>
+                <img class="header__image" src="{{ asset('images/logo.svg') }}" alt="">
+            </div>
+            <div class="header__info">
+                <p>11 пожарная часть</p>
+                <p>Тарко-Сале</p>
+            </div>
+
         </div>
         <div class="header__content col-md-8">
             {% block header_content %}
-                <p>11 пожарная часть</p>
-                <p>г. Тарко-Сале, Ямало-Ненецкий автономоный округ</p>
+                <h1>Firefighter Info Service</h1>
             {% endblock %}
         </div>
         <div class="header__menu col-md-2">

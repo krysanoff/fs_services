@@ -1,9 +1,14 @@
-<nav class="menu">
+<nav class="menu col-sm-3 col-md-2">
     <div class="menu__inner">
-        <h2>Menu</h2>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="elements.html">Elements</a></li>
+        <h2 class="menu__title">Menu</h2>
+        <ul class="nav nav-pills nav-stacked">
+            <li class="menu__item {% if app.request.get('_route') == 'homepage' %} active {% endif %}">
+                <a class="menu__link" href="{{ path('homepage') }}">Home</a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" href="{{ path('homepage') }}">Elements</a>
+            </li>
         </ul>
-    </div><a class="close" href="#menu">Close</a>
+    </div>
+    <a class="menu__close" href="#menu"><span class="glyphicon glyphicon-remove"></span></a>
 </nav>
