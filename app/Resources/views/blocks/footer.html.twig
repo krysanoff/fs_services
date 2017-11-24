@@ -1,25 +1,27 @@
 <footer class="footer col-md-12">
     <div class="contacts col-md-4">
-        <h3>Контакты</h3>
+        <h3>{{ 'footer.contacts.title' | trans({}, 'main') }}</h3>
         <div class="contacts__address">
             <p>
-                <span class="contacts__title">Адрес:</span>
+                <span class="contacts__title">{{ 'footer.contacts.address' | trans({}, 'main') }}:</span>
                 629851, ЯНАО, г.Тарко-Сале, ул.Таежная, 23
             </p>
             <p>
-                <span class="contacts__title">Телефон:</span>
+                <span class="contacts__title">{{ 'footer.contacts.phone' | trans({}, 'main') }}:</span>
                 +7 (34997) 2-15-01
             </p>
             <p>
-                <span class="contacts__title">Email:</span>
+                <span class="contacts__title">{{ 'footer.contacts.email' | trans({}, 'main') }}:</span>
                 <a class="footer__link" href="mailto:11-pchfps@mail.ru">11-pchfps@mail.ru</a>
             </p>
         </div>
     </div>
     <div class="social col-md-4">
-        <h3>Социальные сети</h3>
+        <h3>{{ 'footer.social' | trans({}, 'main') }}</h3>
         <ul class="list-inline">
-            <li class="social__item social__item_vk"><a href="" class="social__link fa fa-vk"></a></li>
+            <li class="social__item social__item_vk">
+                <a href="https://vk.com/11pch" class="social__link fa fa-vk" target="_blank"></a>
+            </li>
             <li class="social__item social__item_ok"><a href="" class="social__link fa fa-odnoklassniki"></a></li>
         </ul>
     </div>
@@ -28,7 +30,10 @@
     <div class="clearfix"></div>
 
     <div class="footer__copyright col-md-12">
-        © Copyright 2017. All rights reserved by
-        <a class="footer__link" href="https://github.com/krysanoff" target="_blank">Eugene Krysanov</a>
+        <p>&copy; {{ 'now' | date('Y') }} {{ 'site.name' | trans({}, 'main') }}</p>
+        <p>
+            {{ 'site.developer' | trans({}, 'main') }} -
+            <a class="footer__link" href="https://github.com/krysanoff" target="_blank">{{ 'site.author' | trans({}, 'main') }}</a>
+        </p>
     </div>
 </footer>

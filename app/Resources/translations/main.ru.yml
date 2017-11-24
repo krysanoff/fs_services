@@ -1,2 +1,27 @@
 site:
-  name: FS Services
+  name: Fighfighter Info Service
+  author: Евгений Крысанов
+  developer: Разработчик
+
+location:
+  city: Тарко-Сале
+  fire_department: 11 пожарная часть
+
+menu:
+  title: Меню
+  homepage: Главная
+  graph: График дежурства
+  shift: '%shift% караул'
+  waterponds: Водоисточники
+  docs: Документация
+
+homepage:
+  title: 'К вашим услугам'
+
+footer:
+  contacts:
+    title: Контакты
+    address: Адрес
+    phone: Телефон
+    email: Email
+  social: Социальные сети

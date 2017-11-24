@@ -4,14 +4,14 @@
                 <img class="header__image" src="{{ asset('images/logo.svg') }}" alt="">
             </div>
             <div class="header__info">
-                <p>11 пожарная часть</p>
-                <p>Тарко-Сале</p>
+                <p>{{ 'location.fire_department' | trans({}, 'main') }}</p>
+                <p>{{ 'location.city' | trans({}, 'main') }}</p>
             </div>
 
         </div>
         <div class="header__content col-md-8">
             {% block header_content %}
-                <h1>Firefighter Info Service</h1>
+                <h1>{{ 'site.name' | trans({}, 'main') }}</h1>
             {% endblock %}
         </div>
         <div class="header__menu col-md-2">
