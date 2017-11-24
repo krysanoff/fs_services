@@ -11,13 +11,13 @@ use Symfony\Component\HttpFoundation\Request;
 /**
 *
 */
-class GraphController extends Controller
+class SchemaController extends Controller
 {
     /**
-    * @Route("/{_locale/admin/graph", name="graph")
+    * @Route("/{_locale}/admin/schema", name="schema")
     */
     public function indexAction()
     {
-        return $this->render("graph/index.html.twig");
+        return $this->render("graph/schema.html.twig");
     }
 }
