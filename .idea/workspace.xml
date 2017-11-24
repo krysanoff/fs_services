@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="185bf6fc-e6c6-409f-9a5d-32148ef6fafa" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Form/SchemaFormType.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/admin/blocks/nav.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/admin/blocks/nav.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/admin/schema.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/admin/schema.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/Graph/GraphController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/Graph/GraphController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/Graph/SchemaController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/Graph/SchemaController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Form/SchemaFormType.php" afterPath="$PROJECT_DIR$/src/AppBundle/Form/SchemaFormType.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,11 +22,21 @@
       <file leaf-file-name="EmployeeController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/Admin/EmployeeController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="56" column="29" lean-forward="false" selection-start-line="56" selection-start-column="29" selection-end-line="56" selection-end-column="29" />
+            <state relative-caret-position="756">
+              <caret line="222" column="62" lean-forward="false" selection-start-line="213" selection-start-column="8" selection-end-line="222" selection-end-column="62" />
               <folding>
                 <element signature="e#1505#1525#1#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EmployeeFormType.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/EmployeeFormType.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="68" column="44" lean-forward="false" selection-start-line="68" selection-start-column="12" selection-end-line="68" selection-end-column="44" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -85,37 +93,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="graph.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/admin/graph.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-              <folding>
-                <element signature="e#12#32#0#Twig" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SchemaController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SchemaController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/Graph/SchemaController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="30" column="56" lean-forward="false" selection-start-line="30" selection-start-column="56" selection-end-line="30" selection-end-column="56" />
+            <state relative-caret-position="204">
+              <caret line="65" column="0" lean-forward="true" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
               <folding>
-                <element signature="e#69#103#0#PHP" expanded="true" />
-                <element signature="e#484#507#1#PHP" expanded="true" />
-                <element signature="e#721#746#0#PHP" expanded="true" />
+                <element signature="e#69#102#0#PHP" expanded="true" />
+                <element signature="e#518#541#1#PHP" expanded="true" />
+                <element signature="e#755#780#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="schema.html.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="schema.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/admin/schema.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="70" column="14" lean-forward="true" selection-start-line="70" selection-start-column="14" selection-end-line="70" selection-end-column="14" />
+            <state relative-caret-position="252">
+              <caret line="56" column="40" lean-forward="false" selection-start-line="56" selection-start-column="40" selection-end-line="56" selection-end-column="40" />
               <folding>
                 <element signature="e#12#32#0#Twig" expanded="true" />
               </folding>
@@ -126,9 +122,11 @@
       <file leaf-file-name="SchemaFormType.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/SchemaFormType.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="31" column="45" lean-forward="false" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
-              <folding />
+            <state relative-caret-position="60">
+              <caret line="31" column="19" lean-forward="false" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
+              <folding>
+                <element signature="e#58#91#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -247,8 +245,8 @@
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Graph.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/admin/blocks/nav.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/Graph/GraphController.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Form/SchemaFormType.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/Graph/SchemaController.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Form/SchemaFormType.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/admin/schema.html.twig" />
       </list>
     </option>
@@ -694,14 +692,7 @@
       <workItem from="1511325613413" duration="44013000" />
       <workItem from="1511461616973" duration="3146000" />
       <workItem from="1511505044471" duration="3765000" />
-      <workItem from="1511509032080" duration="5178000" />
-    </task>
-    <task id="LOCAL-00011" summary="output all admin users">
-      <created>1508996513525</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1508996513525</updated>
+      <workItem from="1511509032080" duration="6620000" />
     </task>
     <task id="LOCAL-00012" summary="delete feature for system users">
       <created>1509002305523</created>
@@ -1039,11 +1030,18 @@
       <option name="project" value="LOCAL" />
       <updated>1511517041831</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="Graph&#10; - create schema form">
+      <created>1511519359510</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1511519359510</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="268380000" />
+    <option name="totallyTimeSpent" value="269822000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="4" width="1303" height="780" extended-state="6" />
@@ -1102,7 +1100,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Forms&#10; - employee translations has updated" />
     <MESSAGE value="Employee&#10; - title" />
     <MESSAGE value="Employee&#10; - pagetitle&#10; - form title" />
     <MESSAGE value="Employee&#10; - form field translations have refactored" />
@@ -1127,7 +1124,8 @@
     <MESSAGE value="Main page&#10; - bootstrap and other files" />
     <MESSAGE value="Main page&#10; - basic styles and html" />
     <MESSAGE value="Graph&#10; - add graph and schema entities" />
-    <option name="LAST_COMMIT_MESSAGE" value="Graph&#10; - add graph and schema entities" />
+    <MESSAGE value="Graph&#10; - create schema form" />
+    <option name="LAST_COMMIT_MESSAGE" value="Graph&#10; - create schema form" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1148,13 +1146,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Employee.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="66" column="6" lean-forward="false" selection-start-line="66" selection-start-column="6" selection-end-line="66" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/translations/validator.ru.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1490,14 +1481,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/SchemaFormType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="31" column="45" lean-forward="false" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/Graph/GraphController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="258">
@@ -1508,32 +1491,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/Admin/EmployeeController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="56" column="29" lean-forward="false" selection-start-line="56" selection-start-column="29" selection-end-line="56" selection-end-column="29" />
+        <state relative-caret-position="756">
+          <caret line="222" column="62" lean-forward="false" selection-start-line="213" selection-start-column="8" selection-end-line="222" selection-end-column="62" />
           <folding>
             <element signature="e#1505#1525#1#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/Graph/SchemaController.php">
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/EmployeeFormType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="30" column="56" lean-forward="false" selection-start-line="30" selection-start-column="56" selection-end-line="30" selection-end-column="56" />
+        <state relative-caret-position="216">
+          <caret line="68" column="44" lean-forward="false" selection-start-line="68" selection-start-column="12" selection-end-line="68" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/SchemaFormType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="31" column="19" lean-forward="false" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
           <folding>
-            <element signature="e#69#103#0#PHP" expanded="true" />
-            <element signature="e#484#507#1#PHP" expanded="true" />
-            <element signature="e#721#746#0#PHP" expanded="true" />
+            <element signature="e#58#91#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/admin/schema.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="70" column="14" lean-forward="true" selection-start-line="70" selection-start-column="14" selection-end-line="70" selection-end-column="14" />
+        <state relative-caret-position="252">
+          <caret line="56" column="40" lean-forward="false" selection-start-line="56" selection-start-column="40" selection-end-line="56" selection-end-column="40" />
           <folding>
             <element signature="e#12#32#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/Graph/SchemaController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="65" column="0" lean-forward="true" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+          <folding>
+            <element signature="e#69#102#0#PHP" expanded="true" />
+            <element signature="e#518#541#1#PHP" expanded="true" />
+            <element signature="e#755#780#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
