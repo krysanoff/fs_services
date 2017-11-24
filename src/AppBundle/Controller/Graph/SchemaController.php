@@ -28,8 +28,8 @@ class SchemaController extends Controller
         ]);
 
         return $this->render("/admin/schema.html.twig", [
-            'schemas' => $schemas,
             'create_form' => $create_form->createView(),
+            'schemas' => $schemas,
         ]);
     }
 
@@ -58,11 +58,10 @@ class SchemaController extends Controller
         }
 
         $formData = $form->getData();
-        dump($formData);
 
         $em = $this->getDoctrine()->getManager();
         $schema = new GraphSchema();
-        $schema->setName($formData->getName());
+        $schema->setName($formData['name']);
 
         $em->persist($schema);
         $em->flush();

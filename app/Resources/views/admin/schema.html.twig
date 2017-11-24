@@ -19,22 +19,28 @@
                         </tr>
                         </thead>
                         <tbody>
-                        {% for employee in pagination %}
-                        <tr>
-                            <td>{{ employee.lastname }} {{ employee.firstname }} {{ employee.middlename }}</td>
-                            <td>
-                                <a href="{{ path('admin_employee', {'employee': employee.id}) }}">
-                                    <span class="fa fa-lg fa-edit"></span>
-                                </a>
-                            </td>
-                            <td>
-                                <a href="{{ path('admin_employee_delete', {'employee': employee.id}) }}">
-                                    <span class="fa fa-lg fa-remove"></span>
-                                </a>
-                            </td>
-                        </tr>
-                        </tbody>
+                        {% for schema in schemas %}
+                            <form name="schema-{{ schema.id }}">
+                                <tr>
+                                    <td>
+                                        <input type="text"
+                                                placeholder="{{ '' }}"
+                                                value="{{ schema.name }}">
+                                    </td>
+                                    <td>
+                                        <a href="{{ path('schema_update', {'schema': schema.id}) }}">
+                                            <span class="fa fa-lg fa-edit"></span>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="{{ path('schema_delete', {'schema': schema.id}) }}">
+                                            <span class="fa fa-lg fa-remove"></span>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </form>
                         {% endfor %}
+                        </tbody>
                     </table>
                 </div>
                 <div class="card-footer">
