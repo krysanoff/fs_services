@@ -1,121 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="185bf6fc-e6c6-409f-9a5d-32148ef6fafa" name="Default" comment="Main page&#10; - footer block">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/fonts/bootstrap/glyphicons-halflings-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/fonts/bootstrap/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/fonts/bootstrap/glyphicons-halflings-regular.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/images/.keep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/ek.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/assets/fonts/glyphicons-halflings-regular.448c34a5.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/assets/fonts/glyphicons-halflings-regular.f4769f9b.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/assets/fonts/glyphicons-halflings-regular.fa277232.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/fonts/bootstrap/glyphicons-halflings-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/fonts/bootstrap/glyphicons-halflings-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/javascripts/bootstrap-sprockets.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/javascripts/bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/javascripts/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/javascripts/bootstrap/affix.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/javascripts/bootstrap/alert.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/javascripts/bootstrap/button.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/javascripts/bootstrap/carousel.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/javascripts/bootstrap/collapse.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/javascripts/bootstrap/dropdown.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/javascripts/bootstrap/modal.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/javascripts/bootstrap/popover.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/javascripts/bootstrap/scrollspy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/javascripts/bootstrap/tab.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/javascripts/bootstrap/tooltip.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/javascripts/bootstrap/transition.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/_bootstrap-compass.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/_bootstrap-mincer.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/_bootstrap-sprockets.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/_bootstrap.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/_alerts.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/_badges.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/_breadcrumbs.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/_button-groups.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/_buttons.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/_carousel.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/_close.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/_code.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/_component-animations.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/_dropdowns.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/_forms.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/_glyphicons.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/_grid.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/_input-groups.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/_jumbotron.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/_labels.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/_list-group.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/_media.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/_mixins.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/_modals.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/_navbar.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/_navs.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/_normalize.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/_pager.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/_pagination.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/_panels.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/_popovers.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/_print.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/_progress-bars.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/_responsive-embed.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/_responsive-utilities.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/_scaffolding.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/_tables.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/_theme.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/_thumbnails.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/_tooltip.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/_type.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/_utilities.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/_variables.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/_wells.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/mixins/_alerts.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/mixins/_background-variant.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/mixins/_border-radius.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/mixins/_buttons.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/mixins/_center-block.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/mixins/_clearfix.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/mixins/_forms.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/mixins/_gradients.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/mixins/_grid-framework.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/mixins/_grid.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/mixins/_hide-text.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/mixins/_image.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/mixins/_labels.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/mixins/_list-group.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/mixins/_nav-divider.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/mixins/_nav-vertical-align.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/mixins/_opacity.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/mixins/_pagination.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/mixins/_panels.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/mixins/_progress-bar.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/mixins/_reset-filter.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/mixins/_reset-text.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/mixins/_resize.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/mixins/_responsive-visibility.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/mixins/_size.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/mixins/_tab-focus.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/mixins/_table-row.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/mixins/_text-emphasis.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/mixins/_text-overflow.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/bootstrap/assets/stylesheets/bootstrap/mixins/_vendor-prefixes.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/imports/_reset.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/logo.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/admin.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Form\Type/build_form.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Tests/Controller/Form\TypeControllerTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/assets/css/admin.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/assets/css/main.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/assets/fonts/glyphicons-halflings-regular.e18bbf61.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/assets/images/glyphicons-halflings-regular.89889688.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/assets/js/admin.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/assets/js/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/assets/manifest.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/images/logo.svg" />
+    <list default="true" id="185bf6fc-e6c6-409f-9a5d-32148ef6fafa" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/phpRuntime.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/imports/_homepage.sass" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/main.sass" afterPath="$PROJECT_DIR$/assets/css/main.sass" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/main.js" afterPath="$PROJECT_DIR$/assets/js/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/css/main.css" afterPath="$PROJECT_DIR$/web/assets/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/js/admin.js" afterPath="$PROJECT_DIR$/web/assets/js/admin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/js/main.js" afterPath="$PROJECT_DIR$/web/assets/js/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/manifest.json" afterPath="$PROJECT_DIR$/web/assets/manifest.json" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -132,42 +28,38 @@
       <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="13" column="22" lean-forward="false" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
-              <folding>
-                <element signature="e#489#512#0#Twig" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DefaultController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="16" column="53" lean-forward="false" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="53" />
-              <folding>
-                <element signature="e#457#482#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/blocks/header.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="234">
-              <caret line="13" column="44" lean-forward="false" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
+              <caret line="13" column="22" lean-forward="false" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/js/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="468">
+              <caret line="26" column="34" lean-forward="false" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.sass" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/css/main.sass">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="8" column="25" lean-forward="false" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/docs/index.html.twig">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/default/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="54">
+              <caret line="6" column="63" lean-forward="false" selection-start-line="6" selection-start-column="63" selection-end-line="6" selection-end-column="63" />
               <folding>
                 <element signature="e#12#26#0#Twig" expanded="true" />
               </folding>
@@ -175,14 +67,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/default/index.html.twig">
+      <file leaf-file-name="_homepage.sass" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assets/css/imports/_homepage.sass">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding>
-                <element signature="e#12#26#0#Twig" expanded="true" />
-              </folding>
+            <state relative-caret-position="342">
+              <caret line="19" column="22" lean-forward="false" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -253,7 +143,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/AppBundle/Form/UserFormType.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/flash-messages.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Service/GetFormErrors.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Service/Form.php" />
@@ -291,10 +180,8 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/assets/css/imports/_reset.sass" />
-        <option value="$PROJECT_DIR$/assets/css/main.sass" />
         <option value="$PROJECT_DIR$/app/Resources/views/blocks/header.html.twig" />
         <option value="$PROJECT_DIR$/assets/css/imports/_header.sass" />
-        <option value="$PROJECT_DIR$/assets/js/main.js" />
         <option value="$PROJECT_DIR$/assets/css/helpers/_variables.sass" />
         <option value="$PROJECT_DIR$/assets/css/imports/_menu.sass" />
         <option value="$PROJECT_DIR$/app/Resources/views/blocks/menu.html.twig" />
@@ -303,7 +190,10 @@
         <option value="$PROJECT_DIR$/assets/css/imports/_reset.scss" />
         <option value="$PROJECT_DIR$/assets/css/imports/_footer.sass" />
         <option value="$PROJECT_DIR$/app/Resources/views/blocks/footer.html.twig" />
+        <option value="$PROJECT_DIR$/assets/css/main.sass" />
+        <option value="$PROJECT_DIR$/assets/js/main.js" />
         <option value="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" />
+        <option value="$PROJECT_DIR$/assets/css/imports/_homepage.sass" />
       </list>
     </option>
   </component>
@@ -474,7 +364,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -551,15 +440,16 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.splitter.proportion" value="0.2744739" />
-    <property name="SearchEverywhereHistoryKey" value="default/index.html.twig&#9;FILE&#9;file:///home/eugene/host/fs/app/Resources/views/default/index.html.twig&#10;reset&#9;FILE&#9;file:///home/eugene/host/fs/assets/css/imports/_reset.scss&#10;hea&#9;FILE&#9;file:///home/eugene/host/fs/app/Resources/views/blocks/head.html.twig&#10;admin/hea&#9;FILE&#9;file:///home/eugene/host/fs/app/Resources/views/admin/blocks/head.html.twig&#10;nav&#9;FILE&#9;file:///home/eugene/host/fs/app/Resources/views/admin/blocks/nav.html.twig&#10;head&#9;FILE&#9;file:///home/eugene/host/fs/app/Resources/views/blocks/head.html.twig&#10;basea&#9;FILE&#9;file:///home/eugene/host/fs/app/Resources/views/base_admin.html.twig&#10;base&#9;FILE&#9;file:///home/eugene/host/fs/app/Resources/views/base_admin.html.twig&#10;index&#9;FILE&#9;file:///home/eugene/host/fs/app/Resources/views/admin/index.html.twig&#10;emp&#9;FILE&#9;file:///home/eugene/host/fs/app/Resources/views/admin/employees.html.twig&#10;config&#9;FILE&#9;file:///home/eugene/host/fs/app/config/config.yml&#10;para&#9;FILE&#9;file:///home/eugene/host/fs/app/config/parameters.yml&#10;appk&#9;null&#9;null&#10;file&#9;FILE&#9;file:///home/eugene/host/fs/src/AppBundle/Service/FileUploader.php&#10;тфмю&#9;FILE&#9;file:///home/eugene/host/fs/app/Resources/views/admin/blocks/nav.html.twig&#10;Employ&#9;FILE&#9;file:///home/eugene/host/fs/src/AppBundle/Entity/Employee.php&#10;empl&#9;FILE&#9;file:///home/eugene/host/fs/src/AppBundle/Entity/Employee.php&#10;emplocontr&#9;FILE&#9;file:///home/eugene/host/fs/src/AppBundle/Controller/Admin/EmployeeController.php&#10;ad&#9;FILE&#9;file:///home/eugene/host/fs/app/Resources/translations/admin.ru.yml&#10;employ&#9;null&#9;null&#10;userc&#9;FILE&#9;file:///home/eugene/host/fs/src/AppBundle/Controller/Admin/UserController.php&#10;UserCreateFormType&#9;FILE&#9;file:///home/eugene/host/fs/src/AppBundle/Form/UserCreateFormType.php&#10;userco&#9;FILE&#9;file:///home/eugene/host/fs/src/AppBundle/Controller/Admin/UserController.php&#10;flash-messages.html.twig&#9;FILE&#9;file:///home/eugene/host/fs/app/Resources/views/flash-messages.html.twig&#10;we&#9;FILE&#9;file:///home/eugene/host/fs/webpack.config.js&#10;config.y&#9;FILE&#9;file:///home/eugene/host/fs/app/config/config.yml&#10;routing.y&#9;FILE&#9;file:///home/eugene/host/fs/app/config/routing.yml&#10;user&#9;FILE&#9;file:///home/eugene/host/fs/src/AppBundle/Form/UserFormType.php&#10;gitig&#9;FILE&#9;file:///home/eugene/host/fs/.gitignore&#10;servi&#9;FILE&#9;file:///home/eugene/host/fs/app/config/services.yml&#10;OptionsResolver&#9;null&#9;null&#10;ArrayCollection&#9;FILE&#9;file:///home/eugene/host/fs/vendor/doctrine/collections/lib/Doctrine/Common/Collections/ArrayCollection.php&#10;Doctrine\Common\Collections\Collection&#9;null&#9;null&#10;Doctrine\ORM\PersistentCollection&#9;null&#9;null&#10;db.html.twig&#9;FILE&#9;file:///home/eugene/host/fs/vendor/doctrine/doctrine-bundle/Resources/views/Collector/db.html.twig&#10;DefaultAuthenticationSuccessHandler&#9;null&#9;null&#10;Symfony\Component\Security\Http\Authentication\AuthenticationUtils&#9;null&#9;null&#10;userpro&#9;FILE&#9;file:///home/eugene/host/fs/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Authentication/Provider/UserAuthenticationProvider.php&#10;security&#9;FILE&#9;file:///home/eugene/host/fs/app/config/security.yml&#10;config_&#9;FILE&#9;file:///home/eugene/host/fs/app/config/config_dev.yml" />
+    <property name="SearchEverywhereHistoryKey" value="main.js&#9;FILE&#9;file:///home/eugene/host/fs/assets/js/main.js&#10;main&#9;FILE&#9;file:///home/eugene/host/fs/assets/css/main.sass&#10;default/index.html.twig&#9;FILE&#9;file:///home/eugene/host/fs/app/Resources/views/default/index.html.twig&#10;reset&#9;FILE&#9;file:///home/eugene/host/fs/assets/css/imports/_reset.scss&#10;hea&#9;FILE&#9;file:///home/eugene/host/fs/app/Resources/views/blocks/head.html.twig&#10;admin/hea&#9;FILE&#9;file:///home/eugene/host/fs/app/Resources/views/admin/blocks/head.html.twig&#10;nav&#9;FILE&#9;file:///home/eugene/host/fs/app/Resources/views/admin/blocks/nav.html.twig&#10;head&#9;FILE&#9;file:///home/eugene/host/fs/app/Resources/views/blocks/head.html.twig&#10;basea&#9;FILE&#9;file:///home/eugene/host/fs/app/Resources/views/base_admin.html.twig&#10;base&#9;FILE&#9;file:///home/eugene/host/fs/app/Resources/views/base_admin.html.twig&#10;index&#9;FILE&#9;file:///home/eugene/host/fs/app/Resources/views/admin/index.html.twig&#10;emp&#9;FILE&#9;file:///home/eugene/host/fs/app/Resources/views/admin/employees.html.twig&#10;config&#9;FILE&#9;file:///home/eugene/host/fs/app/config/config.yml&#10;para&#9;FILE&#9;file:///home/eugene/host/fs/app/config/parameters.yml&#10;appk&#9;null&#9;null&#10;file&#9;FILE&#9;file:///home/eugene/host/fs/src/AppBundle/Service/FileUploader.php&#10;тфмю&#9;FILE&#9;file:///home/eugene/host/fs/app/Resources/views/admin/blocks/nav.html.twig&#10;Employ&#9;FILE&#9;file:///home/eugene/host/fs/src/AppBundle/Entity/Employee.php&#10;empl&#9;FILE&#9;file:///home/eugene/host/fs/src/AppBundle/Entity/Employee.php&#10;emplocontr&#9;FILE&#9;file:///home/eugene/host/fs/src/AppBundle/Controller/Admin/EmployeeController.php&#10;ad&#9;FILE&#9;file:///home/eugene/host/fs/app/Resources/translations/admin.ru.yml&#10;employ&#9;null&#9;null&#10;userc&#9;FILE&#9;file:///home/eugene/host/fs/src/AppBundle/Controller/Admin/UserController.php&#10;UserCreateFormType&#9;FILE&#9;file:///home/eugene/host/fs/src/AppBundle/Form/UserCreateFormType.php&#10;userco&#9;FILE&#9;file:///home/eugene/host/fs/src/AppBundle/Controller/Admin/UserController.php&#10;flash-messages.html.twig&#9;FILE&#9;file:///home/eugene/host/fs/app/Resources/views/flash-messages.html.twig&#10;we&#9;FILE&#9;file:///home/eugene/host/fs/webpack.config.js&#10;config.y&#9;FILE&#9;file:///home/eugene/host/fs/app/config/config.yml&#10;routing.y&#9;FILE&#9;file:///home/eugene/host/fs/app/config/routing.yml&#10;user&#9;FILE&#9;file:///home/eugene/host/fs/src/AppBundle/Form/UserFormType.php&#10;gitig&#9;FILE&#9;file:///home/eugene/host/fs/.gitignore&#10;servi&#9;FILE&#9;file:///home/eugene/host/fs/app/config/services.yml&#10;OptionsResolver&#9;null&#9;null&#10;ArrayCollection&#9;FILE&#9;file:///home/eugene/host/fs/vendor/doctrine/collections/lib/Doctrine/Common/Collections/ArrayCollection.php&#10;Doctrine\Common\Collections\Collection&#9;null&#9;null&#10;Doctrine\ORM\PersistentCollection&#9;null&#9;null&#10;db.html.twig&#9;FILE&#9;file:///home/eugene/host/fs/vendor/doctrine/doctrine-bundle/Resources/views/Collector/db.html.twig&#10;DefaultAuthenticationSuccessHandler&#9;null&#9;null&#10;Symfony\Component\Security\Http\Authentication\AuthenticationUtils&#9;null&#9;null&#10;userpro&#9;FILE&#9;file:///home/eugene/host/fs/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Authentication/Provider/UserAuthenticationProvider.php&#10;security&#9;FILE&#9;file:///home/eugene/host/fs/app/config/security.yml&#10;config_&#9;FILE&#9;file:///home/eugene/host/fs/app/config/config_dev.yml" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.path.for.package.jscs" value="project" />
     <property name="node.js.detected.package.jscs" value="true" />
@@ -715,14 +605,9 @@
       <workItem from="1510829786423" duration="3716000" />
       <workItem from="1511160650460" duration="7434000" />
       <workItem from="1511258669881" duration="9249000" />
-      <workItem from="1511325613413" duration="42595000" />
-    </task>
-    <task id="LOCAL-00008" summary="working frontend workflow">
-      <created>1508955450682</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1508955450682</updated>
+      <workItem from="1511325613413" duration="44013000" />
+      <workItem from="1511461616973" duration="3146000" />
+      <workItem from="1511505044471" duration="2004000" />
     </task>
     <task id="LOCAL-00009" summary="added few bootstrap styles">
       <created>1508959044295</created>
@@ -1060,25 +945,32 @@
       <option name="project" value="LOCAL" />
       <updated>1511439114506</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="Main page&#10; - bootstrap and other files">
+      <created>1511439553446</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1511439553447</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="254873000" />
+    <option name="totallyTimeSpent" value="261441000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="4" width="1303" height="780" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24581006" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25379092" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25040916" sideWeight="0.509178" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25040916" sideWeight="0.5123703" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25040916" sideWeight="0.49082202" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25040916" sideWeight="0.48762968" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1123,7 +1015,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="new user localization" />
     <MESSAGE value="form errors output" />
     <MESSAGE value="Forms&#10; - success flash messages" />
     <MESSAGE value="Forms&#10; - employee translations has updated" />
@@ -1148,7 +1039,8 @@
     <MESSAGE value="Main page&#10; - header block" />
     <MESSAGE value="Main page&#10; - menu block" />
     <MESSAGE value="Main page&#10; - footer block" />
-    <option name="LAST_COMMIT_MESSAGE" value="Main page&#10; - footer block" />
+    <MESSAGE value="Main page&#10; - bootstrap and other files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Main page&#10; - bootstrap and other files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1161,7 +1053,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/webpack.config.js</url>
           <line>4</line>
-          <properties />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
@@ -1170,14 +1061,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/assets/js/jquery-2.1.4.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="20229" lean-forward="false" selection-start-line="3" selection-start-column="20229" selection-end-line="3" selection-end-column="20229" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/1-tools/bootstrap-source/bootstrap/_buttons.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1578">
@@ -1186,14 +1069,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/imports/_user.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/imports/_user.scss" />
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/EmployeeFormType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="188">
@@ -1208,7 +1084,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="38" column="38" lean-forward="false" selection-start-line="38" selection-start-column="38" selection-end-line="38" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1216,7 +1091,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="1" column="8" lean-forward="false" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1224,7 +1098,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="46" column="38" lean-forward="false" selection-start-line="46" selection-start-column="38" selection-end-line="46" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1240,23 +1113,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="366">
           <caret line="104" column="0" lean-forward="false" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
-          <folding>
-            <marker date="1511349041996" expanded="true" signature="1580:2565" ph="employee: &lt;6 keys&gt;" />
-            <marker date="1511349041996" expanded="true" signature="2332:2565" ph="flash: &lt;4 keys&gt;" />
-            <marker date="1511349041996" expanded="true" signature="2566:2759" ph="employees: &lt;3 keys&gt;" />
-            <marker date="1511349041996" expanded="true" signature="2586:2604" ph="Сотрудники части" />
-            <marker date="1511349041996" expanded="true" signature="2618:2636" ph="Наша гордость!!!" />
-            <marker date="1511349041996" expanded="true" signature="2639:2759" ph="table: &lt;5 keys&gt;" />
-            <marker date="1511349041996" expanded="true" signature="2657:2677" ph="Список сотрудников" />
-            <marker date="1511349041996" expanded="true" signature="2692:2700" ph="Ф.И.О." />
-            <marker date="1511349041996" expanded="true" signature="2715:2724" ph="Должность" />
-            <marker date="1511349041996" expanded="true" signature="2735:2741" ph="Звание" />
-            <marker date="1511349041996" expanded="true" signature="2753:2759" ph="Караул" />
-            <marker date="1511349041996" expanded="true" signature="2761:2854" ph="new_employee: &lt;2 keys&gt;" />
-            <marker date="1511349041996" expanded="true" signature="2784:2819" ph="Создание …сотрудника" />
-            <marker date="1511349041996" expanded="true" signature="2822:2854" ph="form: &lt;1 key&gt;" />
-            <marker date="1511349041996" expanded="true" signature="2839:2854" ph="Новый сотрудник" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1264,48 +1120,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="66" column="6" lean-forward="false" selection-start-line="66" selection-start-column="6" selection-end-line="66" selection-end-column="6" />
-          <folding>
-            <element signature="e#59#91#0#PHP" expanded="true" />
-            <marker date="1511349042000" expanded="true" signature="1385:1462" ph=" @var string ..." />
-            <marker date="1511349042000" expanded="true" signature="1385:5350" ph="{...}" />
-            <marker date="1511349042000" expanded="true" signature="1498:1618" ph=" @var string ..." />
-            <marker date="1511349042000" expanded="true" signature="1649:1843" ph=" @var int ..." />
-            <marker date="1511349042000" expanded="true" signature="1877:2063" ph=" @var int ..." />
-            <marker date="1511349042000" expanded="true" signature="2093:2281" ph=" @var int ..." />
-            <marker date="1511349042000" expanded="true" signature="2312:2358" ph=" Get id ..." />
-            <marker date="1511349042000" expanded="true" signature="2388:2426" ph="{...}" />
-            <marker date="1511349042000" expanded="true" signature="2435:2518" ph=" Set id ..." />
-            <marker date="1511349042000" expanded="true" signature="2551:2611" ph="{...}" />
-            <marker date="1511349042000" expanded="true" signature="2620:2715" ph=" Set lastname ..." />
-            <marker date="1511349042000" expanded="true" signature="2760:2832" ph="{...}" />
-            <marker date="1511349042000" expanded="true" signature="2841:2896" ph=" Get lastname ..." />
-            <marker date="1511349042000" expanded="true" signature="2932:2976" ph="{...}" />
-            <marker date="1511349042000" expanded="true" signature="2985:3082" ph=" Set firstname ..." />
-            <marker date="1511349042000" expanded="true" signature="3129:3203" ph="{...}" />
-            <marker date="1511349042000" expanded="true" signature="3212:3268" ph=" Get firstname ..." />
-            <marker date="1511349042000" expanded="true" signature="3305:3350" ph="{...}" />
-            <marker date="1511349042000" expanded="true" signature="3359:3458" ph=" Set middlename ..." />
-            <marker date="1511349042000" expanded="true" signature="3507:3583" ph="{...}" />
-            <marker date="1511349042000" expanded="true" signature="3592:3649" ph=" Get middlename ..." />
-            <marker date="1511349042000" expanded="true" signature="3687:3733" ph="{...}" />
-            <marker date="1511349042000" expanded="true" signature="3742:3831" ph=" Set image ..." />
-            <marker date="1511349042000" expanded="true" signature="3870:3936" ph="{...}" />
-            <marker date="1511349042000" expanded="true" signature="3945:3997" ph=" Get image ..." />
-            <marker date="1511349042000" expanded="true" signature="4030:4071" ph="{...}" />
-            <marker date="1511349042000" expanded="true" signature="4080:4170" ph=" Set shift ..." />
-            <marker date="1511349042000" expanded="true" signature="4284:4333" ph=" Get shift ..." />
-            <marker date="1511349042000" expanded="true" signature="4366:4407" ph="{...}" />
-            <marker date="1511349042000" expanded="true" signature="4416:4511" ph=" Set position ..." />
-            <marker date="1511349042000" expanded="true" signature="4556:4628" ph="{...}" />
-            <marker date="1511349042000" expanded="true" signature="4637:4699" ph=" Get $this-&gt;position ..." />
-            <marker date="1511349042000" expanded="true" signature="4735:4779" ph="{...}" />
-            <marker date="1511349042000" expanded="true" signature="4788:4882" ph=" Set $this-&gt;rank ..." />
-            <marker date="1511349042000" expanded="true" signature="4919:4983" ph="{...}" />
-            <marker date="1511349042000" expanded="true" signature="4992:5050" ph=" Get $this-&gt;rank ..." />
-            <marker date="1511349042000" expanded="true" signature="5082:5122" ph="{...}" />
-            <marker date="1511349042000" expanded="true" signature="5131:5187" ph=" Get full name ..." />
-            <marker date="1511349042000" expanded="true" signature="5223:5348" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1313,9 +1127,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="36" lean-forward="false" selection-start-line="0" selection-start-column="36" selection-end-line="0" selection-end-column="36" />
-          <folding>
-            <marker date="1511349041996" expanded="true" signature="28:497" ph="Пароли до… совпадать" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1323,7 +1134,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
           <caret line="58" column="0" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1331,9 +1141,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="222">
           <caret line="82" column="22" lean-forward="false" selection-start-line="82" selection-start-column="22" selection-end-line="82" selection-end-column="22" />
-          <folding>
-            <element signature="e#12#34#0#Twig" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1358,16 +1165,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding>
-            <marker date="1511349041996" expanded="true" signature="39:56" ph="{% block title ...%}" />
-            <marker date="1511349041996" expanded="true" signature="240:3124" ph="{% block content ...%}" />
-            <marker date="1511349041996" expanded="true" signature="268:3109" ph="{% if employees ...%}" />
-            <marker date="1511349041996" expanded="true" signature="1317:1336" ph="{% for employee in pagination ...%}" />
-            <marker date="1511349041996" expanded="true" signature="2720:3046" ph="..." />
-            <marker date="1511349041996" expanded="false" signature="2764:2782" ph="/{_locale}/admin/employee/new" />
-            <marker date="1511349041996" expanded="true" signature="2843:3019" ph="..." />
-            <marker date="1511349041996" expanded="true" signature="3126:3165" ph="{% block javascripts ...%}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1375,14 +1172,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="828">
           <caret line="204" column="35" lean-forward="false" selection-start-line="204" selection-start-column="35" selection-end-line="204" selection-end-column="35" />
-          <folding>
-            <element signature="e#69#99#0#PHP" expanded="true" />
-            <marker date="1511349042000" expanded="true" signature="542:7210" ph="{...}" />
-            <marker date="1511349042000" expanded="true" signature="6684:7208" ph="{...}" />
-            <marker date="1511349042000" expanded="true" signature="6970:7136" ph="..." />
-            <marker date="1511349042000" expanded="true" signature="7013:7135" ph="..." />
-            <marker date="1511349042000" expanded="true" signature="7136:7208" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1390,7 +1179,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1406,34 +1194,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/imports/_navy.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="5" lean-forward="true" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.cache/.fr-4GObMU/bootstrap-sass-3.3.7/assets/stylesheets/_bootstrap.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.cache/.fr-8SCBrC/bootstrap-sass-3.3.7/assets/stylesheets/_bootstrap.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/imports/_navy.sass" />
+    <entry file="file://$USER_HOME$/.cache/.fr-4GObMU/bootstrap-sass-3.3.7/assets/stylesheets/_bootstrap.scss" />
+    <entry file="file://$USER_HOME$/.cache/.fr-8SCBrC/bootstrap-sass-3.3.7/assets/stylesheets/_bootstrap.scss" />
     <entry file="file://$PROJECT_DIR$/assets/css/imports/_basics.sass">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
@@ -1446,7 +1212,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="10" column="23" lean-forward="false" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1454,9 +1219,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="18" column="82" lean-forward="false" selection-start-line="18" selection-start-column="77" selection-end-line="18" selection-end-column="82" />
-          <folding>
-            <element signature="e#209#238#0#Twig" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1464,7 +1226,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1472,9 +1233,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1016">
           <caret line="616" column="23" lean-forward="false" selection-start-line="616" selection-start-column="4" selection-end-line="616" selection-end-column="23" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1482,7 +1240,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="6" column="27" lean-forward="true" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1490,9 +1247,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-11354">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1500,7 +1254,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="301">
           <caret line="321" column="20" lean-forward="false" selection-start-line="321" selection-start-column="20" selection-end-line="321" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1508,23 +1261,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="39" lean-forward="false" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/main.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="22" lean-forward="false" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1548,7 +1284,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="13" column="6" lean-forward="true" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1556,7 +1291,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="1" column="85" lean-forward="false" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="85" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1580,7 +1314,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="126" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1588,7 +1321,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="6" column="126" lean-forward="false" selection-start-line="6" selection-start-column="126" selection-end-line="6" selection-end-column="126" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1600,39 +1332,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/blocks/header.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="44" lean-forward="false" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="13" column="22" lean-forward="false" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
-          <folding>
-            <element signature="e#489#512#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="16" column="53" lean-forward="false" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="53" />
-          <folding>
-            <element signature="e#457#482#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/blocks/footer.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="24" column="10" lean-forward="false" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1640,9 +1343,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#12#26#0#Twig" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1650,19 +1350,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#12#26#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/docs/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#12#26#0#Twig" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1674,13 +1361,66 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/docs/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/blocks/header.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="44" lean-forward="false" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="16" column="53" lean-forward="false" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="22" lean-forward="false" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/main.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="25" lean-forward="false" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="26" column="34" lean-forward="false" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/default/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state relative-caret-position="54">
+          <caret line="6" column="63" lean-forward="false" selection-start-line="6" selection-start-column="63" selection-end-line="6" selection-end-column="63" />
           <folding>
             <element signature="e#12#26#0#Twig" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/imports/_homepage.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="22" lean-forward="false" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
