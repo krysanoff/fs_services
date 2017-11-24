@@ -18,6 +18,6 @@ class GraphController extends Controller
     */
     public function indexAction()
     {
-        return $this->render("graph/index.html.twig");
+        return $this->render("/admin/graph.html.twig");
     }
 }

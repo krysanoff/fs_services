@@ -1,10 +1,71 @@
 {% extends 'base_admin.html.twig' %}
 {% block title %}List of shifts{% endblock %}
 
-{% block body %}
+{% block pagetitle %}{{ 'employees.pagetitle' | trans({}, 'admin') }}{% endblock %}
 
-{% endblock %}
+{% block content %}
+    {% if schemas %}
+        <div class="col-md-4">
+            <div class="card">
+                <h3 class="card-pagetitle">{{ 'employees.table.title' | trans({}, 'admin') }}</h3>
+                {{ include('flash-messages.html.twig') }}
+                <div class="card-body">
+                    <table class="table table-hover">
+                        <thead>
+                        <tr>
+                            <th>{{ 'employees.table.fullname' | trans({}, 'admin') }}</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for employee in pagination %}
+                        <tr>
+                            <td>{{ employee.lastname }} {{ employee.firstname }} {{ employee.middlename }}</td>
+                            <td>
+                                <a href="{{ path('admin_employee', {'employee': employee.id}) }}">
+                                    <span class="fa fa-lg fa-edit"></span>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="{{ path('admin_employee_delete', {'employee': employee.id}) }}">
+                                    <span class="fa fa-lg fa-remove"></span>
+                                </a>
+                            </td>
+                        </tr>
+                        </tbody>
+                        {% endfor %}
+                    </table>
+                </div>
+                <div class="card-footer">
+                    <a href="{{ path('admin_employee_new') }}" class="user__actions btn btn-block btn-lg btn-success">
+                        <span class="fa fa-lg fa-newuser"></span>
+                        {{ 'employee.button.add' | trans({}, 'admin') }}
+                    </a>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+    <div class="col-md-4">
+        <div class="card">
+            <h3 class="card-pagetitle">{{ "new_user.form.title" | trans({}, 'admin')}}</h3>
+            <div class="card-body">
+                {{ include('flash-messages.html.twig') }}
 
-{% block stylesheets %}
+                {{ form_start(create_form, {'name': 'new_schema', 'method': 'post', 'attr': { 'autocomplete': 'off' } }) }}
 
+                {{ form_row(create_form.schemaname, {
+                    'label': 'user.form.username.label',
+                    'attr': {'placeholder': 'user.form.username.placeholder'}
+                }) }}
+
+                {{ form_row(create_form.submit, {
+                    'label': 'user.button.submit',
+                    'attr': {'class': 'btn btn-primary btn-success'}
+                }) }}
+
+                {{ form_end(create_form) }}
+            </div>
+        </div>
+    </div>
 {% endblock %}
