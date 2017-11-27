@@ -21,6 +21,9 @@ Encore
     // public js
     .addEntry('js/main', './assets/js/main.js')
 
+    // graph app with React
+    .addEntry('js/graph', './assets/js/graph.js')
+
     // admin.css
     .addStyleEntry('css/admin', './assets/css/admin.sass')
 
@@ -29,6 +32,9 @@ Encore
 
     // allow sass/scss files to be processed
     .enableSassLoader()
+
+    // react
+    .enableReactPreset()
 
     .enableSourceMaps(!Encore.isProduction())
 

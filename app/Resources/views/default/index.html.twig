@@ -8,16 +8,16 @@
                 <h3>{{ 'menu.graph' | trans({}, 'main') }}</h3>
                 <ul class="nav nav-pills nav-stacked">
                     <li>
-                        <a href="#">{{ 'menu.shift' | trans({'%shift%': 1}, 'main') }}</a>
+                        <a href="{{ path('graph', {'shift': 1}) }}">{{ 'menu.shift' | trans({'%shift%': 1}, 'main') }}</a>
                     </li>
                     <li>
-                        <a href="">{{ 'menu.shift' | trans({'%shift%': 2}, 'main') }}</a>
+                        <a href="{{ path('graph', {'shift': 2}) }}">{{ 'menu.shift' | trans({'%shift%': 2}, 'main') }}</a>
                     </li>
                     <li>
-                        <a href="">{{ 'menu.shift' | trans({'%shift%': 3}, 'main') }}</a>
+                        <a href="{{ path('graph', {'shift': 3}) }}">{{ 'menu.shift' | trans({'%shift%': 3}, 'main') }}</a>
                     </li>
                     <li>
-                        <a href="">{{ 'menu.shift' | trans({'%shift%': 4}, 'main') }}</a>
+                        <a href="{{ path('graph', {'shift': 4}) }}">{{ 'menu.shift' | trans({'%shift%': 4}, 'main') }}</a>
                     </li>
                 </ul>
             </div>
