@@ -141,7 +141,6 @@ class EmployeeController extends Controller
         }
 
         $formData = $form->getData();
-        dump($formData);
 
         $em = $this->getDoctrine()->getManager();
         $imageName = $fileUploader->upload($formData->getImage());

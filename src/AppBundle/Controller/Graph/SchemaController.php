@@ -27,9 +27,18 @@ class SchemaController extends Controller
             'action' => $this->generateUrl('schema_create'),
         ]);
 
+        foreach ($schemas as $schema) {
+            static $forms = [];
+            $schema_form = $this->createForm(SchemaFormType::class, $schema, [
+                'action' => $this->generateUrl('schema_update'),
+            ]);
+
+            $forms[] = $schema_form->createView();
+        }
+
         return $this->render("/admin/schema.html.twig", [
             'create_form' => $create_form->createView(),
-            'schemas' => $schemas,
+            'forms' => $forms,
         ]);
     }
 
@@ -81,11 +90,43 @@ class SchemaController extends Controller
      *
      * @Route("/{_locale}/admin/schema/update", name="schema_update")
      *
+     * @param Request $request
+     *
      * @return string
      */
-    public function updateAction()
+    public function updateAction(Request $request)
     {
-        return 't';
+        $form = $this->createForm(SchemaFormType::class, null);
+
+        $form->handleRequest($request);
+
+        if (!$form->isValid() || !$form->isSubmitted()) {
+            foreach ($form->getErrors(true) as $error)
+            {
+                $this->addFlash('danger', $error->getMessage());
+            }
+
+            return $this->redirect($request->headers->get('referer'));
+        }
+
+        $formData = $form->getData();
+        dump($formData);
+
+        $em = $this->getDoctrine()->getManager();
+        $schema = $em->find(GraphSchema::class, $formData['id']);
+
+        $schema->setName($formData['name']);
+
+        $em->persist($schema);
+        $em->flush();
+
+        $this->addFlash('success', $this->get('translator')->trans(
+            'employee.flash.create',
+            ['%employee%' => $schema->getName()],
+            'admin'
+        ));
+
+        return $this->redirectToRoute('schemas');
     }
 
     /**

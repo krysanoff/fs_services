@@ -10,7 +10,9 @@ $(function () {
     var $menu = $('.menu'),
         $hamburger = $('.header__menu'),
         $close_button = $('.menu__close'),
-        $service_popup = $('.service__popup');
+        $service_popup = $('.service__popup'),
+        $schema_update = $('.schema_update'),
+        $schema_delete = $('.schema_delete');
 
     // EVENTS
     // Menu clicks
@@ -29,5 +31,13 @@ $(function () {
 
     $service_popup.mouseleave(function () {
         $(this).css('opacity', 0.4);
+    });
+
+    // Schema CRUD
+    $schema_update.on('click', function (e) {
+        e.defaultPrevented();
+        var schema = $(this).data('id');
+
+        $(this).closest('form').submit();
     });
 });

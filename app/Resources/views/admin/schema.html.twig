@@ -4,44 +4,40 @@
 {% block pagetitle %}{{ 'employees.pagetitle' | trans({}, 'admin') }}{% endblock %}
 
 {% block content %}
-    {% if schemas %}
+    {% if forms %}
         <div class="col-md-4">
             <div class="card">
                 <h3 class="card-pagetitle">{{ 'employees.table.title' | trans({}, 'admin') }}</h3>
                 {{ include('flash-messages.html.twig') }}
                 <div class="card-body">
-                    <table class="table table-hover">
-                        <thead>
-                        <tr>
-                            <th>{{ 'employees.table.fullname' | trans({}, 'admin') }}</th>
-                            <th></th>
-                            <th></th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        {% for schema in schemas %}
-                            <form name="schema-{{ schema.id }}">
-                                <tr>
-                                    <td>
-                                        <input type="text"
-                                                placeholder="{{ '' }}"
-                                                value="{{ schema.name }}">
-                                    </td>
-                                    <td>
-                                        <a href="{{ path('schema_update', {'schema': schema.id}) }}">
-                                            <span class="fa fa-lg fa-edit"></span>
-                                        </a>
-                                    </td>
-                                    <td>
-                                        <a href="{{ path('schema_delete', {'schema': schema.id}) }}">
-                                            <span class="fa fa-lg fa-remove"></span>
-                                        </a>
-                                    </td>
-                                </tr>
-                            </form>
-                        {% endfor %}
-                        </tbody>
-                    </table>
+                    {% for form in forms %}
+                        {{ form_start(form) }}
+                        <table>
+                            <tbody>
+                            <tr>
+                                <td>
+                                    {{ form_row(form.name) }}
+                                </td>
+                                <td>
+                                    {{ form_row(form.submit, {
+                                        'label': ' ',
+                                        'attr': {
+                                            'class': 'fa fa-lg fa-edit btn-success'
+                                        },
+                                    }) }}
+                                </td>
+                                <td>
+                                    <a class="schema_delete btn btn-danger"
+                                            href="{{ path('schema_delete', {'id': form.vars.value}) }}">
+                                        <span class="fa fa-lg fa-remove"></span>
+                                    </a>
+                                </td>
+
+                            </tr>
+                            </tbody>
+                        </table>
+                        {{ form_end(form) }}
+                    {% endfor %}
                 </div>
                 <div class="card-footer">
                     <a href="{{ path('admin_employee_new') }}" class="user__actions btn btn-block btn-lg btn-success">
