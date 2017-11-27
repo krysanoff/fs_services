@@ -118,3 +118,26 @@ new_employee:
   title: 'Создание записи нового сотрудника'
   form:
     title: Новый сотрудник
+
+schemas:
+  title: 'Схемы графиков дежурств'
+  pagetitle: 'Создание и удаление схем'
+  form:
+    title: 'Список схем'
+    submit:
+      label: ' ' # Чтобы не выводилось название кнопки
+    name:
+      placeholder: 'Введите название схемы'
+  create_schema:
+    title: 'Новая схема'
+    name:
+      label: 'Название схемы'
+      placeholder: 'Условное название схемы. Например: DFDF'
+    attention:
+      title: 'Имейте ввиду!!!'
+      desc: 'По названию схемы должен быть создан файл {название_схемы}.js, который будет отвечать за логику создания графика'
+    submit: 'Создать'
+  flash:
+      create: 'Схема <strong>%schema%</strong> успешно создана'
+      delete: 'Схема <strong>%schema%</strong> удалена'
+      update: '<strong>%schema%</strong> - новые название схемы сохранено'

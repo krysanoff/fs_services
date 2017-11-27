@@ -1,13 +1,13 @@
 {% extends 'base_admin.html.twig' %}
-{% block title %}List of shifts{% endblock %}
+{% block title %}{{ "site.name" | trans([], 'main')}} || {{ "schemas.title" | trans([], 'admin')}}{% endblock %}
 
-{% block pagetitle %}{{ 'employees.pagetitle' | trans({}, 'admin') }}{% endblock %}
+{% block pagetitle %}{{ "schemas.pagetitle" | trans([], 'admin')}}{% endblock %}
 
 {% block content %}
     {% if forms %}
         <div class="col-md-4">
             <div class="card">
-                <h3 class="card-pagetitle">{{ 'employees.table.title' | trans({}, 'admin') }}</h3>
+                <h3 class="card-pagetitle">{{ "schemas.form.title" | trans([], 'admin')}}</h3>
                 {{ include('flash-messages.html.twig') }}
                 <div class="card-body">
                     {% for form in forms %}
@@ -16,11 +16,15 @@
                             <tbody>
                             <tr>
                                 <td>
-                                    {{ form_row(form.name) }}
+                                    {{ form_row(form.name, {
+                                        'attr': {
+                                            'placeholder': 'schemas.form.name.placeholder',
+                                        }
+                                    }) }}
                                 </td>
                                 <td>
                                     {{ form_row(form.submit, {
-                                        'label': ' ',
+                                        'label': 'schemas.form.submit.label',
                                         'attr': {
                                             'class': 'fa fa-lg fa-edit btn-success'
                                         },
@@ -39,34 +43,38 @@
                         {{ form_end(form) }}
                     {% endfor %}
                 </div>
-                <div class="card-footer">
-                    <a href="{{ path('admin_employee_new') }}" class="user__actions btn btn-block btn-lg btn-success">
-                        <span class="fa fa-lg fa-newuser"></span>
-                        {{ 'employee.button.add' | trans({}, 'admin') }}
-                    </a>
-                </div>
             </div>
         </div>
     {% endif %}
     <div class="col-md-4">
         <div class="card">
-            <h3 class="card-pagetitle">{{ "new_user.form.title" | trans({}, 'admin')}}</h3>
+            <h3 class="card-pagetitle">{{ "schemas.create_schema.title" | trans({}, 'admin')}}</h3>
             <div class="card-body">
                 {{ include('flash-messages.html.twig') }}
 
                 {{ form_start(create_form, {'name': 'new_schema', 'method': 'post', 'attr': { 'autocomplete': 'off' } }) }}
 
                 {{ form_row(create_form.name, {
-                    'label': 'user.form.username.label',
-                    'attr': {'placeholder': 'user.form.username.placeholder'}
+                    'label': 'schemas.create_schema.name.label',
+                    'attr': {'placeholder': 'schemas.create_schema.name.placeholder'}
                 }) }}
 
                 {{ form_row(create_form.submit, {
-                    'label': 'user.button.submit',
+                    'label': 'schemas.create_schema.submit',
                     'attr': {'class': 'btn btn-primary btn-success'}
                 }) }}
 
                 {{ form_end(create_form) }}
+                <div class="bs-component">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">{{ 'schemas.create_schema.attention.title' | trans({}, 'admin') }}</h3>
+                        </div>
+                        <div class="panel-body">
+                            <p>{{ 'schemas.create_schema.attention.desc' | trans({}, 'admin') }}</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

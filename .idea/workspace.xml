@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="185bf6fc-e6c6-409f-9a5d-32148ef6fafa" name="Default" comment="">
+    <list default="true" id="185bf6fc-e6c6-409f-9a5d-32148ef6fafa" name="Default" comment="Graph&#10; - schema translations">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/translations/admin.ru.yml" afterPath="$PROJECT_DIR$/app/Resources/translations/admin.ru.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/admin/schema.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/admin/schema.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/main.js" afterPath="$PROJECT_DIR$/assets/js/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/Graph/SchemaController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/Graph/SchemaController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/js/main.js" afterPath="$PROJECT_DIR$/web/assets/js/main.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,18 +22,18 @@
       <file leaf-file-name="EmployeeController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/Admin/EmployeeController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="101" column="8" lean-forward="false" selection-start-line="101" selection-start-column="8" selection-end-line="103" selection-end-column="9" />
+            <state relative-caret-position="222">
+              <caret line="110" column="59" lean-forward="false" selection-start-line="110" selection-start-column="48" selection-end-line="110" selection-end-column="59" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SchemaController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SchemaController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/Graph/SchemaController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="158" column="49" lean-forward="false" selection-start-line="158" selection-start-column="49" selection-end-line="158" selection-end-column="49" />
+            <state relative-caret-position="-78">
+              <caret line="124" column="33" lean-forward="false" selection-start-line="124" selection-start-column="33" selection-end-line="124" selection-end-column="33" />
               <folding>
                 <element signature="e#69#102#0#PHP" expanded="true" />
               </folding>
@@ -42,21 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/js/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="12" column="46" lean-forward="false" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="schema.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/admin/schema.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="30" column="83" lean-forward="false" selection-start-line="30" selection-start-column="83" selection-end-line="30" selection-end-column="83" />
+            <state relative-caret-position="165">
+              <caret line="26" column="69" lean-forward="false" selection-start-line="26" selection-start-column="69" selection-end-line="26" selection-end-column="69" />
               <folding>
                 <element signature="e#12#32#0#Twig" expanded="true" />
               </folding>
@@ -64,11 +53,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="admin.ru.yml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Resources/translations/admin.ru.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="116" column="13" lean-forward="true" selection-start-line="116" selection-start-column="13" selection-end-line="116" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="user.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/admin/user.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1026">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="36">
+              <caret line="2" column="40" lean-forward="false" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="40" />
               <folding>
                 <element signature="e#12#34#0#Twig" expanded="true" />
               </folding>
@@ -173,7 +172,6 @@
         <option value="$PROJECT_DIR$/app/Resources/views/admin/employee.html.twig" />
         <option value="$PROJECT_DIR$/assets/css/4-pages/employee.sass" />
         <option value="$PROJECT_DIR$/assets/css/admin.sass" />
-        <option value="$PROJECT_DIR$/app/Resources/translations/admin.ru.yml" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Employee.php" />
         <option value="$PROJECT_DIR$/app/Resources/translations/validator.ru.yml" />
         <option value="$PROJECT_DIR$/src/AppBundle/Service/FileUploader.php" />
@@ -213,8 +211,9 @@
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/Admin/EmployeeController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Form/SchemaFormType.php" />
         <option value="$PROJECT_DIR$/assets/js/main.js" />
-        <option value="$PROJECT_DIR$/app/Resources/views/admin/schema.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/Graph/SchemaController.php" />
+        <option value="$PROJECT_DIR$/app/Resources/views/admin/schema.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/translations/admin.ru.yml" />
       </list>
     </option>
   </component>
@@ -407,6 +406,13 @@
               <item name="fs" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="translations" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="fs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fs" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -500,7 +506,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.splitter.proportion" value="0.2744739" />
-    <property name="SearchEverywhereHistoryKey" value="security.y&#9;FILE&#9;file:///home/eugene/host/fs/app/config/security.yml&#10;main.&#9;FILE&#9;file:///home/eugene/host/fs/assets/js/main.js&#10;main.js&#9;FILE&#9;file:///home/eugene/host/fs/assets/js/main.js&#10;main&#9;FILE&#9;file:///home/eugene/host/fs/assets/css/main.sass&#10;default/index.html.twig&#9;FILE&#9;file:///home/eugene/host/fs/app/Resources/views/default/index.html.twig&#10;reset&#9;FILE&#9;file:///home/eugene/host/fs/assets/css/imports/_reset.scss&#10;hea&#9;FILE&#9;file:///home/eugene/host/fs/app/Resources/views/blocks/head.html.twig&#10;admin/hea&#9;FILE&#9;file:///home/eugene/host/fs/app/Resources/views/admin/blocks/head.html.twig&#10;nav&#9;FILE&#9;file:///home/eugene/host/fs/app/Resources/views/admin/blocks/nav.html.twig&#10;head&#9;FILE&#9;file:///home/eugene/host/fs/app/Resources/views/blocks/head.html.twig&#10;basea&#9;FILE&#9;file:///home/eugene/host/fs/app/Resources/views/base_admin.html.twig&#10;base&#9;FILE&#9;file:///home/eugene/host/fs/app/Resources/views/base_admin.html.twig&#10;index&#9;FILE&#9;file:///home/eugene/host/fs/app/Resources/views/admin/index.html.twig&#10;emp&#9;FILE&#9;file:///home/eugene/host/fs/app/Resources/views/admin/employees.html.twig&#10;config&#9;FILE&#9;file:///home/eugene/host/fs/app/config/config.yml&#10;para&#9;FILE&#9;file:///home/eugene/host/fs/app/config/parameters.yml&#10;appk&#9;null&#9;null&#10;file&#9;FILE&#9;file:///home/eugene/host/fs/src/AppBundle/Service/FileUploader.php&#10;тфмю&#9;FILE&#9;file:///home/eugene/host/fs/app/Resources/views/admin/blocks/nav.html.twig&#10;Employ&#9;FILE&#9;file:///home/eugene/host/fs/src/AppBundle/Entity/Employee.php&#10;empl&#9;FILE&#9;file:///home/eugene/host/fs/src/AppBundle/Entity/Employee.php&#10;emplocontr&#9;FILE&#9;file:///home/eugene/host/fs/src/AppBundle/Controller/Admin/EmployeeController.php&#10;ad&#9;FILE&#9;file:///home/eugene/host/fs/app/Resources/translations/admin.ru.yml&#10;employ&#9;null&#9;null&#10;userc&#9;FILE&#9;file:///home/eugene/host/fs/src/AppBundle/Controller/Admin/UserController.php&#10;UserCreateFormType&#9;FILE&#9;file:///home/eugene/host/fs/src/AppBundle/Form/UserCreateFormType.php&#10;userco&#9;FILE&#9;file:///home/eugene/host/fs/src/AppBundle/Controller/Admin/UserController.php&#10;flash-messages.html.twig&#9;FILE&#9;file:///home/eugene/host/fs/app/Resources/views/flash-messages.html.twig&#10;we&#9;FILE&#9;file:///home/eugene/host/fs/webpack.config.js&#10;config.y&#9;FILE&#9;file:///home/eugene/host/fs/app/config/config.yml&#10;routing.y&#9;FILE&#9;file:///home/eugene/host/fs/app/config/routing.yml&#10;user&#9;FILE&#9;file:///home/eugene/host/fs/src/AppBundle/Form/UserFormType.php&#10;gitig&#9;FILE&#9;file:///home/eugene/host/fs/.gitignore&#10;servi&#9;FILE&#9;file:///home/eugene/host/fs/app/config/services.yml&#10;OptionsResolver&#9;null&#9;null&#10;ArrayCollection&#9;FILE&#9;file:///home/eugene/host/fs/vendor/doctrine/collections/lib/Doctrine/Common/Collections/ArrayCollection.php&#10;Doctrine\Common\Collections\Collection&#9;null&#9;null&#10;Doctrine\ORM\PersistentCollection&#9;null&#9;null&#10;db.html.twig&#9;FILE&#9;file:///home/eugene/host/fs/vendor/doctrine/doctrine-bundle/Resources/views/Collector/db.html.twig&#10;DefaultAuthenticationSuccessHandler&#9;null&#9;null&#10;Symfony\Component\Security\Http\Authentication\AuthenticationUtils&#9;null&#9;null&#10;userpro&#9;FILE&#9;file:///home/eugene/host/fs/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Authentication/Provider/UserAuthenticationProvider.php&#10;security&#9;FILE&#9;file:///home/eugene/host/fs/app/config/security.yml&#10;config_&#9;FILE&#9;file:///home/eugene/host/fs/app/config/config_dev.yml" />
+    <property name="SearchEverywhereHistoryKey" value="messages&#9;FILE&#9;file:///home/eugene/host/fs/app/Resources/views/flash-messages.html.twig&#10;admin.ru&#9;FILE&#9;file:///home/eugene/host/fs/app/Resources/translations/admin.ru.yml&#10;security.y&#9;FILE&#9;file:///home/eugene/host/fs/app/config/security.yml&#10;main.&#9;FILE&#9;file:///home/eugene/host/fs/assets/js/main.js&#10;main.js&#9;FILE&#9;file:///home/eugene/host/fs/assets/js/main.js&#10;main&#9;FILE&#9;file:///home/eugene/host/fs/assets/css/main.sass&#10;default/index.html.twig&#9;FILE&#9;file:///home/eugene/host/fs/app/Resources/views/default/index.html.twig&#10;reset&#9;FILE&#9;file:///home/eugene/host/fs/assets/css/imports/_reset.scss&#10;hea&#9;FILE&#9;file:///home/eugene/host/fs/app/Resources/views/blocks/head.html.twig&#10;admin/hea&#9;FILE&#9;file:///home/eugene/host/fs/app/Resources/views/admin/blocks/head.html.twig&#10;nav&#9;FILE&#9;file:///home/eugene/host/fs/app/Resources/views/admin/blocks/nav.html.twig&#10;head&#9;FILE&#9;file:///home/eugene/host/fs/app/Resources/views/blocks/head.html.twig&#10;basea&#9;FILE&#9;file:///home/eugene/host/fs/app/Resources/views/base_admin.html.twig&#10;base&#9;FILE&#9;file:///home/eugene/host/fs/app/Resources/views/base_admin.html.twig&#10;index&#9;FILE&#9;file:///home/eugene/host/fs/app/Resources/views/admin/index.html.twig&#10;emp&#9;FILE&#9;file:///home/eugene/host/fs/app/Resources/views/admin/employees.html.twig&#10;config&#9;FILE&#9;file:///home/eugene/host/fs/app/config/config.yml&#10;para&#9;FILE&#9;file:///home/eugene/host/fs/app/config/parameters.yml&#10;appk&#9;null&#9;null&#10;file&#9;FILE&#9;file:///home/eugene/host/fs/src/AppBundle/Service/FileUploader.php&#10;тфмю&#9;FILE&#9;file:///home/eugene/host/fs/app/Resources/views/admin/blocks/nav.html.twig&#10;Employ&#9;FILE&#9;file:///home/eugene/host/fs/src/AppBundle/Entity/Employee.php&#10;empl&#9;FILE&#9;file:///home/eugene/host/fs/src/AppBundle/Entity/Employee.php&#10;emplocontr&#9;FILE&#9;file:///home/eugene/host/fs/src/AppBundle/Controller/Admin/EmployeeController.php&#10;ad&#9;FILE&#9;file:///home/eugene/host/fs/app/Resources/translations/admin.ru.yml&#10;employ&#9;null&#9;null&#10;userc&#9;FILE&#9;file:///home/eugene/host/fs/src/AppBundle/Controller/Admin/UserController.php&#10;UserCreateFormType&#9;FILE&#9;file:///home/eugene/host/fs/src/AppBundle/Form/UserCreateFormType.php&#10;userco&#9;FILE&#9;file:///home/eugene/host/fs/src/AppBundle/Controller/Admin/UserController.php&#10;flash-messages.html.twig&#9;FILE&#9;file:///home/eugene/host/fs/app/Resources/views/flash-messages.html.twig&#10;we&#9;FILE&#9;file:///home/eugene/host/fs/webpack.config.js&#10;config.y&#9;FILE&#9;file:///home/eugene/host/fs/app/config/config.yml&#10;routing.y&#9;FILE&#9;file:///home/eugene/host/fs/app/config/routing.yml&#10;user&#9;FILE&#9;file:///home/eugene/host/fs/src/AppBundle/Form/UserFormType.php&#10;gitig&#9;FILE&#9;file:///home/eugene/host/fs/.gitignore&#10;servi&#9;FILE&#9;file:///home/eugene/host/fs/app/config/services.yml&#10;OptionsResolver&#9;null&#9;null&#10;ArrayCollection&#9;FILE&#9;file:///home/eugene/host/fs/vendor/doctrine/collections/lib/Doctrine/Common/Collections/ArrayCollection.php&#10;Doctrine\Common\Collections\Collection&#9;null&#9;null&#10;Doctrine\ORM\PersistentCollection&#9;null&#9;null&#10;db.html.twig&#9;FILE&#9;file:///home/eugene/host/fs/vendor/doctrine/doctrine-bundle/Resources/views/Collector/db.html.twig&#10;DefaultAuthenticationSuccessHandler&#9;null&#9;null&#10;Symfony\Component\Security\Http\Authentication\AuthenticationUtils&#9;null&#9;null&#10;userpro&#9;FILE&#9;file:///home/eugene/host/fs/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Authentication/Provider/UserAuthenticationProvider.php&#10;security&#9;FILE&#9;file:///home/eugene/host/fs/app/config/security.yml&#10;config_&#9;FILE&#9;file:///home/eugene/host/fs/app/config/config_dev.yml" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.path.for.package.jscs" value="project" />
     <property name="node.js.detected.package.jscs" value="true" />
@@ -660,14 +666,7 @@
       <workItem from="1511461616973" duration="3146000" />
       <workItem from="1511505044471" duration="3765000" />
       <workItem from="1511509032080" duration="12164000" />
-      <workItem from="1511764410866" duration="8609000" />
-    </task>
-    <task id="LOCAL-00015" summary="little styled user part">
-      <created>1509044380631</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1509044380631</updated>
+      <workItem from="1511764410866" duration="10859000" />
     </task>
     <task id="LOCAL-00016" summary="- create new entities: Employee, Position, Rank&#10;- add Role to new user">
       <created>1509092792941</created>
@@ -1005,11 +1004,18 @@
       <option name="project" value="LOCAL" />
       <updated>1511775912768</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="Graph&#10; - delete schemas">
+      <created>1511776937997</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1511776937997</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="283975000" />
+    <option name="totallyTimeSpent" value="286225000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="4" width="1303" height="780" extended-state="6" />
@@ -1069,7 +1075,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Employee&#10; - not found" />
     <MESSAGE value="Employee&#10; - translations was refactored" />
     <MESSAGE value="Employee&#10; - first letters of names to upper case" />
     <MESSAGE value="Employees page&#10; - add translations" />
@@ -1094,7 +1099,8 @@
     <MESSAGE value="Graph&#10; - create schema action" />
     <MESSAGE value="Graph&#10; - output all schemas" />
     <MESSAGE value="Graph&#10; - edit schemas" />
-    <option name="LAST_COMMIT_MESSAGE" value="Graph&#10; - edit schemas" />
+    <MESSAGE value="Graph&#10; - delete schemas" />
+    <option name="LAST_COMMIT_MESSAGE" value="Graph&#10; - delete schemas" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1115,20 +1121,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/admin/employee.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="82" column="22" lean-forward="false" selection-start-line="82" selection-start-column="22" selection-end-line="82" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="19" column="10" lean-forward="false" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -1445,41 +1437,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/Admin/EmployeeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="101" column="8" lean-forward="false" selection-start-line="101" selection-start-column="8" selection-end-line="103" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/admin/user.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1026">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="36">
+          <caret line="2" column="40" lean-forward="false" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="40" />
           <folding>
             <element signature="e#12#34#0#Twig" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/flash-messages.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/Admin/EmployeeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="110" column="59" lean-forward="false" selection-start-line="110" selection-start-column="48" selection-end-line="110" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/Graph/SchemaController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-78">
+          <caret line="124" column="33" lean-forward="false" selection-start-line="124" selection-start-column="33" selection-end-line="124" selection-end-column="33" />
+          <folding>
+            <element signature="e#69#102#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/admin/schema.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="30" column="83" lean-forward="false" selection-start-line="30" selection-start-column="83" selection-end-line="30" selection-end-column="83" />
+        <state relative-caret-position="165">
+          <caret line="26" column="69" lean-forward="false" selection-start-line="26" selection-start-column="69" selection-end-line="26" selection-end-column="69" />
           <folding>
             <element signature="e#12#32#0#Twig" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/Graph/SchemaController.php">
+    <entry file="file://$PROJECT_DIR$/app/Resources/translations/admin.ru.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="158" column="49" lean-forward="false" selection-start-line="158" selection-start-column="49" selection-end-line="158" selection-end-column="49" />
-          <folding>
-            <element signature="e#69#102#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="228">
+          <caret line="116" column="13" lean-forward="true" selection-start-line="116" selection-start-column="13" selection-end-line="116" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -78,8 +78,8 @@ class SchemaController extends Controller
         $em->flush();
 
         $this->addFlash('success', $this->get('translator')->trans(
-            'employee.flash.create',
-            ['%employee%' => $schema->getName()],
+            'schemas.flash.create',
+            ['%schema%' => $schema->getName()],
             'admin'
         ));
 
@@ -112,7 +112,6 @@ class SchemaController extends Controller
         }
 
         $formData = $form->getData();
-        dump($formData);
 
         $em = $this->getDoctrine()->getManager();
         $schema = $em->find(GraphSchema::class, $formData['id']);
@@ -123,8 +122,8 @@ class SchemaController extends Controller
         $em->flush();
 
         $this->addFlash('success', $this->get('translator')->trans(
-            'employee.flash.create',
-            ['%employee%' => $schema->getName()],
+            'schemas.flash.update',
+            ['%schema%' => $schema->getName()],
             'admin'
         ));
 
@@ -154,7 +153,11 @@ class SchemaController extends Controller
         $em->getManager()->remove($deletingSchema);
         $em->getManager()->flush();
 
-        $this->addFlash('success', 'deleted');
+        $this->addFlash('success', $this->get('translator')->trans(
+            'schemas.flash.delete',
+            ['%schema%' => $deletingSchema->getName()],
+            'admin'
+        ));
 
         return $this->redirectToRoute('schemas');
     }
