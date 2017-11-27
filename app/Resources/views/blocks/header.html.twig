@@ -10,9 +10,7 @@
 
         </div>
         <div class="header__content col-md-8">
-            {% block header_content %}
-                <h1>{{ 'site.name' | trans({}, 'main') }}</h1>
-            {% endblock %}
+            <h1>{{ header_content ?: 'site.name' | trans({}, 'main') }}</h1>
         </div>
         <div class="header__menu col-md-2">
             <span class="header__hamburger glyphicon glyphicon-menu-hamburger"></span>

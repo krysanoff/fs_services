@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block header_content %}
+    Firefighter graph :: {{ 'menu.shift' | trans({'%shift%': app.request.get('shift')}, 'main') }}
+{% endblock %}
+
+{% block content %}
+    <div id="graph">React doesn't work</div>
+{% endblock %}
