@@ -16,19 +16,21 @@ use Symfony\Component\HttpFoundation\Request;
 class SchemaController extends Controller
 {
     /**
-    * @Route("/{_locale}/admin/schemas", name="schemas")
-    */
+     * @Route("/{_locale}/admin/schemas", name="schemas")
+     *
+     * @return string
+     */
     public function indexAction()
     {
         $em = $this->getDoctrine()->getRepository('AppBundle:GraphSchema');
         $schemas = $em->findAll();
+        $forms = [];
 
-        $create_form = $this->createForm(SchemaFormType::class, null, [
+        $createForm = $this->createForm(SchemaFormType::class, null, [
             'action' => $this->generateUrl('schema_create'),
         ]);
 
         foreach ($schemas as $schema) {
-            static $forms = [];
             $schema_form = $this->createForm(SchemaFormType::class, $schema, [
                 'action' => $this->generateUrl('schema_update'),
             ]);
@@ -37,7 +39,7 @@ class SchemaController extends Controller
         }
 
         return $this->render("/admin/schema.html.twig", [
-            'create_form' => $create_form->createView(),
+            'create_form' => $createForm->createView(),
             'forms' => $forms,
         ]);
     }
@@ -132,12 +134,28 @@ class SchemaController extends Controller
     /**
      * Delete a schema
      *
-     * @Route("/{_locale}/admin/schema/delete", name="schema_delete")
+     * @Route("/{_locale}/admin/schema/delete/{schema}", name="schema_delete", requirements={"schema": "\d+"})
      *
      * @return string
      */
-    public function deleteAction()
+    public function deleteAction($schema)
     {
-        return 't';
+        if (!$schema) {
+            throw new NotFoundHttpException("Page not found");
+        }
+
+        $em = $this->getDoctrine();
+        $deletingSchema = $em->getRepository(GraphSchema::class)->find($schema);
+
+        if (!$deletingSchema) {
+            throw new NotFoundHttpException("Page not found");
+        }
+
+        $em->getManager()->remove($deletingSchema);
+        $em->getManager()->flush();
+
+        $this->addFlash('success', 'deleted');
+
+        return $this->redirectToRoute('schemas');
     }
 }
