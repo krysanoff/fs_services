@@ -22,7 +22,7 @@ Encore
     .addEntry('js/main', './assets/js/main.js')
 
     // graph app with React
-    .addEntry('js/graph', './assets/js/graph.js')
+    .addEntry('js/graph', './assets/js/graphApp/index.js')
 
     // admin.css
     .addStyleEntry('css/admin', './assets/css/admin.sass')

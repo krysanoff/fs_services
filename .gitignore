@@ -1,8 +1,12 @@
+/.idea
 /.web-server-pid
 /app/config/parameters.yml
-/build/
+/assets/images/*
+/assets/manifest.json
+/images/*
 /node_modules/
 /phpunit.xml
+/uploads/*
 /var/*
 !/var/cache
 /var/cache/*
